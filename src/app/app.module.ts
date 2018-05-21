@@ -1,6 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule, Router} from '@angular/router';
+import { RouterModule, Routes, Router } from '@angular/router';
+
+import './modules/homepage/homepage.module.ts';
+
+import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing/medicine-listing.component';
+import { MedicineService } from './modules/medicine/medicine.service';
+import { MedicineDetailComponent } from './modules/medicine/details/medicine-detail/medicine-detail.component';
+import { FilterComponent } from './modules/medicine/listing/filter/filter.component';
 
 import { AppComponent } from './app.component';
 import { HomepageviewComponent } from './modules/homepage/homepageview/homepageview.component';
@@ -35,6 +42,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     ZoofilterComponent,
     ZooCollectionComponent,
     ListingComponent,
+    MedicineListingComponent,
+    MedicineDetailComponent,
+    FilterComponent,
     AnimalitemComponent,
     SmallComponentComponent,
     FilterComponentComponent,
@@ -49,12 +59,17 @@ import { FooterComponent } from './shared/components/footer/footer.component';
   imports: [
     BrowserModule,
     RouterModule.forRoot([
+      { path: 'medicine', component: MedicineListingComponent, 
+        children: [
+          { path: 'details', component: MedicineDetailComponent}
+        ]
+    },
       {path: 'listing' , component: ListingComponent},
       // {path: 'animals', component: SmallComponentComponent},
       {path: 'details/:id', component: AnimalitemComponent}
-  ])
-],
-  providers: [AnimalService],
+    ])
+  ],
+  providers: [MedicineService, AnimalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

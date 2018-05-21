@@ -4,6 +4,7 @@ import {RouterModule, Router} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomepageviewComponent } from './modules/homepage/homepageview/homepageview.component';
+
 import './modules/homepage/homepage.module.ts';
 import { ListingComponent } from 'src/app/modules/animals/listing/listing.component';
 import { AnimalitemComponent } from 'src/app/modules/animals/listing/animalitem/animalitem.component';
@@ -11,6 +12,15 @@ import { SmallComponentComponent } from 'src/app/modules/animals/listing/small-c
 import { FilterComponentComponent } from 'src/app/modules/animals/listing/filter-component/filter-component.component';
 import { AnimalService } from 'src/app/modules/animals/animal.service';
 import { OneSmallComponent } from 'src/app/modules/animals/listing/small-component/one-small-component/one-small.component';
+
+import { ZooComponent } from './modules/homepage/homepageview/zoos/zoo.component';
+import { ShowhomepageComponent } from './modules/homepage/homepageview/shows/showhomepage.component';
+import { NewshomepageComponent } from './modules/homepage/homepageview/news/newshomepage.component';
+import { AnimalhomepageComponent } from './modules/homepage/homepageview/animalcategouries/animalhomepage.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+
+
 
 
 
@@ -22,7 +32,13 @@ import { OneSmallComponent } from 'src/app/modules/animals/listing/small-compone
     AnimalitemComponent,
     SmallComponentComponent,
     FilterComponentComponent,
-    OneSmallComponent
+    OneSmallComponent,
+    ZooComponent,
+    ShowhomepageComponent,
+    NewshomepageComponent,
+    AnimalhomepageComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

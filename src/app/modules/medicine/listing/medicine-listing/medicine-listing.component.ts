@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Medicine} from './../../medicine';
-import { MEDICINES } from "./../../mock-medicines";
-import { MedicineService } from '../../medicine.service';
+import {Medicine} from './../../../../shared/interfaces/medicine';
+import { MEDICINES } from "./../../../../shared/services/medicineservice/mock-medicines";
+import { MedicineService } from './../../../../shared/services/medicineservice/medicine.service';
 
 @Component({
   selector: 'app-medicine-listing',

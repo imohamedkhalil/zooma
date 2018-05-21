@@ -5,7 +5,7 @@ import { RouterModule, Routes, Router } from '@angular/router';
 import './modules/homepage/homepage.module.ts';
 
 import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing/medicine-listing.component';
-import { MedicineService } from './modules/medicine/medicine.service';
+import { MedicineService } from './shared/services/medicineservice/medicine.service';
 import { MedicineDetailComponent } from './modules/medicine/details/medicine-detail/medicine-detail.component';
 import { FilterComponent } from './modules/medicine/listing/filter/filter.component';
 

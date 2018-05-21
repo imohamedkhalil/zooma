@@ -1,4 +1,4 @@
-import {Medicine} from './medicine'
+import {Medicine} from './../../interfaces/medicine'
 
 export const MEDICINES: Medicine[] = [
     { id: 1, name: 'Aspirine', description: "Aspirine Description" },

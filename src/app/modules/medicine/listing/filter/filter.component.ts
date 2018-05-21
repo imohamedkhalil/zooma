@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MedicineService } from '../../medicine.service';
+import { MedicineService } from './../../../../shared/services/medicineservice/medicine.service';
 
 @Component({
   selector: 'app-filter',

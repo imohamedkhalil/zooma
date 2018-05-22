@@ -9,7 +9,7 @@
             <h4>{{medicine.name}}</h4>
             <p>{{medicine.description}}</p>
             <p>
-              <a href="/" class="lnk-primary learn-more">Learn more
+              <a [routerLink]="['../medicine/details', medicine.id]" class="lnk-primary learn-more">Learn more
                 <i class="fa fa-angle-right"></i>
               </a>
             </p>

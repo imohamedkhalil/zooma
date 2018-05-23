@@ -1,5 +1,5 @@
 import { Component, OnInit ,Input} from '@angular/core';
-import { IZooSmallComponent } from 'src/app/modules/zoos/interfaces/zoointerface';
+import { IZooSmallComponent } from 'src/app/shared/interfaces/zoointerface/zoointerface';
 
 @Component({
   selector: 'app-zooitem',

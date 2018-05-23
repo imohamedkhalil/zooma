@@ -1,6 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { ZooserviceService } from 'src/app/modules/zoos/service/zooservice.service';
-import { IZooSmallComponent } from 'src/app/modules/zoos/interfaces/zoointerface';
+import { ZooserviceService } from 'src/app/shared/services/zooservice/zooservice.service';
+import { IZooSmallComponent } from 'src/app/shared/interfaces/zoointerface/zoointerface';
 import{ZooCollectionComponent} from '../zoolisting/zoo-collection/zoo-collection.component';
 
 @Component({

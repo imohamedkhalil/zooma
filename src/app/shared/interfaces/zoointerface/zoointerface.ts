@@ -7,5 +7,5 @@ export class IZooSmallComponent{
     email ?:string;
     addressUrl ?:string;
     locImg ?:string;
-    animals?:string[];
+    animals?:string;
 }

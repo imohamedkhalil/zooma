@@ -1,55 +1,55 @@
- <li class=" isotope-item leadership   {{zoo.animals}} " > 
-  <div class="row mt-xlg">
-    <div class="col-md-12 custom-sm-margin-bottom-1">
-      <div class="custom-thumb-carousel background-color-light custom-box-shadow">
-        <div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': false, 'duration': 300}}">
-          <div class="" data-plugin-options="{'items': 1, 'loop': false, 'nav': true, 'dots': false}">
+<li class=" isotope-item leadership {{zoo.animals}}">
+<div class="row mt-xlg">
+  <div class="col-md-12 custom-sm-margin-bottom-1">
+    <div class="custom-thumb-carousel background-color-light custom-box-shadow">
+      <div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': false, 'duration': 300}}">
+        <div class="" data-plugin-options="{'items': 1, 'loop': false, 'nav': true, 'dots': false}">
 
-            <div>
-              <a class="img-thumbnail img-thumbnail-hover-icon" href={{zoo.imgUrl}}>
-                <img class="img-responsive" src={{zoo.imgUrl}} alt="Zoo Image">
-              </a>
-            </div>
+          <div>
+            <a class="img-thumbnail img-thumbnail-hover-icon" href={{zoo.imgUrl}}>
+              <img class="img-responsive" src={{zoo.imgUrl}} alt="Zoo Image">
+            </a>
           </div>
         </div>
-        <div style="text-align: right;">
+      </div>
+      <div style="text-align: right;">
 
-          <a href="#">
-            <i class="fa fa-pencil" style="text-align: right;margin-left:10px;"></i>
-          </a>
-          <a href="#">
-            <i class="fa fa-trash" style="text-align: center;margin-left:10px;"></i>
-          </a>
+        <a href="#">
+          <i class="fa fa-pencil" style="text-align: right;margin-left:10px;"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-trash" style="text-align: center;margin-left:10px;"></i>
+        </a>
 
-        </div>
-        <div class="col-md-6 col-sm-6">
+      </div>
+      <div class="col-md-6 col-sm-6">
 
-          <div class="custom-location">
+        <div class="custom-location">
 
-            <img src={{zoo.locImg}} alt class="img-responsive" />
-            <h4 class="font-weight-bold custom-primary-font mb-none">{{zoo.name}}</h4>
-            <p>
-              {{zoo.address}}
-              <br>
-              <a href="#">{{zoo.addressUrl}}</a>
-            </p>
-
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-6 pt-lg mt-xs custom-xs-padding-1">
-          <span class="custom-phone custom-xs-ml-1">
-            <strong>Phone:</strong>
-            <a class="custom-text-color-default" href="tel:+123456789">{{zoo.phone}}</a>
+          <img src={{zoo.locImg}} alt class="img-responsive" />
+          <h4 class="font-weight-bold custom-primary-font mb-none">{{zoo.name}}</h4>
+          <p>
+            {{zoo.address}}
             <br>
-            <strong>Email:</strong>
-            <a class="custom-xs-ml-1" href="mailto:church@domain.com">{{zoo.email}}</a>
+            <a href="#">{{zoo.addressUrl}}</a>
+          </p>
 
-          </span>
-          <button type="button" id="loadingButton" data-loading-text="Loading..." class="btn btn-primary" style="margin-left:50px;margin-top:20px;">
-            Visit Website
-          </button>
         </div>
+      </div>
+      <div class="col-md-6 col-sm-6 pt-lg mt-xs custom-xs-padding-1">
+        <span class="custom-phone custom-xs-ml-1">
+          <strong>Phone:</strong>
+          <a class="custom-text-color-default" href="tel:+123456789">{{zoo.phone}}</a>
+          <br>
+          <strong>Email:</strong>
+          <a class="custom-xs-ml-1" href="mailto:church@domain.com">{{zoo.email}}</a>
+
+        </span>
+        <a [routerLink]="['../zoo/details',zoo.id]" id="loadingButton" data-loading-text="Loading..." class="btn btn-primary" style="margin-left:50px;margin-top:20px;">
+          Visit Website
+        </a>
       </div>
     </div>
   </div>
-  </li> 
+</div>
+</li>

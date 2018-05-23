@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes, Router } from '@angular/router';
+
+import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
+import {FormsModule} from '@angular/forms';
+
 
 import './modules/homepage/homepage.module.ts';
 
@@ -9,14 +12,14 @@ import { MedicineService } from './shared/services/medicineservice/medicine.serv
 import { MedicineDetailComponent } from './modules/medicine/details/medicine-detail/medicine-detail.component';
 import { FilterComponent } from './modules/medicine/listing/filter/filter.component';
 
-import { AppComponent } from './app.component';
+
+import { AppComponent } from './app.component'; 
 import { HomepageviewComponent } from './modules/homepage/homepageview/homepageview.component';
 import { ZoolistingComponent } from 'src/app/modules/zoos/zoolisting/zoolisting.component';
 import { ZooitemComponent } from 'src/app/modules/zoos/zoolisting/zooitem/zooitem.component';
 import { ZoofilterComponent } from 'src/app/modules/zoos/zoolisting/zoofilter/zoofilter.component';
 import { ZooCollectionComponent } from 'src/app/modules/zoos/zoolisting/zoo-collection/zoo-collection.component';
 
-import './modules/homepage/homepage.module.ts';
 import { ListingComponent } from 'src/app/modules/animals/listing/listing.component';
 import { AnimalitemComponent } from 'src/app/modules/animals/listing/animalitem/animalitem.component';
 import { SmallComponentComponent } from 'src/app/modules/animals/listing/small-component/small-component.component';
@@ -31,6 +34,12 @@ import { AnimalhomepageComponent } from './modules/homepage/homepageview/animalc
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 
+import { ZooserviceService } from 'src/app/shared/services/zooservice/zooservice.service';
+import { ZoosComponent } from './src/app/modules/zoos/zoos.component';
+import { ZoodetailsComponent } from 'src/app/modules/zoos/zoodetails/zoodetails.component';
+import { ZooheaderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspage/zooheader/zooheader.component';
+import { ZoosliderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspage/zooslider/zooslider.component';
+import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-form/add-zoo-form.component';
 
 
 @NgModule({
@@ -40,6 +49,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     ZoolistingComponent,
     ZooitemComponent,
     ZoofilterComponent,
+    ZooCollectionComponent,
     ZooCollectionComponent,
     ListingComponent,
     MedicineListingComponent,
@@ -54,7 +64,11 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     NewshomepageComponent,
     AnimalhomepageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ZoodetailsComponent,
+    ZooheaderComponent,
+    ZoosliderComponent,
+    AddZooFormComponent
   ],
   imports: [
     BrowserModule,
@@ -63,10 +77,14 @@ import { FooterComponent } from './shared/components/footer/footer.component';
       { path: 'medicine/details/:id' , component: MedicineDetailComponent},
       {path: 'listing' , component: ListingComponent},
       // {path: 'animals', component: SmallComponentComponent},
-      {path: 'details/:id', component: AnimalitemComponent}
+      {path: 'details/:id', component: AnimalitemComponent},
+      {path: 'zoo', component: ZoolistingComponent},
+      { path: 'zoo/details/:id', component: ZoodetailsComponent },
     ])
   ],
-  providers: [MedicineService, AnimalService],
+  
+  providers: [AnimalService, ZooserviceService, MedicineService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,47 @@
+
+.m{
+    text-align: center;
+    margin-top:2%;
+
+}
+img{
+    width: 13%;
+}
+.txtstyle{
+    font-weight: bold;
+    font-size: 180%;
+   
+}
+.txtbox{
+   width:100%;
+   border: none;
+  font-size: 150%;
+ height: 45px;
+margin-right: 2%;
+}
+
+
+hr{
+    margin: 0;
+    width:92%;
+    border-color: darkcyan;
+}
+.h{
+    width: 100%;
+}
+.num{
+    width:92%;
+}
+.b{
+  
+    border-radius: 15px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 3%;
+    font-size: 120%;
+}
+.d{
+     margin:0 auto;
+     width:50%;
+     
+}

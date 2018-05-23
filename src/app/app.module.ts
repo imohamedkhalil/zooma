@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppComponent } from './app.component';
 import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
 import {FormsModule} from '@angular/forms';
 
@@ -13,7 +14,6 @@ import { MedicineDetailComponent } from './modules/medicine/details/medicine-det
 import { FilterComponent } from './modules/medicine/listing/filter/filter.component';
 
 
-import { AppComponent } from './app.component'; 
 import { HomepageviewComponent } from './modules/homepage/homepageview/homepageview.component';
 import { ZoolistingComponent } from 'src/app/modules/zoos/zoolisting/zoolisting.component';
 import { ZooitemComponent } from 'src/app/modules/zoos/zoolisting/zooitem/zooitem.component';
@@ -33,6 +33,11 @@ import { NewshomepageComponent } from './modules/homepage/homepageview/news/news
 import { AnimalhomepageComponent } from './modules/homepage/homepageview/animalcategouries/animalhomepage.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { ShowlistingComponent } from './modules/shows/showslist/showlisting.component';
+import { ShowitemComponent } from './modules/shows/showslist/showitem/showitem.component';
+import { ShowdetailsComponent } from './modules/shows/showdetails/showdetails.component';
+import { ShowService } from 'src/app/shared/services/showservice/show.service';
+import { ShowaddComponent } from './modules/shows/showadd/showadd.component';
 
 import { ZooserviceService } from 'src/app/shared/services/zooservice/zooservice.service';
 import { ZoosComponent } from './src/app/modules/zoos/zoos.component';
@@ -65,6 +70,10 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
     AnimalhomepageComponent,
     HeaderComponent,
     FooterComponent,
+    ShowlistingComponent,
+    ShowitemComponent,
+    ShowdetailsComponent,
+    ShowaddComponent,
     ZoodetailsComponent,
     ZooheaderComponent,
     ZoosliderComponent,
@@ -74,19 +83,20 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: 'medicine', component: MedicineListingComponent},
-      { path: 'medicine/details/:id' , component: MedicineDetailComponent},
-      
+      {path: 'medicine', component: MedicineListingComponent},
+      {path: 'medicine/details/:id' , component: MedicineDetailComponent},
       {path: 'listing' , component: ListingComponent},
       // {path: 'animals', component: SmallComponentComponent},
       {path: 'details/:id', component: AnimalitemComponent},
       {path: 'zoo', component: ZoolistingComponent},
-      { path: 'zoo/details/:id', component: ZoodetailsComponent },
-    ])
+      {path: 'zoo/details/:id', component: ZoodetailsComponent },
+      {path:'show',component:ShowlistingComponent},
+      {path:'showdetails',component:ShowdetailsComponent},
+      {path:'addshow',component:ShowaddComponent},      
+      {path:'',component:HomepageviewComponent}  
+  ]),
   ],
-  
-  providers: [AnimalService, ZooserviceService, MedicineService],
-
+  providers: [AnimalService, ZooserviceService, MedicineService, ShowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

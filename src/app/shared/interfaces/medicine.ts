@@ -1,5 +1,7 @@
 export class Medicine {
     id? : number;
     name? : string;
-    description? :string
+    smalldescription?: string;
+    description? :string;
+    type?: string;
 }

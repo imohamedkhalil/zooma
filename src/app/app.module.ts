@@ -76,6 +76,7 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent},
       { path: 'medicine/details/:id' , component: MedicineDetailComponent},
+      
       {path: 'listing' , component: ListingComponent},
       // {path: 'animals', component: SmallComponentComponent},
       {path: 'details/:id', component: AnimalitemComponent},

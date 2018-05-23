@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MedicineService } from '../../../../shared/services/medicineservice/medicine.service';
+import { Medicine } from '../../../../shared/interfaces/medicine';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-medicine-detail',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedicineDetailComponent implements OnInit {
 
-  constructor() { }
+  medicine: Medicine;
+
+  getMedicine(){
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.medicine = this.medicineService.getMedicine(id);
+  }
+  
+  constructor(
+    private medicineService: MedicineService,
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit() {
+    this.getMedicine();
   }
-
 }

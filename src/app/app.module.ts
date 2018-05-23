@@ -61,6 +61,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent},
       { path: 'medicine/details/:id' , component: MedicineDetailComponent},
+      
       {path: 'listing' , component: ListingComponent},
       // {path: 'animals', component: SmallComponentComponent},
       {path: 'details/:id', component: AnimalitemComponent}

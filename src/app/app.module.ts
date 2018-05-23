@@ -72,6 +72,7 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent},
       { path: 'medicine/details/:id' , component: MedicineDetailComponent},

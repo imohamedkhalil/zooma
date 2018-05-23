@@ -1,10 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-<<<<<<< Updated upstream
-=======
-import { RouterModule, Router, ActivatedRoute } from '@angular/router';
+
+import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
 import {FormsModule} from '@angular/forms';
->>>>>>> Stashed changes
+
+
+import './modules/homepage/homepage.module.ts';
+
+import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing/medicine-listing.component';
+import { MedicineService } from './shared/services/medicineservice/medicine.service';
+import { MedicineDetailComponent } from './modules/medicine/details/medicine-detail/medicine-detail.component';
+import { FilterComponent } from './modules/medicine/listing/filter/filter.component';
 
 
 import { AppComponent } from './app.component'; 
@@ -14,9 +20,6 @@ import { ZooitemComponent } from 'src/app/modules/zoos/zoolisting/zooitem/zooite
 import { ZoofilterComponent } from 'src/app/modules/zoos/zoolisting/zoofilter/zoofilter.component';
 import { ZooCollectionComponent } from 'src/app/modules/zoos/zoolisting/zoo-collection/zoo-collection.component';
 
-<<<<<<< Updated upstream
-=======
-import './modules/homepage/homepage.module.ts';
 import { ListingComponent } from 'src/app/modules/animals/listing/listing.component';
 import { AnimalitemComponent } from 'src/app/modules/animals/listing/animalitem/animalitem.component';
 import { SmallComponentComponent } from 'src/app/modules/animals/listing/small-component/small-component.component';
@@ -30,6 +33,7 @@ import { NewshomepageComponent } from './modules/homepage/homepageview/news/news
 import { AnimalhomepageComponent } from './modules/homepage/homepageview/animalcategouries/animalhomepage.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+
 import { ZooserviceService } from 'src/app/shared/services/zooservice/zooservice.service';
 import { ZoosComponent } from './src/app/modules/zoos/zoos.component';
 import { ZoodetailsComponent } from 'src/app/modules/zoos/zoodetails/zoodetails.component';
@@ -38,9 +42,6 @@ import { ZoosliderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspa
 import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-form/add-zoo-form.component';
 
 
-
->>>>>>> Stashed changes
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,16 +49,12 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
     ZoolistingComponent,
     ZooitemComponent,
     ZoofilterComponent,
-<<<<<<< Updated upstream
-    ZooCollectionComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-=======
+    ZooCollectionComponent,
     ZooCollectionComponent,
     ListingComponent,
+    MedicineListingComponent,
+    MedicineDetailComponent,
+    FilterComponent,
     AnimalitemComponent,
     SmallComponentComponent,
     FilterComponentComponent,
@@ -68,29 +65,26 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
     AnimalhomepageComponent,
     HeaderComponent,
     FooterComponent,
-    ZoosComponent,
     ZoodetailsComponent,
     ZooheaderComponent,
     ZoosliderComponent,
     AddZooFormComponent
-   
-    
-
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     RouterModule.forRoot([
-      { path: 'listing', component: ListingComponent },
+      { path: 'medicine', component: MedicineListingComponent},
+      { path: 'medicine/details/:id' , component: MedicineDetailComponent},
+      {path: 'listing' , component: ListingComponent},
       // {path: 'animals', component: SmallComponentComponent},
-      { path: 'details/:id', component: AnimalitemComponent },
-      { path: '', component: HomepageviewComponent },
+      {path: 'details/:id', component: AnimalitemComponent},
       {path: 'zoo', component: ZoolistingComponent},
       { path: 'zoo/details/:id', component: ZoodetailsComponent },
     ])
   ],
-  providers: [AnimalService, ZooserviceService],
->>>>>>> Stashed changes
+  
+  providers: [AnimalService, ZooserviceService, MedicineService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,21 @@
+<div class="container">
+  <app-filter class="col-md-3"></app-filter>
+  <div class="col-md-9">
+    <div class="row">
+      <div *ngFor="let medicine of medicines" class="col-md-4 {{medicine.name}}">
+        <div class="featured-box featured-box-primary featured-box-effect-1">
+          <div class="box-content">
+            <i class="icon-featured fa fa-stethoscope"></i>
+            <h4>{{medicine.name}}</h4>
+            <p>{{medicine.description}}</p>
+            <p>
+              <a [routerLink]="['../medicine/details', medicine.id]" class="lnk-primary learn-more">Learn more
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

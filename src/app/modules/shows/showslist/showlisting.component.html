@@ -1,0 +1,87 @@
+<div role="main" class="main">
+
+  <section class="section section-no-border custom-section-padding-4 m-none" style="background: url('../../../assets/img/13.jpg'); background-size: cover;">
+    <div class="container">
+      <div class="row center">
+        <div class="col-md-12" style="margin-top: 45px">
+          <h1 class="text-color-light custom-secondary-font font-weight-bold mb-xs 
+                  appear-animation" data-appear-animation="bounceInRight" data-appear-animation-delay="1">Events</h1>
+        </div>
+      </div>
+    </div>
+   
+  </section>
+  
+  <section class="section  section-no-border m-none">
+    <a routerLink='addshow'  ><i class="fa fa-plus-circle " style="text-align: right;margin-left:10px; width:93%; font-size:25px;"></i></a>
+      
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 custom-sm-margin-bottom-1">
+          <h2 class="text-color-dark font-weight-bold">Next Event</h2>
+          <article class="thumb-info custom-thumb-info custom-box-shadow">
+            <span class="thumb-info-wrapper">
+              <a routerLink="/showdetails">
+                <img src="{{shows[0].imgUrl}}" alt class="img-responsive" />
+              </a>
+            </span>
+            <span class="thumb-info-caption">
+              <span class="custom-thumb-info-wrapper-box center">
+                <span id="countdown" data-countdown-title="" data-countdown-date="2017/06/10 12:00:00" class="custom-newcomers-class clock-one-events text-color-dark font-weight-bold custom-secondary-font custom-box-shadow"></span>
+              </span>
+              <span class="custom-event-infos">
+                <ul>
+                  <li>
+                    <i class="fa fa-clock-o"></i>
+                    {{shows[0].time}}
+                  </li>
+                  <li class="text-uppercase">
+                    <i class="fa fa-map-marker"></i>
+                    {{shows[0].location}}
+                  </li>
+                </ul>
+              </span>
+              <span class="thumb-info-caption-text">
+                <h4 class="font-weight-bold mb-sm">
+                  <a routerLink="/showdetails" class="text-decoration-none custom-secondary-font text-color-dark">
+                      {{shows[0].title}}
+                  </a>
+                </h4>
+                <p>{{shows[0].description}} ...</p>
+              </span>
+            </span>
+          </article>
+        </div>
+        <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2">
+          <h2 class="text-color-dark font-weight-bold">Upcoming Event</h2>
+          
+          <app-showitem  *ngFor="let show of shows" [show]="show"></app-showitem>
+  
+          
+          <hr class="solid">
+         
+        </div> 
+        
+      </div>
+    </div>
+  </section>
+<div>
+ 
+</div>
+  <section class="section section-no-border background-color-light m-none">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="font-weight-bold text-color-dark mb-xlg">Events</h2>
+        </div>
+      </div>
+      <div class="row">
+     
+        <app-showitem ngClass="col-xs-6" *ngFor="let show of shows"[show]="show"></app-showitem>
+      
+      
+      </div>
+ 
+    </div>
+  </section>
+</div>

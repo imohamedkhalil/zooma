@@ -1,0 +1,105 @@
+<section class="section section-no-border custom-section-padding-4 m-none" style="background: url('../../../assets/img/13.jpg'); background-size: cover;">
+    <div class="container">
+      <div class="row center">
+   
+      </div>
+    </div>
+   
+  </section>
+
+<div class="container">
+
+      
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>
+                Add a New Show
+            </h1>
+            <hr/>
+        </div>
+
+        <div class="col-xs-12 m">
+            <figure>
+                <img src="../../../../assets/img/r3.png">
+            </figure>
+            <p>
+                <strong>
+                    <a class="btn">Upload Photo</a>
+                </strong>
+            </p>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-xs-2 s">
+            <span class="txtstyle" for="#fn">
+                Title
+            </span>
+        </div>
+        <div class="col-xs-9 ss">
+            <input type="text" name="title" class="txtbox" id="fn" [(ngModel)]="title" />
+        </div>
+
+    </div>
+    <hr/>
+    <br/>
+    <br/>
+    <div class="row">
+        <div class="col-xs-2">
+            <span class="txtstyle" for="#fn">
+                Description
+            </span>
+        </div>
+        <div class="col-xs-9">
+            <input type="text" name="lastname" class="txtbox" id="fn" [(ngModel)]="description">
+        </div>
+
+    </div>
+    <hr/>
+    <br/>
+    <br/>
+    <div class="row">
+        <div class="col-xs-2">
+            <span class="txtstyle" For="#fn">
+                <input type="number" name="number" placeholder="+44" class="num" id="fn">
+                <hr/>
+            </span>
+        </div>
+        <div class="col-xs-9">
+            <input type="number" name="phone" class="txtbox" id="fn" [(ngModel)]="phone">
+            <hr class="h" />
+        </div>
+
+    </div>
+    <br/>
+    <br/>
+    
+    <div class="row">
+        <div class="col-xs-2">
+            <span class="txtstyle" for="#fn">
+                Location
+            </span>
+        </div>
+        <div class="col-xs-9">
+            <input type="textBox" name="description" class="txtbox" id="fn" [(ngModel)]="location">
+        </div>
+
+    </div>
+    <hr/>
+    <br>
+    <br/>
+
+    <div class="row ">
+        <div class="d">
+            <a routerLink="" class="btn btn-medium btn-block btn-primary b" (click)="add()">Add Contact</a>
+            <br/>
+            <a routerLink="" class="btn btn-large btn-block btn-success b">Cancel</a>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>

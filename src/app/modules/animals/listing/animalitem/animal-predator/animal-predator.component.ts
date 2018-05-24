@@ -3,12 +3,11 @@ import {IAnimal} from 'src/app/shared/interfaces/IAnimal';
 import { AnimalService } from 'src/app/shared/services/animalservice/animal.service';
 
 @Component({
-  selector: 'app-one-small-component',
-  templateUrl: './one-small.component.html',
-  styleUrls: ['./one-small.component.css']
+  selector: 'app-animal-predator',
+  templateUrl: './animal-predator.component.html',
+  styleUrls: ['./animal-predator.component.css']
 })
-export class OneSmallComponent implements OnInit {
-
+export class AnimalPredatorComponent implements OnInit {
   animals: IAnimal [];
   getAnimals() {
     this.animals = this.animalService.getAnimals();
@@ -17,6 +16,6 @@ export class OneSmallComponent implements OnInit {
 
   ngOnInit() {
     this.getAnimals();
-  }
+}
 
 }

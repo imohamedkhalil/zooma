@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Zooma</title>
-  <!-- <base href="/"> -->
+  <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -25,13 +25,14 @@
 
   <!-- Web Fonts  
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700%7CSintony:400,700" rel="stylesheet" type="text/css">-->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet"
+    type="text/css">
   <!-- Theme CSS -->
   <!-- <link rel="stylesheet" href="assets/css/theme.css"> -->
   <link rel="stylesheet" href="assets/css/theme-elements.css">
   <!-- <link rel="stylesheet" href="assets/css/theme-blog.css">
   <link rel="stylesheet" href="assets/css/theme-shop.css"> -->
- 
+
 
 
   <!--*********header****-->
@@ -57,6 +58,44 @@
   <link rel="stylesheet" href="assets/vendor/owl.carousel/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.min.css">
   <!---****slider******-->
+  <style>
+    /*CSS Add Disease*/
+
+    table {
+      table-layout: fixed;
+      word-break: break-all;
+    }
+
+    table td {
+      overflow: hidden;
+    }
+
+    .fa-times {
+      /* color: #0088cc; */
+      color: maroon;
+      font-size: 15px;
+    }
+
+    table {
+      counter-reset: tableCount;
+    }
+
+    .counterCell:before {
+      content: counter(tableCount);
+      counter-increment: tableCount;
+    }
+
+    #myDiv {
+      display: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+  <link href="assets/css/bootstrap-fileupload.min.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap-multiselect.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -66,28 +105,151 @@
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script src="assets/vendor/jquery-cookie/jquery-cookie.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-  <!-- <script src="assets/vendor/common/common.min.js"></script> -->
-  <!-- <script src="assets/vendor/jquery.validation/jquery.validation.min.js"></script> -->
-  <!-- <script src="assets/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js"></script> -->
-  <!-- <script src="assets/vendor/jquery.gmap/jquery.gmap.min.js"></script> -->
+  <script src="assets/vendor/common/common.min.js"></script>
+  <script src="assets/vendor/jquery.validation/jquery.validation.min.js"></script>
+  <script src="assets/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+  <script src="assets/vendor/jquery.gmap/jquery.gmap.min.js"></script>
   <script src="assets/vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
   <script src="assets/vendor/isotope/jquery.isotope.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-  <!-- <script src="assets/vendor/vide/vide.min.js"></script> -->
+  <script src="assets/vendor/vide/vide.min.js"></script>
 
   <!-- Theme Base, Components and Settings -->
   <script src="assets/js/theme.js"></script>
 
   <!-- Current Page Vendor and Views -->
-   <script src="assets/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+  <script src="assets/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
   <script src="assets/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-<!-- 
-  Theme Custom
-  <script src="assets/js/custom.js"></script>  -->
+  <!-- 
+  Theme Custom-->
+  <script src="assets/js/custom.js"></script>
 
   <!-- Theme Initialization Files -->
   <script src="assets/js/theme.init.js"></script>
+
+  <script src="assets/js/bootstrap-multiselect.js"></script>
+  <script>
+
+    /*
+    Map Settings
+
+        Find the Latitude and Longitude of your address:
+            - http://universimmedia.pagesperso-orange.fr/geo/loc.htm
+            - http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
+
+    */
+
+    // Map Markers
+    var mapMarkers = [{
+      address: "New York, NY 10017",
+      html: "<strong>Porto Real Estate</strong>",
+      icon: {
+        image: "img/demos/real-estate/pin.png",
+        iconsize: [36, 36],
+        iconanchor: [36, 36]
+      },
+      popup: true
+    }];
+
+    // Map Initial Location
+    var initLatitude = 40.75198;
+    var initLongitude = -73.96978;
+
+    // Map Extended Settings
+    var mapSettings = {
+      controls: {
+        draggable: (($.browser.mobile) ? false : true),
+        panControl: true,
+        zoomControl: true,
+        mapTypeControl: true,
+        scaleControl: true,
+        streetViewControl: true,
+        overviewMapControl: true
+      },
+      scrollwheel: false,
+      markers: mapMarkers,
+      latitude: initLatitude,
+      longitude: initLongitude,
+      zoom: 16
+    };
+
+    var map = $('#googlemaps').gMap(mapSettings),
+      mapRef = $('#googlemaps').data('gMap.reference');
+
+    // Map Center At
+    var mapCenterAt = function (options, e) {
+      e.preventDefault();
+      $('#googlemaps').gMap("centerAt", options);
+    }
+
+    // Create an array of styles.
+    var mapColor = "#cfa968";
+
+    var styles = [{
+      stylers: [{
+        hue: mapColor
+      }]
+    }, {
+      featureType: "road",
+      elementType: "geometry",
+      stylers: [{
+        lightness: 0
+      }, {
+        visibility: "simplified"
+      }]
+    }, {
+      featureType: "road",
+      elementType: "labels",
+      stylers: [{
+        visibility: "off"
+      }]
+    }];
+
+    // Styles from https://snazzymaps.com/
+    var styles = [{ "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#e9e9e9" }, { "lightness": 17 }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }, { "lightness": 20 }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#ffffff" }, { "lightness": 17 }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "color": "#ffffff" }, { "lightness": 29 }, { "weight": 0.2 }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "color": "#ffffff" }, { "lightness": 18 }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "color": "#ffffff" }, { "lightness": 16 }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }, { "lightness": 21 }] }, { "featureType": "poi.park", "elementType": "geometry", "stylers": [{ "color": "#dedede" }, { "lightness": 21 }] }, { "elementType": "labels.text.stroke", "stylers": [{ "visibility": "on" }, { "color": "#ffffff" }, { "lightness": 16 }] }, { "elementType": "labels.text.fill", "stylers": [{ "saturation": 36 }, { "color": "#333333" }, { "lightness": 40 }] }, { "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "elementType": "geometry", "stylers": [{ "color": "#f2f2f2" }, { "lightness": 19 }] }, { "featureType": "administrative", "elementType": "geometry.fill", "stylers": [{ "color": "#fefefe" }, { "lightness": 20 }] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{ "color": "#fefefe" }, { "lightness": 17 }, { "weight": 1.2 }] }];
+
+    var styledMap = new google.maps.StyledMapType(styles, {
+      name: 'Styled Map'
+    });
+
+    mapRef.mapTypes.set('map_style', styledMap);
+    mapRef.setMapTypeId('map_style');
+
+  </script>
+  <script>
+
+    // Script Add Disease //
+    $(document).ready(function () {
+      $("#addType").click(function () {
+        var x = document.getElementById("myDiv");
+        if (x.style.display == "none") {
+          x.style.display = "block";
+        }
+        else {
+          x.style.display = "block";
+        }
+        var v2 = $('#insertedName').val();
+        $("#mytable").append('<tr><td class="counterCell"></td><td>' + v2 + '</td><td><button class="Delete" onclick="myFun(this)"><i class="fa fa-times"></i></button></td></tr>');
+      });
+      myFun = function (e) {
+        e.closest('tr').remove();
+      }
+
+    });
+
+
+  </script>
+  <script type="text/javascript">
+    //Script MultiSelect Option//
+
+    $(function () {
+      $('.multiselect-ui').multiselect({
+        includeSelectAllOption: true
+      });
+    });
+  </script>
+  <script src="assets/js/bootstrap-fileupload.min.js"></script>
 </body>
 
 </html>

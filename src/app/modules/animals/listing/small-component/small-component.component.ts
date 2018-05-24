@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { Animal } from 'src/app/modules/animals/animal';
-// import { AnimalService } from 'src/app/modules/animals/animal.service';
+import { IAnimal } from 'src/app/shared/interfaces/IAnimal';
+import { AnimalService } from 'src/app/shared/services/animalservice/animal.service';
 
 @Component({
   selector: 'app-small-component',
@@ -9,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SmallComponentComponent implements OnInit {
 
-  // animals: Animal[];
-  // getAnimals() {
-  //   this.animals = this.animalService.getAnimals();
-  // }
+  animals: IAnimal[];
+  getAnimals() {
+    this.animals = this.animalService.getAnimals();
+  }
 
-  constructor() { }
+  constructor(private animalService: AnimalService) { }
 
   ngOnInit() {
-    // this.getAnimals();
+    this.getAnimals();
   }
 }

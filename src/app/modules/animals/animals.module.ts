@@ -7,6 +7,15 @@ import { SmallComponentComponent } from './listing/small-component/small-compone
 import { OneSmallComponent } from './listing/small-component/one-small-component/one-small.component';
 import { AnimalFoodComponent } from './listing/animalitem/animal-food/animal-food.component';
 import { AnimalDiseaseComponent } from './listing/animalitem/animal-disease/animal-disease.component';
+import { AnimalThreatenComponent } from './listing/animalitem/animal-threaten/animal-threaten.component';
+import { AnimalPredatorComponent } from './listing/animalitem/animal-predator/animal-predator.component';
+import { RelatedAnimalComponent } from './listing/animalitem/related-animal/related-animal.component';
+import { SmallAnimalPredthreComponent } from './listing/animalitem/small-animal-predthre/small-animal-predthre.component';
+import { AddAnimalComponent } from './listing/add-animal/add-animal.component';
+import { AnimaladdfoodComponent } from './listing/animalitem/animal-add/animaladdfood/animaladdfood.component';
+import { AnimaladddiseaseComponent } from './listing/animalitem/animal-add/animaladddisease/animaladddisease.component';
+import { AnimaladdpredatorComponent } from './listing/animalitem/animal-add/animaladdpredator/animaladdpredator.component';
+import { AnimaladdthreatenComponent } from './listing/animalitem/animal-add/animaladdthreaten/animaladdthreaten.component';
 
 @NgModule({
   imports: [
@@ -19,7 +28,16 @@ import { AnimalDiseaseComponent } from './listing/animalitem/animal-disease/anim
     SmallComponentComponent,
     OneSmallComponent,
     AnimalFoodComponent,
-    AnimalDiseaseComponent
+    AnimalDiseaseComponent,
+    AnimalThreatenComponent,
+    AnimalPredatorComponent,
+    RelatedAnimalComponent,
+    SmallAnimalPredthreComponent,
+    AddAnimalComponent,
+    AnimaladdfoodComponent,
+    AnimaladddiseaseComponent,
+    AnimaladdpredatorComponent,
+    AnimaladdthreatenComponent
   ]
 })
 export class AnimalsModule { }

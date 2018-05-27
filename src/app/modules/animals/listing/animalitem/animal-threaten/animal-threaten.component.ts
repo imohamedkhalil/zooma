@@ -3,12 +3,11 @@ import {IAnimal} from 'src/app/shared/interfaces/IAnimal';
 import { AnimalService } from 'src/app/shared/services/animalservice/animal.service';
 
 @Component({
-  selector: 'app-one-small-component',
-  templateUrl: './one-small.component.html',
-  styleUrls: ['./one-small.component.css']
+  selector: 'app-animal-threaten',
+  templateUrl: './animal-threaten.component.html',
+  styleUrls: ['./animal-threaten.component.css']
 })
-export class OneSmallComponent implements OnInit {
-
+export class AnimalThreatenComponent implements OnInit {
   animals: IAnimal [];
   getAnimals() {
     this.animals = this.animalService.getAnimals();

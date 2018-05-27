@@ -1,0 +1,140 @@
+<!--listing Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document" style="width:60%">
+    <div class="modal-body">
+      <form>
+        <div class="col-sm-12 col-md-offset-1">
+          <div class="featured-box featured-box-primary align-left mt-xlg">
+            <div class="box-content">
+              <h4 class="heading-primary text-uppercase mb-md">Add Animal</h4>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="w1-username">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control input-sm" name="Name" id="w1-username" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="w1-username">Contienent</label>
+                <div class="col-sm-10">
+                  <select data-plugin-selectTwo class="form-control populate" id="dropDownType">
+                    <option value="1">Asia</option>
+                    <option value="2">Africa</option>
+                    <option value="3">Europe</option>
+                    <option value="4">liquids</option>
+                    <option value="5">chewables </option>
+                    <option value="6">powders</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="w1-username">Type</label>
+                <div class="col-sm-5">
+                  <select data-plugin-selectTwo class="form-control populate" id="dropDownType">
+                    <option value="1">Asia</option>
+                    <option value="2">Africa</option>
+                    <option value="3">Europe</option>
+                    <option value="4">liquids</option>
+                    <option value="5">chewables </option>
+                    <option value="6">powders</option>
+                  </select>
+                </div>
+                <div class="col-sm-5">
+
+                  <select data-plugin-selectTwo class="form-control populate" id="dropDownType">
+                    <option value="1">Mamels</option>
+                    <option value="2">Reptile</option>
+                    <option value="3">Bird</option>
+                    <option value="4">liquids</option>
+                    <option value="5">chewables </option>
+                    <option value="6">powders</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="w1-username">LifeSpan</label>
+                <div class="col-sm-5">
+                  <div data-plugin-spinner>
+                    <div class="input-group spinner">
+                      <input type="text" class="spinner-input form-control" value="1" min="0" max="5">
+                      <div class="input-group-btn-vertical spinner-buttons input-group-btn">
+                        <button class="btn btn-default spinner-up" type="button">
+                          <i class="fa fa-angle-up"></i>
+                        </button>
+                        <button class="btn btn-default spinner-down" type="button">
+                          <i class="fa fa-angle-down"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <select data-plugin-selectTwo class="form-control populate" id="dropDownType">
+                    <option value="1">Month</option>
+                    <option value="2">Year</option>
+                  </select>
+                </div>
+              </div>
+              <form id="myForm">
+               <div class="form-group">
+                  <label class="col-sm-2 control-label" for="w1-username">Description</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control populate" rows="20">
+                  </div>
+                </div>
+            <!--    <div class="form-group">
+                  <label class="col-sm-2 control-label" for="w1-username">Upload Image</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control input-sm" id="files" type="file" style="margin:10px;">
+                    <button type="button" id="clear">Clear</button>
+                    <div id="message"> </div>
+                    <output id="result">
+                  </div>
+                </div>-->
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="w1-username">Upload Image</label>
+                  <div action="multiupload.php" method="post" enctype="multipart/form-data">
+                    <div class="col-md-6">
+                      <input type="file" class="form-control" id="images" name="images[]" onchange="preview_images();" multiple />
+                    </div>
+                    <div class="col-md-4">
+                      <input type="submit" class="btn btn-primary" name='submit_image' value="Upload Multiple Image" />
+                    </div>
+                  </div>
+                  <div class="row" id="image_preview"></div>
+                </div>
+               <!-- <div class="form-group">
+                  <label class="col-sm-2 control-label" for="w1-username">upload</label>
+                  <div class="col-sm-10">
+                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                      <div class="input-append">
+                        <div class="uneditable-input">
+                          <i class="fa fa-file fileupload-exists"></i>
+                          <span class="fileupload-preview"></span>
+                        </div>
+                        <span class="btn btn-default btn-file">
+                          <span class="fileupload-exists">Change</span>
+                          <span class="fileupload-new">Select Image</span>
+                          <input type="file">
+                        </span>
+                        <a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>-->
+              </form>
+              <div class="row">
+                <div class="col-md-9">
+                  <span class="remember-box checkbox"></span>
+                </div>
+                <div class="col-md-3 ">
+                  <input type="button" value="Cancel" class="btn btn-default pull-right mb-xl" data-dismiss="modal">
+                  <input type="submit" value="Add" class="btn btn-primary pull-left mb-xl" data-loading-text="Loading...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

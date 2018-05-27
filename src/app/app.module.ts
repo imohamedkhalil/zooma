@@ -15,7 +15,6 @@ import { MedicineDetailComponent } from './modules/medicine/details/medicine-det
 import { FilterComponent } from './modules/medicine/listing/filter/filter.component';
 import { EditMedicineComponent } from './modules/medicine/edit-medicine/edit-medicine.component';
 
-
 import { HomepageviewComponent } from './modules/homepage/homepageview/homepageview.component';
 import { ZoolistingComponent } from 'src/app/modules/zoos/zoolisting/zoolisting.component';
 import { ZooitemComponent } from 'src/app/modules/zoos/zoolisting/zooitem/zooitem.component';
@@ -26,8 +25,14 @@ import { ListingComponent } from 'src/app/modules/animals/listing/listing.compon
 import { AnimalitemComponent } from 'src/app/modules/animals/listing/animalitem/animalitem.component';
 import { SmallComponentComponent } from 'src/app/modules/animals/listing/small-component/small-component.component';
 import { FilterComponentComponent } from 'src/app/modules/animals/listing/filter-component/filter-component.component';
-import { AnimalService } from 'src/app/modules/animals/animal.service';
+import { AnimalService } from 'src/app/shared/services/animalservice/animal.service';
 import { OneSmallComponent } from 'src/app/modules/animals/listing/small-component/one-small-component/one-small.component';
+import { AnimalFoodComponent } from 'src/app/modules/animals/listing/animalitem/animal-food/animal-food.component';
+import { AnimalDiseaseComponent } from 'src/app/modules/animals/listing/animalitem/animal-disease/animal-disease.component';
+import { AnimalThreatenComponent } from 'src/app/modules/animals/listing/animalitem/animal-threaten/animal-threaten.component';
+import { AnimalPredatorComponent } from 'src/app/modules/animals/listing/animalitem/animal-predator/animal-predator.component';
+import { RelatedAnimalComponent } from 'src/app/modules/animals/listing/animalitem/related-animal/related-animal.component';
+import { SmallAnimalPredthreComponent } from 'src/app/modules/animals/listing/animalitem/small-animal-predthre/small-animal-predthre.component';
 
 import { ZooComponent } from './modules/homepage/homepageview/zoos/zoo.component';
 import { ShowhomepageComponent } from './modules/homepage/homepageview/shows/showhomepage.component';
@@ -35,6 +40,13 @@ import { NewshomepageComponent } from './modules/homepage/homepageview/news/news
 import { AnimalhomepageComponent } from './modules/homepage/homepageview/animalcategouries/animalhomepage.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+
+import { AddAnimalComponent } from 'src/app/modules/animals/listing/add-animal/add-animal.component';
+import { AnimaladdfoodComponent } from 'src/app/modules/animals/listing/animalitem/animal-add/animaladdfood/animaladdfood.component';
+import { AnimaladddiseaseComponent } from 'src/app/modules/animals/listing/animalitem/animal-add/animaladddisease/animaladddisease.component';
+import { AnimaladdpredatorComponent } from 'src/app/modules/animals/listing/animalitem/animal-add/animaladdpredator/animaladdpredator.component';
+import { AnimaladdthreatenComponent } from 'src/app/modules/animals/listing/animalitem/animal-add/animaladdthreaten/animaladdthreaten.component';
+
 import { ShowlistingComponent } from './modules/shows/showslist/showlisting.component';
 import { ShowitemComponent } from './modules/shows/showslist/showitem/showitem.component';
 import { ShowdetailsComponent } from './modules/shows/showdetails/showdetails.component';
@@ -62,6 +74,12 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
     MedicineDetailComponent,
     FilterComponent,
     AnimalitemComponent,
+    AnimalFoodComponent,
+    AnimalDiseaseComponent,
+    AnimalThreatenComponent,
+    AnimalPredatorComponent,
+    RelatedAnimalComponent,
+    SmallAnimalPredthreComponent,
     SmallComponentComponent,
     FilterComponentComponent,
     OneSmallComponent,
@@ -71,6 +89,11 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
     AnimalhomepageComponent,
     HeaderComponent,
     FooterComponent,
+    AddAnimalComponent,
+    AnimaladdfoodComponent,
+    AnimaladddiseaseComponent,
+    AnimaladdpredatorComponent,
+    AnimaladdthreatenComponent
     ShowlistingComponent,
     ShowitemComponent,
     ShowdetailsComponent,
@@ -80,7 +103,8 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
     ZoosliderComponent,
     AddZooFormComponent,
     AddMedicineComponent,
-    EditMedicineComponent
+    EditMedicineComponent,
+    AddZooFormComponent
   ],
   imports: [
     BrowserModule,
@@ -91,16 +115,19 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
       { path: 'medicine/edit/:id', component:EditMedicineComponent },
       { path: 'medicine/delete/:id', redirectTo: 'medicine', pathMatch: 'full' },
       { path: 'listing', component: ListingComponent },
+      {path: 'animals' , component: ListingComponent},
       // {path: 'animals', component: SmallComponentComponent},
-      { path: 'details/:id', component: AnimalitemComponent },
+      {path: 'animals/details/:id', component: AnimalitemComponent},
+      {path: 'add', component: AddAnimalComponent},
+      {path: '', component: HomepageviewComponent},
       { path: 'zoo', component: ZoolistingComponent },
       { path: 'zoo/details/:id', component: ZoodetailsComponent },
       { path: 'show', component: ShowlistingComponent },
       { path: 'showdetails', component: ShowdetailsComponent },
       { path: 'addshow', component: ShowaddComponent },
       { path: '', component: HomepageviewComponent }
-    ]),
-  ],
+  ])
+],
   providers: [
     AnimalService,
     ZooserviceService, 

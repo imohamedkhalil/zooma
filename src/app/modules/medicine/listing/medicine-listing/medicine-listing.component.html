@@ -14,7 +14,7 @@
                 <a [routerLink]="['../medicine/edit', medicine.id]">
                   <i class="fa fa-pencil" style="text-align: right;margin-left:10px;"></i>
                 </a>
-                <a [routerLink]="['../medicine/delete', medicine.id]" onclick="deleteMedicine()">
+                <a (click)="deleteMedicine(medicine.id)">
                   <i class="fa fa-trash" style="text-align: center;margin-left:10px;"></i>
                 </a>
               </div>

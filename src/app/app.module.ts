@@ -3,16 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 
 import './modules/homepage/homepage.module.ts';
 
 import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing/medicine-listing.component';
 import { MedicineService } from './shared/services/medicineservice/medicine.service';
+import { AddMedicineComponent } from './modules/medicine/add-medicine/add-medicine.component';
 import { MedicineDetailComponent } from './modules/medicine/details/medicine-detail/medicine-detail.component';
 import { FilterComponent } from './modules/medicine/listing/filter/filter.component';
-
+import { EditMedicineComponent } from './modules/medicine/edit-medicine/edit-medicine.component';
 
 import { HomepageviewComponent } from './modules/homepage/homepageview/homepageview.component';
 import { ZoolistingComponent } from 'src/app/modules/zoos/zoolisting/zoolisting.component';
@@ -39,22 +40,20 @@ import { NewshomepageComponent } from './modules/homepage/homepageview/news/news
 import { AnimalhomepageComponent } from './modules/homepage/homepageview/animalcategouries/animalhomepage.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-<<<<<<< HEAD
+
 import { AddAnimalComponent } from 'src/app/modules/animals/listing/add-animal/add-animal.component';
 import { AnimaladdfoodComponent } from 'src/app/modules/animals/listing/animalitem/animal-add/animaladdfood/animaladdfood.component';
 import { AnimaladddiseaseComponent } from 'src/app/modules/animals/listing/animalitem/animal-add/animaladddisease/animaladddisease.component';
 import { AnimaladdpredatorComponent } from 'src/app/modules/animals/listing/animalitem/animal-add/animaladdpredator/animaladdpredator.component';
 import { AnimaladdthreatenComponent } from 'src/app/modules/animals/listing/animalitem/animal-add/animaladdthreaten/animaladdthreaten.component';
-=======
+
 import { ShowlistingComponent } from './modules/shows/showslist/showlisting.component';
 import { ShowitemComponent } from './modules/shows/showslist/showitem/showitem.component';
 import { ShowdetailsComponent } from './modules/shows/showdetails/showdetails.component';
 import { ShowService } from 'src/app/shared/services/showservice/show.service';
 import { ShowaddComponent } from './modules/shows/showadd/showadd.component';
->>>>>>> 05747bd9abf54afbaa4bd2ddadddee22c5a50703
 
 import { ZooserviceService } from 'src/app/shared/services/zooservice/zooservice.service';
-import { ZoosComponent } from './src/app/modules/zoos/zoos.component';
 import { ZoodetailsComponent } from 'src/app/modules/zoos/zoodetails/zoodetails.component';
 import { ZooheaderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspage/zooheader/zooheader.component';
 import { ZoosliderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspage/zooslider/zooslider.component';
@@ -90,13 +89,11 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
     AnimalhomepageComponent,
     HeaderComponent,
     FooterComponent,
-<<<<<<< HEAD
     AddAnimalComponent,
     AnimaladdfoodComponent,
     AnimaladddiseaseComponent,
     AnimaladdpredatorComponent,
     AnimaladdthreatenComponent
-=======
     ShowlistingComponent,
     ShowitemComponent,
     ShowdetailsComponent,
@@ -104,38 +101,39 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
     ZoodetailsComponent,
     ZooheaderComponent,
     ZoosliderComponent,
+    AddZooFormComponent,
+    AddMedicineComponent,
+    EditMedicineComponent,
     AddZooFormComponent
->>>>>>> 05747bd9abf54afbaa4bd2ddadddee22c5a50703
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-<<<<<<< HEAD
+      { path: 'medicine', component: MedicineListingComponent },
+      { path: 'medicine/details/:id', component: MedicineDetailComponent },
+      { path: 'medicine/edit/:id', component:EditMedicineComponent },
+      { path: 'medicine/delete/:id', redirectTo: 'medicine', pathMatch: 'full' },
+      { path: 'listing', component: ListingComponent },
       {path: 'animals' , component: ListingComponent},
       // {path: 'animals', component: SmallComponentComponent},
       {path: 'animals/details/:id', component: AnimalitemComponent},
       {path: 'add', component: AddAnimalComponent},
-      {path: '', component: HomepageviewComponent}
+      {path: '', component: HomepageviewComponent},
+      { path: 'zoo', component: ZoolistingComponent },
+      { path: 'zoo/details/:id', component: ZoodetailsComponent },
+      { path: 'show', component: ShowlistingComponent },
+      { path: 'showdetails', component: ShowdetailsComponent },
+      { path: 'addshow', component: ShowaddComponent },
+      { path: '', component: HomepageviewComponent }
   ])
 ],
-  providers: [AnimalService],
-=======
-      {path: 'medicine', component: MedicineListingComponent},
-      {path: 'medicine/details/:id' , component: MedicineDetailComponent},
-      {path: 'listing' , component: ListingComponent},
-      // {path: 'animals', component: SmallComponentComponent},
-      {path: 'details/:id', component: AnimalitemComponent},
-      {path: 'zoo', component: ZoolistingComponent},
-      {path: 'zoo/details/:id', component: ZoodetailsComponent },
-      {path:'show',component:ShowlistingComponent},
-      {path:'showdetails',component:ShowdetailsComponent},
-      {path:'addshow',component:ShowaddComponent},      
-      {path:'',component:HomepageviewComponent}  
-  ]),
+  providers: [
+    AnimalService,
+    ZooserviceService, 
+    MedicineService, 
+    ShowService
   ],
-  providers: [AnimalService, ZooserviceService, MedicineService, ShowService],
->>>>>>> 05747bd9abf54afbaa4bd2ddadddee22c5a50703
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -93,7 +93,7 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
     AnimaladdfoodComponent,
     AnimaladddiseaseComponent,
     AnimaladdpredatorComponent,
-    AnimaladdthreatenComponent
+    AnimaladdthreatenComponent,
     ShowlistingComponent,
     ShowitemComponent,
     ShowdetailsComponent,

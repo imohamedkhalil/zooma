@@ -1,5 +1,7 @@
 import { Component, OnInit ,Input} from '@angular/core';
 import { IZooSmallComponent } from 'src/app/shared/interfaces/zoointerface/zoointerface';
+import { ZooserviceService } from 'src/app/shared/services/zooservice/zooservice.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-zooitem',
@@ -8,9 +10,18 @@ import { IZooSmallComponent } from 'src/app/shared/interfaces/zoointerface/zooin
 })
 export class ZooitemComponent implements OnInit {
 
-  constructor() { }
-@Input() zoo:IZooSmallComponent;
+  zoos:IZooSmallComponent[]=[];
+  @Input() zoo: IZooSmallComponent;
+
+  getzoo(){
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.zoo = this.zooservice.getzoo(id);
+  }
+  
+  constructor(private zooservice:ZooserviceService, private route: ActivatedRoute) { }
+
   ngOnInit() {
+    this.zoos=this.zooservice.getZooSmallComponent();
   }
 
 }

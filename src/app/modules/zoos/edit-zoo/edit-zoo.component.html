@@ -1,0 +1,44 @@
+<div id="form-container" class="container">
+  <form #f="ngForm" (ngSubmit)="saveZoo(f)">
+      <div class="col-sm-12 col-md-offset-1">
+        <div class="featured-box featured-box-primary align-left mt-xlg">
+          <div class="box-content">
+            <h4 class="heading-primary text-uppercase mb-md">Edit Zoo</h4>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="name">Zoo Name</label>
+              <div class="col-sm-9">
+                <input type="text" value="zoo.name" class="form-control input-sm" name="name" [(ngModel)]="zoo.name" id="name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="Address">Address</label>
+              <div class="col-sm-9">
+                <input type="text" value="zoo.address" class="form-control input-sm" name="address" [(ngModel)]="zoo.address" id="address">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="Phone">Phone</label>
+              <div class="col-sm-9">
+                <input type="text" value="zoo.phone" class="form-control input-sm" name="Phone" [(ngModel)]="zoo.phone"
+                  id="Phone">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="Email">Email</label>
+              <div class="col-sm-9">
+                <input type="text" value="zoo.email" class="form-control input-sm" name="Email" [(ngModel)]="zoo.email"
+                  id="Email">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10"></div>
+              <div class="col-md-2">
+                <input type="button" value="Cancel" class="btn btn-default pull-right mb-xl" data-dismiss="modal">
+                <input id="save-btn" type="submit" value="Save" class="btn btn-primary pull-left mb-xl" data-loading-text="Loading...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>

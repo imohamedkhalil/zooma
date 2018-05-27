@@ -114,4 +114,8 @@ export class ZooserviceService {
   getZooSmallComponent(): IZooSmallComponent[] {
     return this.zoos;
   }
+
+  getzoo(id){
+    return this.zoos.find(zoo => zoo.id == id);
+  }
 }

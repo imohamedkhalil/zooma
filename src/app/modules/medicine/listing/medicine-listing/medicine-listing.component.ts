@@ -18,8 +18,8 @@ export class MedicineListingComponent implements OnInit {
     this.medicines = this.medicineService.getMedicines();
   }
 
-  public deleteMedicine(){
-    const id = +this.route.snapshot.paramMap.get('id');
+  public deleteMedicine(id){
+    //const id = +this.route.snapshot.paramMap.get('id');
     var medicine = this.medicines.map(function(item) { return item.id; }).indexOf(id);
     this.medicines.splice(medicine, 1);
   }
@@ -31,5 +31,5 @@ export class MedicineListingComponent implements OnInit {
 
   ngOnInit() {
     this.getMedicines();
-  }
+  } 
 }

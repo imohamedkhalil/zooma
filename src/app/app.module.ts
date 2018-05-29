@@ -60,7 +60,6 @@ import { ZoosliderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspa
 import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-form/add-zoo-form.component';
 import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -116,19 +115,18 @@ import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.compone
       { path: 'medicine/edit/:id', component:EditMedicineComponent },
       { path: 'listing', component: ListingComponent },
       {path: 'animals' , component: ListingComponent},
-      // {path: 'animals', component: SmallComponentComponent},
       {path: 'animals/details/:id', component: AnimalitemComponent},
       {path: 'add', component: AddAnimalComponent},
-      { path: 'zoo', component: ZoolistingComponent },
-      { path: 'zoo/details/:id', component: ZoodetailsComponent },
+      {path: 'zoo', component: ZoolistingComponent},
+      {path: 'zoo/details/:id', component: ZoodetailsComponent },
       { path: 'zoo/edit/:id', component:EditZooComponent },
-      { path: 'show', component: ShowlistingComponent },
-      { path: 'showdetails', component: ShowdetailsComponent },
-      { path: 'addshow', component: ShowaddComponent },
-      { path: '', component: HomepageviewComponent }
+      {path: 'show', component: ShowlistingComponent},
+      {path: 'showdetails', component: ShowdetailsComponent},
+      {path: 'addshow', component: ShowaddComponent},
+      {path: '', component: HomepageviewComponent}
   ])
 ],
-  providers: [
+   providers: [
     AnimalService,
     ZooserviceService, 
     MedicineService, 

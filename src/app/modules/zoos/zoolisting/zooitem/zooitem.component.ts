@@ -1,3 +1,4 @@
+
 import { Component, OnInit, Input } from '@angular/core';
 import { IZooSmallComponent } from 'src/app/shared/interfaces/zoointerface/zoointerface';
 import { ZooserviceService } from 'src/app/shared/services/zooservice/zooservice.service';
@@ -10,8 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ZooitemComponent implements OnInit {
 
-  zoos: IZooSmallComponent[] = [];
   @Input() zoo: IZooSmallComponent;
+  zoos: IZooSmallComponent[] = [];
 
   getzoo() {
     const id = +this.route.snapshot.paramMap.get('id');
@@ -20,6 +21,7 @@ export class ZooitemComponent implements OnInit {
   deleteZoo(id) {
     this.zooservice.deletezoo(id);
   }
+  
   constructor(private zooservice: ZooserviceService, private route: ActivatedRoute) { }
 
   ngOnInit() {

@@ -10,4 +10,9 @@ export class MedicineService{
     public getMedicine(id: number){
         return MEDICINES.find(medicine => medicine.id == id);
     }  
+
+    public deleteZoo(id){
+        var medicine = MEDICINES.map(function(item) { return item.id; }).indexOf(id);
+        MEDICINES.splice(medicine, 1);
+    }
 }

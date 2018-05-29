@@ -11,12 +11,12 @@ import { Router } from '@angular/router';
 })
 export class AddZooFormComponent implements OnInit {
 
-  zooList: IZooSmallComponent[] = [];
   addZoo(form){
     this.zooservice.addZoo(form);
   }
   
   constructor(private zooservice: ZooserviceService, private router: Router) { }
+
   ngOnInit() {
   }
 

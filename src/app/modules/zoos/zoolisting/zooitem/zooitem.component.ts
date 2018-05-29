@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
 import { IZooSmallComponent } from 'src/app/shared/interfaces/zoointerface/zoointerface';
 
 @Component({
@@ -9,7 +9,7 @@ import { IZooSmallComponent } from 'src/app/shared/interfaces/zoointerface/zooin
 export class ZooitemComponent implements OnInit {
 
   constructor() { }
-@Input() zoo:IZooSmallComponent;
+@Input() zoo: IZooSmallComponent;
   ngOnInit() {
   }
 

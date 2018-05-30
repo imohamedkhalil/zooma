@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component';
 import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
 import {FormsModule} from '@angular/forms';
@@ -40,11 +40,11 @@ import { ShowService } from 'src/app/shared/services/showservice/show.service';
 import { ShowaddComponent } from './modules/shows/showadd/showadd.component';
 
 import { ZooserviceService } from 'src/app/shared/services/zooservice/zooservice.service';
-import { ZoosComponent } from './src/app/modules/zoos/zoos.component';
 import { ZoodetailsComponent } from 'src/app/modules/zoos/zoodetails/zoodetails.component';
 import { ZooheaderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspage/zooheader/zooheader.component';
 import { ZoosliderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspage/zooslider/zooslider.component';
 import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-form/add-zoo-form.component';
+import { EditshowComponent } from './modules/shows/editshow/editshow.component';
 
 
 @NgModule({
@@ -77,11 +77,13 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
     ZoodetailsComponent,
     ZooheaderComponent,
     ZoosliderComponent,
-    AddZooFormComponent
+    AddZooFormComponent,
+    EditshowComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       {path: 'medicine', component: MedicineListingComponent},
       {path: 'medicine/details/:id' , component: MedicineDetailComponent},
@@ -92,7 +94,7 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
       {path: 'zoo/details/:id', component: ZoodetailsComponent },
       {path:'show',component:ShowlistingComponent},
       {path:'showdetails',component:ShowdetailsComponent},
-      {path:'addshow',component:ShowaddComponent},      
+      // {path:'addshow',component:ShowaddComponent},      
       {path:'',component:HomepageviewComponent}  
   ]),
   ],

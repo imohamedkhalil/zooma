@@ -6,6 +6,7 @@ import { IShow } from "../../interfaces/IShowHomePage";
 export class ShowService {
   shows: IShow[] = [
     {
+      id:1,
       imgUrl: "../../../../assets/img/3.jpg",
       time: "5:00 pm",
       location: "Cairo-Egypt",
@@ -13,29 +14,32 @@ export class ShowService {
       description: "The biggest zoo in egypt has alot of animals like lions "
     },
     {
+      id:2,
       imgUrl: "../../../../assets/img/3.jpg",
-      time: "5:00 pm",
+      time: "6:00 pm",
       location: "Egypt",
       title: "Africano Zoo",
       description: "The biggest zoo in egypt has alot of animals like lions"
     },
     {
+      id:3,
       imgUrl: "../../../../assets/img/3.jpg",
-      time: "5:00 pm",
+      time: "7:00 pm",
       location: "Cairo-Egypt",
-      title: "Africano Zoo",
+      title: "Zozo Zoo",
       description: "The biggest zoo in egypt has alot of animals like lions"
     },{
+      id:4,
       imgUrl: "../../../../assets/img/3.jpg",
-      time: "5:00 pm",
+      time: "8:00 pm",
       location: "Cairo-Egypt",
-      title: "Africano Zoo",
+      title: "TOTo ZOo",
       description: "The biggest zoo in egypt has alot of animals like lions"
     },
   ];
   constructor() { }
 
-  public getShows(): IShow[] {
+  public getShows() {
     return this.shows;
   }
 }

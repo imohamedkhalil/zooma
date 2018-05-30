@@ -1,11 +1,10 @@
 <div role="main" class="main">
 
-  <section class="section section-no-border custom-section-padding-4 m-none" style="background: url('../../../assets/img/13.jpg'); background-size: cover;">
-    <div class="container">
+  <section  class="section section-no-border custom-section-padding-4 m-none" style="background: url('../../../assets/img/13.jpg'); background-size: cover;">
+    <div class="container" >
       <div class="row center">
         <div class="col-md-12" style="margin-top: 45px">
-          <h1 class="text-color-light custom-secondary-font font-weight-bold mb-xs 
-                  appear-animation" data-appear-animation="bounceInRight" data-appear-animation-delay="1">Events</h1>
+          <h1 class="text-color-light custom-secondary-font font-weight-bold mb-xs" [@title]>Events</h1>
         </div>
       </div>
     </div>
@@ -13,7 +12,9 @@
   </section>
   
   <section class="section  section-no-border m-none">
-    <a routerLink='addshow'  ><i class="fa fa-plus-circle " style="text-align: right;margin-left:10px; width:93%; font-size:25px;"></i></a>
+    <a href="#" data-target="#x" data-toggle="modal">
+      <i class="fa fa-plus-circle " style="text-align: right;margin-left:10px; width:93%; font-size:25px;">
+        </i></a>
       
     <div class="container">
       <div class="row">
@@ -55,7 +56,7 @@
         <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2">
           <h2 class="text-color-dark font-weight-bold">Upcoming Event</h2>
           
-          <app-showitem  *ngFor="let show of shows" [show]="show"></app-showitem>
+          <app-showitem (id)="getId($event)" *ngFor="let show of shows" [show]="show"></app-showitem>
   
           
           <hr class="solid">
@@ -77,7 +78,7 @@
       </div>
       <div class="row">
      
-        <app-showitem ngClass="col-xs-6" *ngFor="let show of shows"[show]="show"></app-showitem>
+        <app-showitem (id)="getId($event)" ngClass="col-xs-6" *ngFor="let show of shows"[show]="show" ></app-showitem>
       
       
       </div>
@@ -85,3 +86,5 @@
     </div>
   </section>
 </div>
+<app-showadd></app-showadd>
+<app-editshow [show]="show"></app-editshow>

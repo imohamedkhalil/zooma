@@ -1,4 +1,5 @@
 export interface IShow{
+    id:number;
     imgUrl ?:string;
     time? :any;
     location? :string;

@@ -1,0 +1,37 @@
+<div id="form-container" class="container">
+<form #f="ngForm" (ngSubmit)="saveMedicine(f)">
+    <div class="col-sm-12 col-md-offset-1">
+      <div class="featured-box featured-box-primary align-left mt-xlg">
+        <div class="box-content">
+          <h4 class="heading-primary text-uppercase mb-md">Edit Medicine</h4>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="name">Medicine Name</label>
+            <div class="col-sm-9">
+              <input type="text" value="medicine.name" class="form-control input-sm" name="name" [(ngModel)]="medicine.name" id="name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="type">Type</label>
+            <div class="col-sm-9">
+              <input type="text" value="medicine.type" class="form-control input-sm" name="type" [(ngModel)]="medicine.type" id="type">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="smalldescription">Small Description</label>
+            <div class="col-sm-9">
+              <input type="text" value="medicine.smalldescription" class="form-control input-sm" name="smalldescription" [(ngModel)]="medicine.smalldescription"
+                id="smalldescription">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-2">
+              <input type="button" value="Cancel" class="btn btn-default pull-right mb-xl" data-dismiss="modal">
+              <input id="save-btn" type="submit" value="Save" class="btn btn-primary pull-left mb-xl" data-loading-text="Loading...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

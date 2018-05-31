@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {IAnimal} from './../../../IAnimal';
-import { AnimalService } from 'src/app/modules/animals/animal.service';
+import {IAnimal} from 'src/app/shared/interfaces/IAnimal';
+import { AnimalService } from 'src/app/shared/services/animalservice/animal.service';
 
 @Component({
   selector: 'app-one-small-component',

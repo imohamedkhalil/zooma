@@ -11,17 +11,11 @@ import { Router } from '@angular/router';
 })
 export class AddZooFormComponent implements OnInit {
 
-  zooList:IZooSmallComponent[]=[];
-   addZoo(form){
-     var zoo : IZooSmallComponent;
-     zoo = form.value;
-     debugger;
-     //this.zooList.push(zoo);
-      this.zooservice.zoos.push(zoo);
-     debugger;
-    // this.router.navigate(['zoo']);
-   }
-  constructor(private zooservice: ZooserviceService,private router:Router) { }
+  addZoo(form){
+    this.zooservice.addZoo(form);
+  }
+  
+  constructor(private zooservice: ZooserviceService, private router: Router) { }
 
   ngOnInit() {
   }

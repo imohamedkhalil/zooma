@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { IZooSmallComponent } from '../../interfaces/zoointerface/zoointerface'
-
 @Injectable({
   providedIn: 'root'
 })
@@ -113,5 +112,19 @@ export class ZooserviceService {
 
   getZooSmallComponent(): IZooSmallComponent[] {
     return this.zoos;
+  }
+
+  getzoo(id){
+    return this.zoos.find(zoo => zoo.id == id);
+  }
+
+ deletezoo(id){
+    var zoo = this.zoos.map(function(item) { return item.id; }).indexOf(id);
+    this.zoos.splice(zoo, 1);
+  }
+  addZoo(form) {
+    var zoo: IZooSmallComponent;
+    zoo = form.value;
+    this.zoos.push(zoo);
   }
 }

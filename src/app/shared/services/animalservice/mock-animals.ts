@@ -1,4 +1,4 @@
-import {IAnimal} from './IAnimal';
+import {IAnimal} from './../../interfaces/IAnimal';
 
 export const ANIMALS: IAnimal[] = [
     {id: 1, name: 'Cat', type: 'mamel', image : '../assets/slides/cat.jpg'},

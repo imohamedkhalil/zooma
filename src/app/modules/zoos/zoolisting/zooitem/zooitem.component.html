@@ -14,10 +14,10 @@
       </div>
       <div style="text-align: right;">
 
-        <a href="#">
+        <a [routerLink]="['../zoo/edit', zoo.id]">
           <i class="fa fa-pencil" style="text-align: right;margin-left:10px;"></i>
         </a>
-        <a href="#">
+        <a (click)="deleteZoo(zoo.id)">
           <i class="fa fa-trash" style="text-align: center;margin-left:10px;"></i>
         </a>
 

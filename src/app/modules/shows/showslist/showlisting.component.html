@@ -56,7 +56,7 @@
         <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2">
           <h2 class="text-color-dark font-weight-bold">Upcoming Event</h2>
           
-          <app-showitem (id)="getId($event)" *ngFor="let show of shows" [show]="show"></app-showitem>
+          <app-showitem (id)="getId($event)" *ngFor="let x of topShows" [show]="x"></app-showitem>
   
           
           <hr class="solid">
@@ -78,7 +78,7 @@
       </div>
       <div class="row">
      
-        <app-showitem (id)="getId($event)" ngClass="col-xs-6" *ngFor="let show of shows"[show]="show" ></app-showitem>
+        <app-showitem (id)="getId($event)" ngClass="col-xs-6" *ngFor="let y of shows" [show]="y" ></app-showitem>
       
       
       </div>

@@ -25,17 +25,21 @@ import { animation } from '@angular/animations/src/animation_metadata';
 export class ShowlistingComponent implements OnInit, AfterViewInit {
   // state = 'none';
   shows: IShow[] = this.ShowService.shows;
+  topShows:IShow[]=this.ShowService.topshows;
   show:IShow;
 
   getShows(){
     this.shows = this.ShowService.getShows();
+  }
+  getTopShows(){
+    this.shows = this.ShowService.getTopShows();
   }
 
   constructor(private ShowService: ShowService) { }
   
   ngOnInit() {
     this.getShows();
-    this.shows = this.shows.slice(1);
+    this.getTopShows();
   }
 
   ngAfterViewInit() {
@@ -44,6 +48,9 @@ export class ShowlistingComponent implements OnInit, AfterViewInit {
  
   getId(id:number){
     this.show=this.ShowService.shows.find(a=>a.id == id);
+    if(this.show == undefined){
+      this.show=this.ShowService.topshows.find(a=>a.id == id);
+    }
  }
 
 }

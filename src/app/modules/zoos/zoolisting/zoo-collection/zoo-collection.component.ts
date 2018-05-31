@@ -25,5 +25,8 @@ export class ZooCollectionComponent implements OnInit {
   ngOnInit() {
     this.zoos=this.zooservice.getZooSmallComponent();
   }
-
+ edit(id){
+  this.zoo= this.zooservice.zoos.find(a=>a.id==id);
+  console.log(this.zoo);
+ }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input , EventEmitter ,Output} from '@angular/core';
 import { IZooSmallComponent } from 'src/app/shared/interfaces/zoointerface/zoointerface';
 import { ZooserviceService } from 'src/app/shared/services/zooservice/zooservice.service';
 import { ActivatedRoute } from '@angular/router';
@@ -12,6 +12,7 @@ export class ZooitemComponent implements OnInit {
 
   zoos: IZooSmallComponent[] = [];
   @Input() zoo: IZooSmallComponent;
+  @Output() id = new EventEmitter <number>();
 
   getzoo() {
     const id = +this.route.snapshot.paramMap.get('id');
@@ -24,6 +25,10 @@ export class ZooitemComponent implements OnInit {
 
   ngOnInit() {
     this.zoos = this.zooservice.getZooSmallComponent();
+  }
+
+  editZoo(id){
+   this.id.emit(id)
   }
 
 }

@@ -32,5 +32,8 @@ export class EditZooComponent implements OnInit {
   ngOnInit() {
     this.getzoo();
   }
-
+  editZoo(form){
+    var zoo: IZooSmallComponent;
+    zoo = form.value;
+  }
 }

@@ -20,7 +20,6 @@
                         <a href="#" data-target="#exampleModal" data-toggle="modal">
                             <i class="fa fa-plus-square" style="text-align: right; margin-left:10px;"></i>
                         </a>
-                       
                         <a href="#">
                             <i class="fa fa-trash" style="text-align: center;margin-left:10px;"></i>
                         </a>
@@ -30,6 +29,7 @@
         </div>
     </div>
 </div>
-<app-zooitem class="col-md-6 col-sm-6 col-xs-12" *ngFor="let x of zoos" [zoo]="x">
+<app-zooitem class="col-md-6 col-sm-6 col-xs-12" *ngFor="let x of zoos" [zoo]="x" (id)="edit($event)">
 </app-zooitem>
 <app-add-zoo-form></app-add-zoo-form>
+<app-edit-zoo></app-edit-zoo>

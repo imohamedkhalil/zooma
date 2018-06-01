@@ -19,7 +19,7 @@ export class MedicineListingComponent implements OnInit {
   }
 
   public deleteMedicine(id){
-    this.medicineService.deleteZoo(id);
+    this.medicineService.deleteMedicine(id);
   }
 
   constructor(

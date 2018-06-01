@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component';
 import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -116,24 +116,24 @@ import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.compone
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },
-      { path: 'medicine/edit/:id', component:EditMedicineComponent },
+      // { path: 'medicine/edit/:id', component: EditMedicineComponent },
       { path: 'listing', component: ListingComponent },
-      {path: 'animals' , component: ListingComponent},
-      {path: 'animals/details/:id', component: AnimalitemComponent},
-      {path: 'add', component: AddAnimalComponent},
-      {path: 'zoo', component: ZoolistingComponent},
-      {path: 'zoo/details/:id', component: ZoodetailsComponent },
-      { path: 'zoo/edit/:id', component:EditZooComponent },
-      {path:'show',component:ShowlistingComponent},
-      {path:'showdetails',component:ShowdetailsComponent},
-      {path:'addshow',component:ShowaddComponent},      
-      {path:'',component:HomepageviewComponent}  
-  ])
-],
-   providers: [
+      { path: 'animals', component: ListingComponent },
+      { path: 'animals/details/:id', component: AnimalitemComponent },
+      { path: 'add', component: AddAnimalComponent },
+      { path: 'zoo', component: ZoolistingComponent },
+      { path: 'zoo/details/:id', component: ZoodetailsComponent },
+      { path: 'zoo/edit/:id', component: EditZooComponent },
+      { path: 'show', component: ShowlistingComponent },
+      { path: 'showdetails', component: ShowdetailsComponent },
+      { path: 'addshow', component: ShowaddComponent },
+      { path: '', component: HomepageviewComponent }
+    ])
+  ],
+  providers: [
     AnimalService,
-    ZooserviceService, 
-    MedicineService, 
+    ZooserviceService,
+    MedicineService,
     ShowService
   ],
   bootstrap: [AppComponent]

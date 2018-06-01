@@ -1,37 +1,47 @@
-<div id="form-container" class="container">
-<form #f="ngForm" (ngSubmit)="saveMedicine(f)">
-    <div class="col-sm-12 col-md-offset-1">
-      <div class="featured-box featured-box-primary align-left mt-xlg">
-        <div class="box-content">
-          <h4 class="heading-primary text-uppercase mb-md">Edit Medicine</h4>
-          <div class="form-group">
-            <label class="col-sm-3 control-label" for="name">Medicine Name</label>
-            <div class="col-sm-9">
-              <input type="text" value="medicine.name" class="form-control input-sm" name="name" [(ngModel)]="medicine.name" id="name">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label" for="type">Type</label>
-            <div class="col-sm-9">
-              <input type="text" value="medicine.type" class="form-control input-sm" name="type" [(ngModel)]="medicine.type" id="type">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-3 control-label" for="smalldescription">Small Description</label>
-            <div class="col-sm-9">
-              <input type="text" value="medicine.smalldescription" class="form-control input-sm" name="smalldescription" [(ngModel)]="medicine.smalldescription"
-                id="smalldescription">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-10"></div>
-            <div class="col-md-2">
-              <input type="button" value="Cancel" class="btn btn-default pull-right mb-xl" data-dismiss="modal">
-              <input id="save-btn" type="submit" value="Save" class="btn btn-primary pull-left mb-xl" data-loading-text="Loading...">
+<a data-target="#editMedicine" data-toggle="modal">
+  <i class="fa fa-pencil" style="text-align: right; margin-left:10px;"></i>
+</a>
+
+<div class="modal fade" id="editMedicine" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document" style="width:60%">
+    <div class="modal-body">
+      <form #f="ngForm" (ngSubmit)="saveMedicine(f)">
+        <div class="col-sm-12 col-md-offset-1">
+          <div class="featured-box featured-box-primary align-left mt-xlg">
+            <div class="box-content">
+              <h4 class="heading-primary text-uppercase mb-md">Edit Medicine</h4>
+              <div class="form-group">
+                <label class="col-sm-3 control-label" for="name">Medicine Name</label>
+                <div class="col-sm-9">
+                  <input type="text" value="medicine.name" class="form-control input-sm" name="name" [(ngModel)]="medicine.name" id="name"
+                    required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label" for="type">Type</label>
+                <div class="col-sm-9">
+                  <input type="text" value="medicine.type" class="form-control input-sm" name="type" [(ngModel)]="medicine.type" id="type"
+                    required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label" for="smalldescription">Small Description</label>
+                <div class="col-sm-9">
+                  <input type="text" value="medicine.smalldescription" class="form-control input-sm" name="smalldescription" [(ngModel)]="medicine.smalldescription"
+                    id="smalldescription" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-10"></div>
+                <div class="col-md-2">
+                  <input type="button" value="Cancel" class="btn btn-default pull-right mb-xl" data-dismiss="modal">
+                  <input id="save-btn" type="submit" value="Save" class="btn btn-primary pull-left mb-xl" data-loading-text="Loading...">
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
-  </form>
+  </div>
 </div>

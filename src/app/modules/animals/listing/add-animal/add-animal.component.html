@@ -1,5 +1,5 @@
 <!--listing Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document" style="width:60%">
     <div class="modal-body">
       <form #f="ngForm" (ngSubmit)="addAnimal(f)" novalidate>
@@ -17,12 +17,9 @@
                 <label class="col-sm-2 control-label" for="w1-username">Contienent</label>
                 <div class="col-sm-10">
                   <select data-plugin-selectTwo class="form-control populate" name="contienent" [(ngModel)] = "contienent" id="dropDownType">
-                    <option value="1">Asia</option>
-                    <option value="2">Africa</option>
-                    <option value="3">Europe</option>
-                    <option value="4">liquids</option>
-                    <option value="5">chewables </option>
-                    <option value="6">powders</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Europe">Europe</option>
                   </select>
                 </div>
               </div>
@@ -33,20 +30,14 @@
                     <option value="1">Asia</option>
                     <option value="2">Africa</option>
                     <option value="3">Europe</option>
-                    <option value="4">liquids</option>
-                    <option value="5">chewables </option>
-                    <option value="6">powders</option>
                   </select>
                 </div>
                 <div class="col-sm-5">
 
                   <select data-plugin-selectTwo class="form-control populate" id="dropDownType">
-                    <option value="1">Mamels</option>
-                    <option value="2">Reptile</option>
-                    <option value="3">Bird</option>
-                    <option value="4">liquids</option>
-                    <option value="5">chewables </option>
-                    <option value="6">powders</option>
+                    <option value="Mamels">Mamels</option>
+                    <option value="Reptile">Reptile</option>
+                    <option value="Bird">Bird</option>
                   </select>
                 </div>
               </div>
@@ -126,9 +117,9 @@
                 <div class="col-md-9">
                   <span class="remember-box checkbox"></span>
                 </div>
-                <div class="col-md-3 ">
+                <div class="col-md-3">
                   <input type="button" value="Cancel" class="btn btn-default pull-right mb-xl" data-dismiss="modal">
-                  <input type="submit" value="Add" class="btn btn-primary pull-left mb-xl" data-loading-text="Loading...">
+                  <input type="submit" value="Add" class="btn btn-primary pull-left mb-xl" data-dismiss="modal" data-loading-text="Loading...">
                 </div>
               </div>
             </div>

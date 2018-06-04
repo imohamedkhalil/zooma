@@ -59,6 +59,7 @@ import { ZooheaderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspa
 import { ZoosliderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspage/zooslider/zooslider.component';
 import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-form/add-zoo-form.component';
 import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.component';
+import { EditAnimalComponent } from 'src/app/modules/animals/listing/edit-animal/edit-animal/edit-animal.component';
 
 @NgModule({
   declarations: [
@@ -104,7 +105,8 @@ import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.compone
     AddMedicineComponent,
     EditMedicineComponent,
     AddZooFormComponent,
-    EditZooComponent
+    EditZooComponent,
+    EditAnimalComponent
   ],
   imports: [
     BrowserModule,
@@ -112,24 +114,24 @@ import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.compone
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },
-      { path: 'medicine/edit/:id', component:EditMedicineComponent },
-      { path: 'listing', component: ListingComponent },
-      {path: 'animals' , component: ListingComponent},
-      {path: 'animals/details/:id', component: AnimalitemComponent},
-      {path: 'add', component: AddAnimalComponent},
-      {path: 'zoo', component: ZoolistingComponent},
-      {path: 'zoo/details/:id', component: ZoodetailsComponent },
-      { path: 'zoo/edit/:id', component:EditZooComponent },
-      {path: 'show', component: ShowlistingComponent},
-      {path: 'showdetails', component: ShowdetailsComponent},
-      {path: 'addshow', component: ShowaddComponent},
-      {path: '', component: HomepageviewComponent}
-  ])
-],
-   providers: [
+      { path: 'medicine/edit/:id', component: EditMedicineComponent },
+      { path: 'animals', component: ListingComponent },
+      { path: 'animals/details/:id', component: AnimalitemComponent },
+      { path: 'animals/edit/:id', component: EditAnimalComponent },
+      { path: 'add', component: AddAnimalComponent },
+      { path: 'zoo', component: ZoolistingComponent },
+      { path: 'zoo/details/:id', component: ZoodetailsComponent },
+      { path: 'zoo/edit/:id', component: EditZooComponent },
+      { path: 'show', component: ShowlistingComponent },
+      { path: 'showdetails', component: ShowdetailsComponent },
+      { path: 'addshow', component: ShowaddComponent },
+      { path: '', component: HomepageviewComponent }
+    ])
+  ],
+  providers: [
     AnimalService,
-    ZooserviceService, 
-    MedicineService, 
+    ZooserviceService,
+    MedicineService,
     ShowService
   ],
   bootstrap: [AppComponent]

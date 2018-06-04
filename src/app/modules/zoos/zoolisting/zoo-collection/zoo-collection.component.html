@@ -8,7 +8,7 @@
                 <div class="header-search hidden-xs">
                     <form id="searchForm" action="page-search-results.html" method="get" style="border-radius:10px;">
                         <div class="input-group">
-                            <input type="text" class="form-control" name="q" id="q" placeholder="Search..." required>
+                            <input type="text" [(ngModel)]="queryString" class="form-control" name="q" id="q" placeholder="Search..." required>
                             <span class="input-group-btn">
                                 <button class="btn btn-default" type="submit">
                                     <i class="fa fa-search"></i>
@@ -29,7 +29,8 @@
         </div>
     </div>
 </div>
-<app-zooitem class="col-md-6 col-sm-6 col-xs-12" *ngFor="let x of zoos" [zoo]="x" (id)="edit($event)">
+
+<app-zooitem class="col-md-6 col-sm-6 col-xs-12" *ngFor="let x of zoos | searchdata: queryString : 'name' ; let i = index "  [zoo]="x" (id)="edit($event)" >
 </app-zooitem>
 <app-add-zoo-form></app-add-zoo-form>
 <app-edit-zoo [Zoo]="zoo"></app-edit-zoo>

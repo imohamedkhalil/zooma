@@ -60,6 +60,7 @@ import { ZoosliderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspa
 import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-form/add-zoo-form.component';
 import { EditshowComponent } from './modules/shows/editshow/editshow.component';
 import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.component';
+import { EditAnimalComponent } from 'src/app/modules/animals/listing/edit-animal/edit-animal/edit-animal.component';
 import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-oneitem/medicine-oneitem.component';
 
 @NgModule({
@@ -109,6 +110,7 @@ import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-on
     EditMedicineComponent,
     AddZooFormComponent,
     EditZooComponent,
+    EditAnimalComponent,
     MedicineOneitemComponent
   ],
   imports: [

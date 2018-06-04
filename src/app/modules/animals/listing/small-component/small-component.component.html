@@ -29,15 +29,16 @@
 
       <div class="portfolio-item">
         <div style="text-align: right;">
-          <a href="add" data-target="#exampleModal" data-toggle="modal">
-            <i class="fa fa-plus-square" style="text-align: right; margin-left:10px;"></i>
+          <a href="#" data-target="#addModal" data-toggle="modal">
+            <i class="fa fa-plus-square fa-2x" style="text-align: right; margin-left:10px;"></i>
           </a>
         </div>
         <ul class="portfolio-list sort-destination" data-sort-id="portfolio">
-          <app-one-small-component></app-one-small-component>
+          <app-one-small-component *ngFor = "let animal of animals" [animal] = "animal" (id)="editform($event)"></app-one-small-component>
         </ul>
       </div>
     </div>
     <app-add-animal></app-add-animal>
+    <app-edit-animal [Animal]="animal"></app-edit-animal>
   </div>
 </div>

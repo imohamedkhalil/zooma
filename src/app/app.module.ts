@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 
 import './modules/homepage/homepage.module.ts';
 
-import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing/medicine-listing.component';
+import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing.component';
 import { MedicineService } from './shared/services/medicineservice/medicine.service';
 import { AddMedicineComponent } from './modules/medicine/add-medicine/add-medicine.component';
 import { MedicineDetailComponent } from './modules/medicine/details/medicine-detail/medicine-detail.component';
@@ -60,6 +60,7 @@ import { ZoosliderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspa
 import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-form/add-zoo-form.component';
 import { EditshowComponent } from './modules/shows/editshow/editshow.component';
 import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.component';
+import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-oneitem/medicine-oneitem.component';
 
 @NgModule({
   declarations: [
@@ -107,7 +108,8 @@ import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.compone
     AddMedicineComponent,
     EditMedicineComponent,
     AddZooFormComponent,
-    EditZooComponent
+    EditZooComponent,
+    MedicineOneitemComponent
   ],
   imports: [
     BrowserModule,

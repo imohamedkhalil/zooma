@@ -122,7 +122,7 @@ import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-on
       { path: 'medicine/details/:id', component: MedicineDetailComponent },
       // { path: 'medicine/edit/:id', component: EditMedicineComponent },
       { path: 'listing', component: ListingComponent },
-      { path: 'animals', component: ListingComponent },
+      { path: 'animals', component: SmallComponentComponent },
       { path: 'animals/details/:id', component: AnimalitemComponent },
       { path: 'add', component: AddAnimalComponent },
       { path: 'zoo', component: ZoolistingComponent },

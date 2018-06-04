@@ -11,13 +11,12 @@ import { Router } from '@angular/router';
 })
 export class AddAnimalComponent implements OnInit {
  
-  animals: IAnimal[] = ANIMALS; 
+  animals: IAnimal[] = this.animalService.animals; 
   addAnimal(form) {
-    debugger;
     let animal: IAnimal;
     animal = form.value;
     this.animals.push(animal);
-    this.router.navigate(['/animals']);
+    console.log(this.animals);
 }
   // addAnimal(form) {
   //   // tslint:disable-next-line:no-debugger

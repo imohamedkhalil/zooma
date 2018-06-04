@@ -133,11 +133,11 @@ import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-on
       { path: 'show', component: ShowlistingComponent },
       { path: 'showdetails', component: ShowdetailsComponent },
       { path: 'addshow', component: ShowaddComponent },
-      {path:'createzoo',component:CreatezooComponent},     
+      {path:'createzoo',component:CreatezooComponent},
       { path: '', component: HomepageviewComponent }
     ])
   ],
- 
+  
   providers: [
     AnimalService,
     ZooserviceService,

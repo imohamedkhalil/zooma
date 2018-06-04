@@ -17,7 +17,7 @@ export class ZooCollectionComponent implements OnInit {
 
   getzoo(){
     const id = +this.route.snapshot.paramMap.get('id');
-    this.zoo = this.zooservice.getzoo(id);
+     this.zoo = this.zooservice.getzoo(id);
   }
 
   constructor(private zooservice:ZooserviceService, private route: ActivatedRoute) { }
@@ -25,5 +25,9 @@ export class ZooCollectionComponent implements OnInit {
   ngOnInit() {
     this.zoos=this.zooservice.getZooSmallComponent();
   }
-
+ edit(id){
+  this.zoo= this.zooservice.zoos.find(a=>a.id==id);
+  console.log(this.zoo);
+ }
 }
+ 

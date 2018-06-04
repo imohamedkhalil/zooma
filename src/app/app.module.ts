@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component';
 import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 
 import './modules/homepage/homepage.module.ts';
 
-import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing/medicine-listing.component';
+import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing.component';
 import { MedicineService } from './shared/services/medicineservice/medicine.service';
 import { AddMedicineComponent } from './modules/medicine/add-medicine/add-medicine.component';
 import { MedicineDetailComponent } from './modules/medicine/details/medicine-detail/medicine-detail.component';
@@ -58,8 +58,10 @@ import { ZoodetailsComponent } from 'src/app/modules/zoos/zoodetails/zoodetails.
 import { ZooheaderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspage/zooheader/zooheader.component';
 import { ZoosliderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspage/zooslider/zooslider.component';
 import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-form/add-zoo-form.component';
+import { EditshowComponent } from './modules/shows/editshow/editshow.component';
 import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.component';
 import { EditAnimalComponent } from 'src/app/modules/animals/listing/edit-animal/edit-animal/edit-animal.component';
+import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-oneitem/medicine-oneitem.component';
 
 @NgModule({
   declarations: [
@@ -102,22 +104,26 @@ import { EditAnimalComponent } from 'src/app/modules/animals/listing/edit-animal
     ZoodetailsComponent,
     ZooheaderComponent,
     ZoosliderComponent,
+    AddZooFormComponent,
+    EditshowComponent,
     AddMedicineComponent,
     EditMedicineComponent,
     AddZooFormComponent,
     EditZooComponent,
-    EditAnimalComponent
+    EditAnimalComponent,
+    MedicineOneitemComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },
-      { path: 'medicine/edit/:id', component: EditMedicineComponent },
+      // { path: 'medicine/edit/:id', component: EditMedicineComponent },
+      { path: 'listing', component: ListingComponent },
       { path: 'animals', component: ListingComponent },
       { path: 'animals/details/:id', component: AnimalitemComponent },
-      { path: 'animals/edit/:id', component: EditAnimalComponent },
       { path: 'add', component: AddAnimalComponent },
       { path: 'zoo', component: ZoolistingComponent },
       { path: 'zoo/details/:id', component: ZoodetailsComponent },

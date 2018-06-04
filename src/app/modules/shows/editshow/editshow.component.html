@@ -1,43 +1,44 @@
-<div class="modal fade" id="x" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="y" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document" style="width:60%">
     <div class="modal-body">
-      <form #f="ngForm" (ngSubmit)="addShow(f)" novalidate>
+      <form #f="ngForm" (ngSubmit)="editShow(f)" novalidate>
         <div class="col-sm-12 col-md-offset-1">
           <div class="featured-box featured-box-primary align-left mt-xlg">
             <div class="box-content">
-              <h4 class="heading-primary text-uppercase mb-md">Add Show</h4>
+              <h4 class="heading-primary text-uppercase mb-md">Edit Show</h4>
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="title">Title</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control input-sm" name="title" [(ngModel)]="title" placeholder="Show Name" id="title" required pattern="[A-Za]{2}">
+                  <input type="text" class="form-control input-sm" name="title" [(ngModel)]="title" placeholder="{{show.title}}" id="title"
+                    required pattern="[A-Za]{2}">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="w1-username">Time</label>
                 <div class="col-sm-10">
-                  <input type="number" class="form-control input-sm" name="time" [(ngModel)]="time" placeholder="Time Of Show  1 : 24" id="w1-username"
+                  <input type="string" class="form-control input-sm" name="time" [(ngModel)]="time" placeholder="{{show.time}}" id="w1-username"
                     required pattern="[A-Za-z]{3}">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="w1-username">Location</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control input-sm" name="location" [(ngModel)]="location" placeholder="Show Location" id="w1-username"
+                  <input type="text" class="form-control input-sm" name="location" [(ngModel)]="location" placeholder="{{show.location}}" id="w1-username"
                     required pattern="[A-Za-z]{3}">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="w1-username">Description</label>
                 <div class="col-sm-10">
-                  <textarea class="form-control input-sm" name="description" [(ngModel)]="description" placeholder="Write You Description ......" id="w1-username"
+                  <textarea class="form-control input-sm" name="description" [(ngModel)]="description" placeholder="{{show.description}}" id="w1-username"
                     required pattern=".{9}">
-                  </textarea>
+                    </textarea>
                 </div>
               </div>
-             
+
               <div method="post" enctype="multipart/form-data">
                 <div class=" pull-right mb-xl">
-                  <input type="file" id="profile_pic" name="profile_pic" accept=".jpg, .jpeg, .png">
+                  <input type="file" id="profile_pic" name="profile_pic" accept=".jpg, .jpeg, .png" placeholder="{{show.imgUrl}}">
                 </div>
               </div>
               <div class="row">
@@ -46,8 +47,8 @@
                 </div>
 
                 <div class="col-md-3 ">
-                  <input type="button" (click)="cancelShow()" value="Cancel" class="btn btn-default pull-right mb-xl" data-dismiss="modal">
-                  <input (click)="addShow(f)" data-dismiss="modal" type="submit" value="Add" class="btn btn-primary pull-left mb-xl" data-loading-text="Loading...">
+                  <input type="button"(click)="cancelShow()" value="Cancel" class="btn btn-default pull-right mb-xl" data-dismiss="modal">
+                  <input (click)="editShow(f)" data-dismiss="modal" type="submit" value="Edit" class="btn btn-primary pull-left mb-xl" data-loading-text="Loading...">
                 </div>
               </div>
             </div>

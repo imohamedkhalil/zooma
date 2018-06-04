@@ -1,5 +1,4 @@
-
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input , EventEmitter ,Output} from '@angular/core';
 import { IZooSmallComponent } from 'src/app/shared/interfaces/zoointerface/zoointerface';
 import { ZooserviceService } from 'src/app/shared/services/zooservice/zooservice.service';
 import { ActivatedRoute } from '@angular/router';
@@ -10,14 +9,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./zooitem.component.css']
 })
 export class ZooitemComponent implements OnInit {
-
   @Input() zoo: IZooSmallComponent;
+  @Output() id=new EventEmitter<number>();
   zoos: IZooSmallComponent[] = [];
 
-  getzoo() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.zoo = this.zooservice.getzoo(id);
-  }
+  //  getzoo() {
+  //   const id = +this.route.snapshot.paramMap.get('id');
+  //  this.zoo = this.zooservice.getzoo(id);
+  //  }
   deleteZoo(id) {
     this.zooservice.deletezoo(id);
   }
@@ -25,7 +24,10 @@ export class ZooitemComponent implements OnInit {
   constructor(private zooservice: ZooserviceService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.zoos = this.zooservice.getZooSmallComponent();
+  }
+
+  editZoo(id){
+   this.id.emit(id);
   }
 
 }

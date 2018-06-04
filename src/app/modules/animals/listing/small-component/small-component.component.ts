@@ -8,15 +8,17 @@ import { AnimalService } from 'src/app/shared/services/animalservice/animal.serv
   styleUrls: ['./small-component.component.css']
 })
 export class SmallComponentComponent implements OnInit {
-
-  animals: IAnimal[];
-  getAnimals() {
-    this.animals = this.animalService.getAnimals();
-  }
-
   constructor(private animalService: AnimalService) { }
+  animal:  IAnimal;
+  animals: IAnimal[]= this.animalService.animals;
+  
+
+  editform(id:number){
+  this.animal = this.animalService.getAnimal(id);
+  }
+  
 
   ngOnInit() {
-    this.getAnimals();
+
   }
 }

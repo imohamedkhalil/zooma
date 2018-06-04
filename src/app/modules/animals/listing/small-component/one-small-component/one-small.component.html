@@ -1,8 +1,12 @@
-<li  *ngFor = "let animal of animals" class="col-md-4 isotope-item {{animal.name}} {{animal.type}}">
+<li class="isotope-item {{animal.name}} {{animal.type}}">
   <div class="portfolio-item">
     <div style="text-align: right;">
-      <i class="fa fa-pencil" style="text-align: right;margin-left:10px;"></i>
-      <i class="fa fa-trash" style="text-align: center;margin-left:10px;"></i>
+        <a href="#" (click)="edit(animal.id)" data-target="#editModal" data-toggle="modal">
+      <i class="fa fa-pencil"></i>
+      </a>&nbsp;
+      <a (click)="deleteAnimal(animal.id)">
+      <i class="fa fa-trash"></i>
+    </a>
     </div>
     <a [routerLink]="['../animals/details', animal.id]">
       <span class="thumb-info thumb-info-lighten">
@@ -17,3 +21,29 @@
     </a>
   </div>
 </li>
+<!-- <li>
+<div class=" isotope-item {{animal.name}} {{animal.type}}">
+  <div style="text-align: right;">
+
+    <a href="#"(click)="edit(animal.id)" data-target="#editModal" data-toggle="modal">
+      <i class="fa fa-pencil" style="text-align: right; margin-left:10px;"></i>
+    </a>
+
+    <a (click)="deleteAnimal(animal.id)">
+      <i class="fa fa-trash" style="text-align: center; margin-left:10px;"></i>
+    </a>
+  </div>
+  <div class="listing-component featured-box featured-box-primary featured-box-effect-1">
+    <div class="box-content">
+      <i class="icon-featured fa fa-stethoscope"></i>
+      <h4>{{animal.name}}</h4>
+      <p>{{animal.type}}</p>
+      <p>
+        <a [routerLink]="['../animals/details', animal.id]" class="lnk-primary learn-more">Learn more
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+</li> -->

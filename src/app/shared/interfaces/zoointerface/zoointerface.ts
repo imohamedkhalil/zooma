@@ -1,5 +1,5 @@
 export class IZooSmallComponent{
-    id ?:number;
+    id :number;
     imgUrl ?:string;
     name ?:string;
     address ?:string;

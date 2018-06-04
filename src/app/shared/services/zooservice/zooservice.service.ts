@@ -6,7 +6,7 @@ import { IZooSmallComponent } from '../../interfaces/zoointerface/zoointerface'
 export class ZooserviceService {
   zoos: IZooSmallComponent[] = [
     {
-      id:1,
+      id:11,
       imgUrl: "./assets/image/aa.jpg",
       name: "LosAngeles",
       address: "Porto Blvd, Suite 100 Los Angeles/CA",
@@ -17,7 +17,7 @@ export class ZooserviceService {
       animals:"Giraffes"
     },
     {
-      id:2,
+      id:12,
       imgUrl: "./assets/image/dd.jpg",
       name: "Gizaa Zoo",
       address: "Porto Blvd, Suite 100 Los Angeles/CA",
@@ -28,7 +28,7 @@ export class ZooserviceService {
       animals:"Elephants"
     },
     {
-      id:3,
+      id:13,
       imgUrl: "./assets/image/ff.jpg",
       name: "Alex Zoo",
       address: "Porto Blvd, Suite 100 Los Angeles/CA",
@@ -39,7 +39,7 @@ export class ZooserviceService {
       animals:"Lions"
     },
     {
-      id:4,
+      id:14,
       imgUrl: "./assets/image/aa.jpg",
       name: "Ismailia ",
       address: "Porto Blvd, Suite 100 Los Angeles/CA",
@@ -50,7 +50,7 @@ export class ZooserviceService {
       animals:"Monkey"
     },
     {
-      id:5,
+      id:15,
       imgUrl: "./assets/image/aa.jpg",
       name: "Portsaid ",
       address: "Porto Blvd, Suite 100 Los Angeles/CA",
@@ -61,7 +61,7 @@ export class ZooserviceService {
       animals:"Cheetas"
     },
     {
-      id:6,
+      id:16,
       imgUrl: "./assets/image/aa.jpg",
       name: "Portsaid ",
       address: "Porto Blvd, Suite 100 Los Angeles/CA",
@@ -72,7 +72,7 @@ export class ZooserviceService {
       animals:"Zebras"
     },
     {
-      id:7,
+      id:17,
       imgUrl: "./assets/image/aa.jpg",
       name: "elwadyelgded",
       address: "Porto Blvd, Suite 100 Los Angeles/CA",
@@ -83,7 +83,7 @@ export class ZooserviceService {
       animals:"Horses"
     },
     {
-      id:8,
+      id:18,
       imgUrl: "./assets/image/aa.jpg",
       name: "Cairo ",
       address: "Porto Blvd, Suite 100 Los Angeles/CA",
@@ -94,7 +94,7 @@ export class ZooserviceService {
       animals:"Fishes"
     },
     {
-      id:8,
+      id:19,
       imgUrl: "./assets/image/aa.jpg",
       name: "elswees ",
       address: "Porto Blvd, Suite 100 Los Angeles/CA",
@@ -104,12 +104,108 @@ export class ZooserviceService {
       locImg: "./assets/image/pin.png",
       animals:"Tortoise"
     },
-   
   ];
+  topzoos: IZooSmallComponent[]= [ {
+    id:1,
+    imgUrl: "./assets/image/aa.jpg",
+    name: "LosAngeles",
+    address: "Porto Blvd, Suite 100 Los Angeles/CA",
+    phone: 12345678910,
+    email: "Zooo@mail.com",
+    addressUrl: "(view directions)",
+    locImg: "./assets/image/pin.png",
+    animals:"Giraffes"
+  },
+  {
+    id:2,
+    imgUrl: "./assets/image/dd.jpg",
+    name: "Gizaa Zoo",
+    address: "Porto Blvd, Suite 100 Los Angeles/CA",
+    phone: 12345678910,
+    email: "Zooo@mail.com",
+    addressUrl: "(view directions)",
+    locImg: "./assets/image/pin.png",
+    animals:"Elephants"
+  },
+  {
+    id:3,
+    imgUrl: "./assets/image/ff.jpg",
+    name: "Alex Zoo",
+    address: "Porto Blvd, Suite 100 Los Angeles/CA",
+    phone: 12345678910,
+    email: "Zooo@mail.com",
+    addressUrl: "(view directions)",
+    locImg: "./assets/image/pin.png",
+    animals:"Lions"
+  },
+  {
+    id:4,
+    imgUrl: "./assets/image/aa.jpg",
+    name: "Ismailia ",
+    address: "Porto Blvd, Suite 100 Los Angeles/CA",
+    phone: 12345678910,
+    email: "Zooo@mail.com",
+    addressUrl: "(view directions)",
+    locImg: "./assets/image/pin.png",
+    animals:"Monkey"
+  },
+  {
+    id:5,
+    imgUrl: "./assets/image/aa.jpg",
+    name: "Portsaid ",
+    address: "Porto Blvd, Suite 100 Los Angeles/CA",
+    phone: 12345678910,
+    email: "Zooo@mail.com",
+    addressUrl: "(view directions)",
+    locImg: "./assets/image/pin.png",
+    animals:"Cheetas"
+  },
+  {
+    id:6,
+    imgUrl: "./assets/image/aa.jpg",
+    name: "Portsaid ",
+    address: "Porto Blvd, Suite 100 Los Angeles/CA",
+    phone: 12345678910,
+    email: "Zooo@mail.com",
+    addressUrl: "(view directions)",
+    locImg: "./assets/image/pin.png",
+    animals:"Zebras"
+  },
+  {
+    id:7,
+    imgUrl: "./assets/image/aa.jpg",
+    name: "elwadyelgded",
+    address: "Porto Blvd, Suite 100 Los Angeles/CA",
+    phone: 12345678910,
+    email: "Zooo@mail.com",
+    addressUrl: "(view directions)",
+    locImg: "./assets/image/pin.png",
+    animals:"Horses"
+  },
+  {
+    id:8,
+    imgUrl: "./assets/image/aa.jpg",
+    name: "Cairo ",
+    address: "Porto Blvd, Suite 100 Los Angeles/CA",
+    phone: 12345678910,
+    email: "Zooo@mail.com",
+    addressUrl: "(view directions)",
+    locImg: "./assets/image/pin.png",
+    animals:"Fishes"
+  },
+  {
+    id:8,
+    imgUrl: "./assets/image/aa.jpg",
+    name: "elswees ",
+    address: "Porto Blvd, Suite 100 Los Angeles/CA",
+    phone: 12345678910,
+    email: "Zooo@mail.com",
+    addressUrl: "(view directions)",
+    locImg: "./assets/image/pin.png",
+    animals:"Tortoise"
+  },
+];
   constructor() { }
-
-
-
   getZooSmallComponent(): IZooSmallComponent[] {
     return this.zoos;
   }
@@ -126,5 +222,11 @@ export class ZooserviceService {
     var zoo: IZooSmallComponent;
     zoo = form.value;
     this.zoos.push(zoo);
+  }
+  public getZoos() {
+    return this.zoos;
+  }
+  public getTopZoos() {
+    return this.zoos;
   }
 }

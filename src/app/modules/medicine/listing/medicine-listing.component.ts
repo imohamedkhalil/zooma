@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Medicine} from './../../../../shared/interfaces/medicine';
-import { MEDICINES } from "./../../../../shared/services/medicineservice/mock-medicines";
-import { MedicineService } from './../../../../shared/services/medicineservice/medicine.service';
 import { ActivatedRoute } from '@angular/router';
+import { Medicine } from 'src/app/shared/interfaces/medicine';
+import { MedicineService } from 'src/app/shared/services/medicineservice/medicine.service';
 
 @Component({
   selector: 'app-medicine-listing',
@@ -14,12 +13,16 @@ export class MedicineListingComponent implements OnInit {
   medicines: Medicine[];
   medicine: Medicine;
  
-  getMedicines(): void{
+  getMedicines() {
     this.medicines = this.medicineService.getMedicines();
   }
 
+  getMedicine(id){
+    this.medicine = this.medicineService.getMedicine(id);
+  }
+  
   public deleteMedicine(id){
-    this.medicineService.deleteZoo(id);
+    this.medicineService.deleteMedicine(id);
   }
 
   constructor(

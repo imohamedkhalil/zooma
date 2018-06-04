@@ -8,13 +8,13 @@
             <div class="box-content">
               <h4 class="heading-primary text-uppercase mb-md">Add Animal</h4>
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="w1-username">Name</label>
+                <label class="col-sm-2 control-label" for="name">Name</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control input-sm" name="animalname" [(ngModel)] = "animalname" placeholder="Animal Name" id="animalname" required pattern="[A-Za]{2}">
+                  <input type="text" class="form-control input-sm" name="name" [(ngModel)] = "name" placeholder="AnimalName" id="name" required pattern="[A-Za]{2}">
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="w1-username">Contienent</label>
+                <label class="col-sm-2 control-label" for="dropDownType">Contienent</label>
                 <div class="col-sm-10">
                   <select data-plugin-selectTwo class="form-control populate" name="contienent" [(ngModel)] = "contienent" id="dropDownType">
                     <option value="Asia">Asia</option>
@@ -24,7 +24,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="w1-username">Type</label>
+                <label class="col-sm-2 control-label" for="dropDownType">Type</label>
                 <div class="col-sm-5">
                   <select data-plugin-selectTwo class="form-control populate" name="type" [(ngModel)] = "type" id="dropDownType">
                     <option value="1">Asia</option>
@@ -46,7 +46,7 @@
                 <div class="col-sm-5">
                   <div data-plugin-spinner>
                     <div class="input-group spinner">
-                      <input type="text" class="spinner-input form-control" value="1" min="0" max="5"name="lifeSpan" [(ngModel)] = "lifeSpan">
+                      <input type="text" class="spinner-input form-control" value="1" min="0" max="5" name="lifeSpan" [(ngModel)] = "lifeSpan">
                       <div class="input-group-btn-vertical spinner-buttons input-group-btn">
                         <button class="btn btn-default spinner-up" type="button">
                           <i class="fa fa-angle-up"></i>
@@ -67,9 +67,9 @@
               </div>
               <form id="myForm">
                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="w1-username">Description</label>
+                  <label class="col-sm-2 control-label" for="description">Description</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control populate" name="description" [(ngModel)] = "description" rows="20">
+                    <input type="text" class="form-control populate" name="description" id="description" [(ngModel)] = "description" rows="20">
                   </div>
                 </div>
             <!--    <div class="form-group">
@@ -82,8 +82,8 @@
                   </div>
                 </div>-->
                 <div class="form-group">
-                  <label class="col-sm-2 control-label" for="w1-username">Upload Image</label>
-                  <div action="multiupload.php" method="post" enctype="multipart/form-data">
+                  <label class="col-sm-2 control-label" for="image">Upload Image</label>
+                  <div action="multiupload.php" method="post" id="image" enctype="multipart/form-data">
                     <div class="col-md-6">
                       <input type="file" class="form-control" id="images" name="images[]" onchange="preview_images();" multiple />
                     </div>

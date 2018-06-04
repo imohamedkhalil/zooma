@@ -12,13 +12,12 @@ import { ANIMALS } from 'src/app/shared/services/animalservice/mock-animals';
 })
 export class EditAnimalComponent implements OnInit {
   @Input() Animal: IAnimal;
-  animals: IAnimal[] = this.animalService.animals;
+  
+  constructor(private router: Router,private animalService: AnimalService,private route: ActivatedRoute) { }
 
   editAnimal(form) {
-    this.Animal = this.animalService.getAnimal(this.Animal.id);
     let i = this.animalService.animals.indexOf(this.Animal);
-    console.log(i);
-    this.Animal = {
+    let uptanimal = {
       name: form.value.name === undefined ? this.Animal.name : form.value.name,
       description: form.value.description === undefined ? this.Animal.description : form.value.description,
       type: form.value.type === undefined ? this.Animal.type : form.value.type,
@@ -26,11 +25,12 @@ export class EditAnimalComponent implements OnInit {
       category: form.value.category === undefined ? this.Animal.category : form.value.category,
       lifeSpan: form.value.lifeSpan === undefined ? this.Animal.lifeSpan : form.value.lifeSpan,
       date: form.value.date === undefined ? this.Animal.date : form.value.date,
-    };
-    this.animals[i]= this.Animal;
+      image:form.value.image === undefined ? this.Animal.image :form.value.image
+        };
+    this.animalService.animals[i]= uptanimal;
+    this.router.navigateByUrl('/animals');
   }
 
-  constructor(private router: Router,private animalService: AnimalService,private route: ActivatedRoute) { }
 
   ngOnInit() {
   

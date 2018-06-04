@@ -123,19 +123,21 @@ import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-on
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },
       // { path: 'medicine/edit/:id', component: EditMedicineComponent },
-      {path: 'animals' , component: ListingComponent},
-      {path: 'animals/details/:id', component: AnimalitemComponent},
-      {path: 'add', component: AddAnimalComponent},
-      {path: 'zoo', component: ZoolistingComponent},
-      {path: 'zoo/details/:id', component: ZoodetailsComponent },
-      { path: 'zoo/edit/:id', component:EditZooComponent },
-      {path:'show',component:ShowlistingComponent},
-      {path:'showdetails',component:ShowdetailsComponent},
-      {path:'addshow',component:ShowaddComponent}, 
-      {path:'createzoo',component:CreatezooComponent},     
-      {path:'',component:HomepageviewComponent}  
-  ])
-],
+      { path: 'listing', component: ListingComponent },
+      { path: 'animals', component: SmallComponentComponent },
+      { path: 'animals/details/:id', component: AnimalitemComponent },
+      { path: 'add', component: AddAnimalComponent },
+      { path: 'zoo', component: ZoolistingComponent },
+      { path: 'zoo/details/:id', component: ZoodetailsComponent },
+      { path: 'zoo/edit/:id', component: EditZooComponent },
+      { path: 'show', component: ShowlistingComponent },
+      { path: 'showdetails', component: ShowdetailsComponent },
+      { path: 'addshow', component: ShowaddComponent },
+      {path:'createzoo',component:CreatezooComponent},
+      { path: '', component: HomepageviewComponent }
+    ])
+  ],
+  
   providers: [
     AnimalService,
     ZooserviceService,

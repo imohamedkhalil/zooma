@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component';
 import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -58,8 +58,8 @@ import { ZoodetailsComponent } from 'src/app/modules/zoos/zoodetails/zoodetails.
 import { ZooheaderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspage/zooheader/zooheader.component';
 import { ZoosliderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspage/zooslider/zooslider.component';
 import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-form/add-zoo-form.component';
+import { EditshowComponent } from './modules/shows/editshow/editshow.component';
 import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.component';
-
 
 @NgModule({
   declarations: [
@@ -102,6 +102,8 @@ import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.compone
     ZoodetailsComponent,
     ZooheaderComponent,
     ZoosliderComponent,
+    AddZooFormComponent,
+    EditshowComponent,
     AddMedicineComponent,
     EditMedicineComponent,
     AddZooFormComponent,
@@ -110,25 +112,25 @@ import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.compone
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },
       { path: 'medicine/edit/:id', component:EditMedicineComponent },
       { path: 'listing', component: ListingComponent },
       {path: 'animals' , component: ListingComponent},
-      // {path: 'animals', component: SmallComponentComponent},
       {path: 'animals/details/:id', component: AnimalitemComponent},
       {path: 'add', component: AddAnimalComponent},
-      { path: 'zoo', component: ZoolistingComponent },
-      { path: 'zoo/details/:id', component: ZoodetailsComponent },
+      {path: 'zoo', component: ZoolistingComponent},
+      {path: 'zoo/details/:id', component: ZoodetailsComponent },
       { path: 'zoo/edit/:id', component:EditZooComponent },
-      { path: 'show', component: ShowlistingComponent },
-      { path: 'showdetails', component: ShowdetailsComponent },
-      { path: 'addshow', component: ShowaddComponent },
-      { path: '', component: HomepageviewComponent }
+      {path:'show',component:ShowlistingComponent},
+      {path:'showdetails',component:ShowdetailsComponent},
+      {path:'addshow',component:ShowaddComponent},      
+      {path:'',component:HomepageviewComponent}  
   ])
 ],
-  providers: [
+   providers: [
     AnimalService,
     ZooserviceService, 
     MedicineService, 

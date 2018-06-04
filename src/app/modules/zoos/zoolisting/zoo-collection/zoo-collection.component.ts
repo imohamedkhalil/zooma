@@ -17,7 +17,7 @@ export class ZooCollectionComponent implements OnInit {
 
   getzoo(){
     const id = +this.route.snapshot.paramMap.get('id');
-    this.zoo = this.zooservice.getzoo(id);
+     this.zoo = this.zooservice.getzoo(id);
   }
 
   constructor(private zooservice:ZooserviceService, private route: ActivatedRoute) { }
@@ -30,3 +30,4 @@ export class ZooCollectionComponent implements OnInit {
   console.log(this.zoo);
  }
 }
+ 

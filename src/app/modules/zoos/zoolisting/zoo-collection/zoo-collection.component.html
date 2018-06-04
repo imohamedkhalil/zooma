@@ -32,4 +32,4 @@
 <app-zooitem class="col-md-6 col-sm-6 col-xs-12" *ngFor="let x of zoos" [zoo]="x" (id)="edit($event)">
 </app-zooitem>
 <app-add-zoo-form></app-add-zoo-form>
-<app-edit-zoo></app-edit-zoo>
+<app-edit-zoo [Zoo]="zoo"></app-edit-zoo>

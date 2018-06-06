@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component';
 import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 import './modules/homepage/homepage.module.ts';
@@ -60,6 +61,7 @@ import { ZoosliderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspa
 import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-form/add-zoo-form.component';
 import { EditshowComponent } from './modules/shows/editshow/editshow.component';
 import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.component';
+import { SearchdataPipe } from './searchdata.pipe';
 import { CreatezooComponent } from './modules/createzoo/createzoo.component';
 import { EditAnimalComponent } from 'src/app/modules/animals/listing/edit-animal/edit-animal/edit-animal.component';
 import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-oneitem/medicine-oneitem.component';
@@ -111,31 +113,35 @@ import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-on
     EditMedicineComponent,
     AddZooFormComponent,
     EditZooComponent,
+    SearchdataPipe,
     CreatezooComponent,
     EditAnimalComponent,
     MedicineOneitemComponent
   ],
   imports: [
     BrowserModule,
+    ModalModule.forRoot(),
     FormsModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },
       // { path: 'medicine/edit/:id', component: EditMedicineComponent },
-      {path: 'animals' , component: ListingComponent},
-      {path: 'animals/details/:id', component: AnimalitemComponent},
-      {path: 'add', component: AddAnimalComponent},
-      {path: 'zoo', component: ZoolistingComponent},
-      {path: 'zoo/details/:id', component: ZoodetailsComponent },
-      { path: 'zoo/edit/:id', component:EditZooComponent },
-      {path:'show',component:ShowlistingComponent},
-      {path:'showdetails',component:ShowdetailsComponent},
-      {path:'addshow',component:ShowaddComponent}, 
-      {path:'createzoo',component:CreatezooComponent},     
-      {path:'',component:HomepageviewComponent}  
-  ])
-],
+      { path: 'listing', component: ListingComponent },
+      { path: 'animals', component: SmallComponentComponent },
+      { path: 'animals/details/:id', component: AnimalitemComponent },
+      { path: 'add', component: AddAnimalComponent },
+      { path: 'zoo', component: ZoolistingComponent },
+      { path: 'zoo/details/:id', component: ZoodetailsComponent },
+      { path: 'zoo/edit/:id', component: EditZooComponent },
+      { path: 'show', component: ShowlistingComponent },
+      { path: 'showdetails', component: ShowdetailsComponent },
+      { path: 'addshow', component: ShowaddComponent },
+      {path:'createzoo',component:CreatezooComponent},
+      { path: '', component: HomepageviewComponent }
+    ])
+  ],
+  
   providers: [
     AnimalService,
     ZooserviceService,

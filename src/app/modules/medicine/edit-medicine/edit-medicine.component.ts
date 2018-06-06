@@ -26,7 +26,6 @@ export class EditMedicineComponent implements OnInit {
       name : form.value.name == undefined ? this.medicine.name :form.value.name,
       type : form.value.type == undefined ? this.medicine.type :form.value.type,
       smalldescription : form.value.smalldescription == undefined ? this.medicine.smalldescription :form.value.smalldescription,
-       
     }
     console.log(form.value);
     this.medicines[i]=this.medicine;

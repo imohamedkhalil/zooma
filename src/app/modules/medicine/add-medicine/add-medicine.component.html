@@ -7,7 +7,7 @@
 <div class="modal fade" id="addMedicine" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document" style="width:60%">
     <div class="modal-body">
-      <form #f="ngForm" (ngSubmit)="addMedicine(f)">
+      <form #f="ngForm" (ngSubmit)="f.valid && onSubmit(f)" ngNativeValidate>
         <div class="col-sm-12 col-md-offset-1">
           <div class="featured-box featured-box-primary align-left mt-xlg">
             <div class="box-content">
@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-md-3 ">
                   <input type="button" value="Cancel" class="btn btn-default pull-right mb-xl" data-dismiss="modal">
-                  <input id="add-btn" type="submit" (click)="addMedicine(f)"data-dismiss="modal" value="Add" class="btn btn-primary pull-left mb-xl" data-loading-text="Loading...">
+                  <input id="add-btn" (click)="modalRef.hide()" [disabled]="!f.valid" type="submit" value="Add" class="btn btn-primary pull-left mb-xl" data-loading-text="Loading...">
                 </div>
               </div>
             </div>

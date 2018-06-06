@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {ZooitemComponent} from '../zooitem/zooitem.component';
 import { ZooserviceService } from 'src/app/shared/services/zooservice/zooservice.service';
 import { IZooSmallComponent } from 'src/app/shared/interfaces/zoointerface/zoointerface';
@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./zoo-collection.component.css']
 })
 export class ZooCollectionComponent implements OnInit {
-  
+  @Input() data:string;
   zoos:IZooSmallComponent[]=[];
   zoo: IZooSmallComponent;
 

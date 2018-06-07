@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 import './modules/homepage/homepage.module.ts';
@@ -121,6 +122,7 @@ import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-on
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+    ModalModule.forRoot(),
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },

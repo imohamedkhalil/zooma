@@ -23,7 +23,7 @@
                 <div class="header-search hidden-xs">
                   <form id="searchForm" action="page-search-results.html" method="get">
                     <div class="input-group">
-                      <input type="text" class="form-control" name="q" id="q" placeholder="Search..." required>
+                      <input type="text" class="form-control" [(ngModel)]="queryString" name="q" id="q" placeholder="Search..." required>
                       <span class="input-group-btn">
                         <button class="btn btn-default" type="submit">
                           <i class="fa fa-search"></i>
@@ -43,17 +43,17 @@
                 <i class="fa fa-plus-square fa-2x" style="text-align: right; margin-left:10px;"></i>
               </a>
             </div>
-            <!-- <div class="row">
+            <!-- <div class="row"  sort-destination>
               <app-one-small-component class="col-md-4" *ngFor="let a of animals" [animal]="a" (id)="editform($event)"></app-one-small-component>
             </div> -->
             <ul class="portfolio-list" data-sort-id="portfolio">
-                <app-one-small-component *ngFor="let a of animals" class="col-md-4" [animal]="a" (id)="editform($event)"></app-one-small-component>
+                <app-one-small-component *ngFor="let a of animals| searchdata: queryString : 'name' ; let i = index" class="col-md-4" [animal]="a" (id)="editform($event)"></app-one-small-component>
               </ul>
           </div>
         </div>
-        <app-add-animal></app-add-animal>
-        <app-edit-animal [Animal]="animal"></app-edit-animal>
       </div>
+      <app-add-animal></app-add-animal>        
+      <app-edit-animal [Animal]="animal"></app-edit-animal>      
     </div>
   </div>
 </div>

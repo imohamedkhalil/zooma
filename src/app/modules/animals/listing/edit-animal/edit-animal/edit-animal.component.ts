@@ -30,7 +30,10 @@ export class EditAnimalComponent implements OnInit {
     this.animalService.animals[i]= uptanimal;
     this.router.navigateByUrl('/animals');
   }
-
+  canceledit(form){
+   // tslint:disable-next-line:no-unused-expression
+   form.value.name === undefined;
+  }
 
   ngOnInit() {
   

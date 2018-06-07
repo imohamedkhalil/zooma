@@ -10,11 +10,14 @@ import{ZooCollectionComponent} from '../zoolisting/zoo-collection/zoo-collection
 })
 export class ZoolistingComponent implements OnInit {
 
+  filterdata:string;
   constructor() { }
 
   ngOnInit() {
-    
-     
   }
-
+  filterData(data:string){
+  this.filterdata=data;
+  console.log(this.filterdata);
+  debugger;
+  }
 }

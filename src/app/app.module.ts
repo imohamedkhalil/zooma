@@ -120,6 +120,7 @@ import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-on
   ],
   imports: [
     BrowserModule,
+    ModalModule.forRoot(),
     FormsModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),

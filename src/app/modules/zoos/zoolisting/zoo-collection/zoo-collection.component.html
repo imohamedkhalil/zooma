@@ -30,7 +30,7 @@
     </div>
 </div>
 
-<app-zooitem class="col-md-6 col-sm-6 col-xs-12" *ngFor="let x of zoos | searchdata: queryString : 'name' ; let i = index "  [zoo]="x" (id)="edit($event)" >
+<app-zooitem class="col-md-6 col-sm-6 col-xs-12" *ngFor="let x of zoos | searchdata: queryString : 'name' |  searchdata: data: 'animals' ; let i = index "  [zoo]="x" (id)="edit($event)" >
 </app-zooitem>
 <app-add-zoo-form></app-add-zoo-form>
 <app-edit-zoo [Zoo]="zoo"></app-edit-zoo>

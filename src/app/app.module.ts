@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -123,6 +123,7 @@ import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-on
     ModalModule.forRoot(),
     FormsModule,
     BrowserAnimationsModule,
+    ModalModule.forRoot(),
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },

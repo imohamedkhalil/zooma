@@ -16,6 +16,7 @@ import { AnimaladdfoodComponent } from './listing/animalitem/animal-add/animalad
 import { AnimaladddiseaseComponent } from './listing/animalitem/animal-add/animaladddisease/animaladddisease.component';
 import { AnimaladdpredatorComponent } from './listing/animalitem/animal-add/animaladdpredator/animaladdpredator.component';
 import { AnimaladdthreatenComponent } from './listing/animalitem/animal-add/animaladdthreaten/animaladdthreaten.component';
+import { EditAnimalComponent } from './listing/edit-animal/edit-animal/edit-animal.component';
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import { AnimaladdthreatenComponent } from './listing/animalitem/animal-add/anim
     AnimaladdfoodComponent,
     AnimaladddiseaseComponent,
     AnimaladdpredatorComponent,
-    AnimaladdthreatenComponent
+    AnimaladdthreatenComponent,
+    EditAnimalComponent
   ]
 })
 export class AnimalsModule { }

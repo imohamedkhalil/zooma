@@ -8,11 +8,8 @@ import { ActivatedRoute} from '@angular/router';
   styleUrls: ['./animalitem.component.css']
 })
 export class AnimalitemComponent implements OnInit {
-  // animals: IAnimal [];
   animal: IAnimal;
-  // getAnimals() {
-  //   this.animals = this.animalService.getAnimals();
-  // }
+
    getAnimal() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.animal = this.animalService.getAnimal(id);

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {IAnimal} from 'src/app/shared/interfaces/IAnimal';
+import { IAnimal } from 'src/app/shared/interfaces/IAnimal';
 import { AnimalService } from 'src/app/shared/services/animalservice/animal.service';
 import { ANIMALS } from 'src/app/shared/services/animalservice/mock-animals';
 import { Router } from '@angular/router';
+import { ModalModule } from 'ngx-bootstrap';
+import { BsModalService } from 'ngx-bootstrap/modal/bs-modal.service';
 
 @Component({
   selector: 'app-add-animal',
@@ -10,17 +12,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-animal.component.css']
 })
 export class AddAnimalComponent implements OnInit {
+ 
 
-  animalList: IAnimal[] = ANIMALS;
-
-  addAnimal(form) {
-    let animal: IAnimal;
-    animal = form.value;
-    this.animalList.push(animal);
-    }
-  constructor(private router: Router) { }
+  onSubmit(form) {
+    this.animalService.addAnimal(form);
+  }
+  constructor(
+    private animalService: AnimalService,
+    private modalRef: BsModalService
+  ) { }
 
   ngOnInit() {
   }
-
 }

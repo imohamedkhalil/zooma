@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input, Output} from '@angular/core';
 import {IAnimal} from 'src/app/shared/interfaces/IAnimal';
 import { AnimalService } from 'src/app/shared/services/animalservice/animal.service';
+import { EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-one-small-component',
@@ -8,15 +10,22 @@ import { AnimalService } from 'src/app/shared/services/animalservice/animal.serv
   styleUrls: ['./one-small.component.css']
 })
 export class OneSmallComponent implements OnInit {
-
+  
   animals: IAnimal [];
-  getAnimals() {
-    this.animals = this.animalService.getAnimals();
+  @Input() animal: IAnimal;
+  @Output() id= new EventEmitter<number>();
+ 
+  
+  constructor(private animalService: AnimalService, private router:Router) { }
+ 
+  public deleteAnimal(id){
+    this.animalService.deleteAnimal(id); 
   }
-  constructor(private animalService: AnimalService) { }
+  public edit(id){
+    this.id.emit(id);
+  }
 
-  ngOnInit() {
-    this.getAnimals();
+  ngOnInit() {  
   }
 
 }

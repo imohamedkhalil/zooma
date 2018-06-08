@@ -1,14 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 import './modules/homepage/homepage.module.ts';
 
-import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing/medicine-listing.component';
+import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing.component';
 import { MedicineService } from './shared/services/medicineservice/medicine.service';
 import { AddMedicineComponent } from './modules/medicine/add-medicine/add-medicine.component';
 import { MedicineDetailComponent } from './modules/medicine/details/medicine-detail/medicine-detail.component';
@@ -61,7 +62,9 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
 import { EditshowComponent } from './modules/shows/editshow/editshow.component';
 import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.component';
 import { SearchdataPipe } from './searchdata.pipe';
-import { ModalModule } from 'ngx-bootstrap';
+import { CreatezooComponent } from './modules/createzoo/createzoo.component';
+import { EditAnimalComponent } from 'src/app/modules/animals/listing/edit-animal/edit-animal/edit-animal.component';
+import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-oneitem/medicine-oneitem.component';
 
 @NgModule({
   declarations: [
@@ -110,34 +113,40 @@ import { ModalModule } from 'ngx-bootstrap';
     EditMedicineComponent,
     AddZooFormComponent,
     EditZooComponent,
-    SearchdataPipe
+    SearchdataPipe,
+    CreatezooComponent,
+    EditAnimalComponent,
+    MedicineOneitemComponent
   ],
   imports: [
     BrowserModule,
+    ModalModule.forRoot(),
     FormsModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },
-      { path: 'medicine/edit/:id', component:EditMedicineComponent },
-      { path: 'listing', component: ListingComponent },
-      {path: 'animals' , component: ListingComponent},
-      {path: 'animals/details/:id', component: AnimalitemComponent},
-      {path: 'add', component: AddAnimalComponent},
-      {path: 'zoo', component: ZoolistingComponent},
-      {path: 'zoo/details/:id', component: ZoodetailsComponent },
-      { path: 'zoo/edit/:id', component:EditZooComponent },
-      {path:'show',component:ShowlistingComponent},
-      {path:'showdetails',component:ShowdetailsComponent},
-      {path:'addshow',component:ShowaddComponent},      
-      {path:'',component:HomepageviewComponent}  
-  ])
-],
-   providers: [
+      // { path: 'medicine/edit/:id', component: EditMedicineComponent },
+      // { path: 'listing', component: ListingComponent },
+      { path: 'animals', component: ListingComponent },
+      { path: 'animals/details/:id', component: AnimalitemComponent },
+      { path: 'add', component: AddAnimalComponent },
+      { path: 'zoo', component: ZoolistingComponent },
+      { path: 'zoo/details/:id', component: ZoodetailsComponent },
+      { path: 'zoo/edit/:id', component: EditZooComponent },
+      { path: 'show', component: ShowlistingComponent },
+      { path: 'showdetails', component: ShowdetailsComponent },
+      { path: 'addshow', component: ShowaddComponent },
+      {path:'createzoo',component:CreatezooComponent},
+      { path: '', component: HomepageviewComponent }
+    ])
+  ],
+  
+  providers: [
     AnimalService,
-    ZooserviceService, 
-    MedicineService, 
+    ZooserviceService,
+    MedicineService,
     ShowService
   ],
   bootstrap: [AppComponent]

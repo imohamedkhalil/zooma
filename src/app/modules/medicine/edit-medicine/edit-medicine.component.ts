@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Medicine } from '../../../shared/interfaces/medicine';
 import { MedicineService } from '../../../shared/services/medicineservice/medicine.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -11,18 +11,24 @@ import { MEDICINES } from '../../../shared/services/medicineservice/mock-medicin
 })
 export class EditMedicineComponent implements OnInit {
 
-  medicine: Medicine;
+  @Input() medicine: Medicine;
   medicines: Medicine[] = MEDICINES;
-
+  
   getMedicine(){
     const id = +this.route.snapshot.paramMap.get('id');
     this.medicine = this.medicineService.getMedicine(id);
   }
-
+  
   saveMedicine(form){
-    var medicine: Medicine;
-    medicine = form.value;
-    this.router.navigate(['/medicine']);  
+    this.medicine = this.medicineService.getMedicine(this.medicine.id);
+    var i=this.medicines.indexOf(this.medicine);
+    this.medicine ={
+      name : form.value.name == undefined ? this.medicine.name :form.value.name,
+      type : form.value.type == undefined ? this.medicine.type :form.value.type,
+      smalldescription : form.value.smalldescription == undefined ? this.medicine.smalldescription :form.value.smalldescription,
+    }
+    console.log(form.value);
+    this.medicines[i]=this.medicine;
   }
   
   constructor(

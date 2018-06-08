@@ -61,6 +61,7 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
 import { EditshowComponent } from './modules/shows/editshow/editshow.component';
 import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.component';
 import { SearchdataPipe } from './searchdata.pipe';
+import { ModalModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -115,6 +116,7 @@ import { SearchdataPipe } from './searchdata.pipe';
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+    ModalModule.forRoot(),
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },

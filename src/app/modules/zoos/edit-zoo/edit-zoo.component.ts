@@ -3,6 +3,8 @@ import { IZooSmallComponent } from 'src/app/shared/interfaces/zoointerface/zooin
 import { Router } from '@angular/router';
 import { ZooserviceService } from 'src/app/shared/services/zooservice/zooservice.service';
 import { ActivatedRoute } from '@angular/router';
+import { ModalModule } from 'ngx-bootstrap';
+import { BsModalService } from 'ngx-bootstrap/modal/bs-modal.service';
 
 @Component({
   selector: 'app-edit-zoo',
@@ -25,7 +27,7 @@ export class EditZooComponent implements OnInit {
   //    this.router.navigate(['/zoo']);  
   //  }
 
-  constructor(private zooservice: ZooserviceService, private route: ActivatedRoute, private router:Router) { }
+  constructor(private zooservice: ZooserviceService, private route: ActivatedRoute, private router:Router, private modalRef: BsModalService) { }
 
   ngOnInit() {
   }

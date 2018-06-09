@@ -1,0 +1,23 @@
+<li class=" isotope-item horse">
+  <div class="portfolio-item">
+    <div style="text-align: right;">
+      <a data-target="#editModal" data-toggle="modal" (click)="editFood(food.id)">
+        <i class="fa fa-pencil" style="text-align: right;margin-left:10px;"></i>
+      </a>
+      <a (click)="deleteFood(food.id)" >
+        <i class="fa fa-trash" style="text-align: center;margin-left:10px;"></i>
+      </a>
+    </div>
+    <a [routerLink]= "['../food/details',food.id]" >
+      <span class="thumb-info thumb-info-lighten">
+        <span class="thumb-info-wrapper">
+          <img [src]="food.image" class="img-responsive" [alt]="food.title">
+          <span class="thumb-info-title">
+            <span class="thumb-info-inner">{{food.title}} </span>
+            <span class="thumb-info-type">{{food.subtitle}}</span>
+          </span>
+        </span>
+      </span>
+    </a>
+  </div>
+</li>

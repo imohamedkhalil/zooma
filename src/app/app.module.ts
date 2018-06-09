@@ -65,6 +65,12 @@ import { SearchdataPipe } from './searchdata.pipe';
 import { CreatezooComponent } from './modules/createzoo/createzoo.component';
 import { EditAnimalComponent } from 'src/app/modules/animals/listing/edit-animal/edit-animal/edit-animal.component';
 import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-oneitem/medicine-oneitem.component';
+import { FooddetailsComponent } from 'src/app/modules/food/fooddetails/fooddetails.component';
+import { FooditemComponent } from 'src/app/modules/food/foodlisting/fooditem/fooditem.component';
+import { FoodlistingComponent } from 'src/app/modules/food/foodlisting/foodlisting.component';
+import { FoodService } from 'src/app/shared/services/foodservice/food.service';
+import { AddfoodComponent } from 'src/app/modules/food/addfood/addfood.component';
+import { FoodeditComponent } from 'src/app/modules/food/foodedit/foodedit.component';
 
 @NgModule({
   declarations: [
@@ -116,7 +122,13 @@ import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-on
     SearchdataPipe,
     CreatezooComponent,
     EditAnimalComponent,
-    MedicineOneitemComponent
+    MedicineOneitemComponent,
+    FooditemComponent,
+    FoodlistingComponent,
+    FooddetailsComponent,
+    FilterComponent,
+    AddfoodComponent, 
+    FoodeditComponent,
   ],
   imports: [
     BrowserModule,
@@ -139,7 +151,9 @@ import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-on
       { path: 'showdetails', component: ShowdetailsComponent },
       { path: 'addshow', component: ShowaddComponent },
       {path:'createzoo',component:CreatezooComponent},
-      { path: '', component: HomepageviewComponent }
+      { path:'food', component: FoodlistingComponent },
+      { path:'food/details/:id', component: FooddetailsComponent },
+      { path:'', component: HomepageviewComponent },
     ])
   ],
   
@@ -147,7 +161,8 @@ import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-on
     AnimalService,
     ZooserviceService,
     MedicineService,
-    ShowService
+    ShowService,
+    FoodService
   ],
   bootstrap: [AppComponent]
 })

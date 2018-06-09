@@ -12,12 +12,20 @@ import { ANIMALS } from 'src/app/shared/services/animalservice/mock-animals';
 })
 export class EditAnimalComponent implements OnInit {
   @Input() Animal: IAnimal;
-  
+  name:string;
+  description:string;
+  type:string;
+  contienent:string;
+  category:string;
+  lifeSpan:number;
+  date:string;
+  image:string;
   constructor(private router: Router,private animalService: AnimalService,private route: ActivatedRoute) { }
 
   editAnimal(form) {
     let i = this.animalService.animals.indexOf(this.Animal);
     let uptanimal = {
+      id:this.Animal.id,
       name: form.value.name === undefined ? this.Animal.name : form.value.name,
       description: form.value.description === undefined ? this.Animal.description : form.value.description,
       type: form.value.type === undefined ? this.Animal.type : form.value.type,
@@ -29,10 +37,29 @@ export class EditAnimalComponent implements OnInit {
         };
     this.animalService.animals[i]= uptanimal;
     this.router.navigateByUrl('/animals');
+
+
+    // this.name = undefined;
+    // this.description = undefined;
+    // this.type = undefined;
+    // this.category = undefined;
+    // this.category = undefined;
+    // this.contienent = undefined;
+    // this.lifeSpan = undefined;
+    // this.date = undefined;
+    // this.image = undefined;
+    
   }
+
   canceledit(form){
-   // tslint:disable-next-line:no-unused-expression
-   form.value.name === undefined;
+    this.name = this.Animal.name;
+    this.description = this.Animal.description;
+    this.type = this.Animal.type;
+    this.contienent = this.Animal.contienent;
+    this.category = this.Animal.category;
+    this.lifeSpan = this.Animal.lifeSpan;
+    this.date = this.Animal.date;
+    this.image = this.Animal.image;
   }
 
   ngOnInit() {

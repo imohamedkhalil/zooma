@@ -9,7 +9,6 @@ export class SearchdataPipe implements PipeTransform {
     console.log(items);
     console.log(value);
     console.log(label);
-    debugger;
     if (!items){
       return [];
     } 

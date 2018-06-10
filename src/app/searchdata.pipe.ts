@@ -6,6 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SearchdataPipe implements PipeTransform {
 
   transform(items: any[], value: string, label:string): any[] {
+    debugger;
     console.log(items);
     console.log(value);
     console.log(label);
@@ -15,7 +16,6 @@ export class SearchdataPipe implements PipeTransform {
     if(value == 'showall') return items;
     if (!value) return  items;
     if (value == '' || value == null) return [];
-    // console.log(items[0].animals.startsWith(value));
     return items.filter(e => e[label].toLowerCase().indexOf(value.toLowerCase()) > -1 );
     
   }

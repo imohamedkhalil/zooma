@@ -1,4 +1,4 @@
-export class Medicine {
+export interface IDisease {
     id? : number;
     name? : string;
     smalldescription?: string;

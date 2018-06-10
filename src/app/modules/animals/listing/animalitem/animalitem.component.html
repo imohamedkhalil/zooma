@@ -23,7 +23,7 @@
               <div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}}">
                 <div class="owl-carousel owl-theme manual thumb-gallery-detail show-nav-hover" id="thumbGalleryDetail">
                   <div>
-                    <a href="img/demos/real-estate/listings/listing-detail-1.jpg">
+                    <a href="{{animal.image}}">
                       <span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
                         <span class="thumb-info-wrapper font-size-xl">
                           <img alt="Property Detail" src="{{animal.image}}" class="img-responsive">
@@ -37,7 +37,7 @@
                     </a>
                   </div>
                   <div>
-                    <a href="img/demos/real-estate/listings/listing-detail-2.jpg">
+                    <a href="{{animal.image}}">
                       <span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
                         <span class="thumb-info-wrapper font-size-xl">
                           <img alt="Property Detail" src="{{animal.image}}" class="img-responsive">
@@ -51,7 +51,7 @@
                     </a>
                   </div>
                   <div>
-                    <a href="img/demos/real-estate/listings/listing-detail-3.jpg">
+                    <a href="{{animal.image}}">
                       <span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
                         <span class="thumb-info-wrapper font-size-xl">
                           <img alt="Property Detail" src="{{animal.image}}" class="img-responsive">
@@ -65,10 +65,10 @@
                     </a>
                   </div>
                   <div>
-                    <a href="img/demos/real-estate/listings/listing-detail-4.jpg">
+                    <a href="{{animal.image}}">
                       <span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
                         <span class="thumb-info-wrapper font-size-xl">
-                          <img alt="Property Detail" src="img/demos/real-estate/listings/listing-detail-4.jpg" class="img-responsive">
+                          <img alt="Property Detail" src="{{animal.image}}" class="img-responsive">
                           <span class="thumb-info-title font-size-xl">
                             <span class="thumb-info-inner font-size-xl">
                               <i class="icon-magnifier icons font-size-xl"></i>
@@ -82,19 +82,19 @@
               </div>
 
               <!-- <div class="owl-carousel owl-theme manual thumb-gallery-thumbs mt" id="thumbGalleryThumbs">
-                                          <div>
-                                              <img alt="Property Detail" src="img/demos/real-estate/listings/listing-detail-1-thumb.jpg" class="img-responsive cur-pointer">
-                                          </div>
-                                          <div>
-                                              <img alt="Property Detail" src="img/demos/real-estate/listings/listing-detail-2-thumb.jpg" class="img-responsive cur-pointer">
-                                          </div>
-                                          <div>
-                                              <img alt="Property Detail" src="img/demos/real-estate/listings/listing-detail-3-thumb.jpg" class="img-responsive cur-pointer">
-                                          </div>
-                                          <div>
-                                              <img alt="Property Detail" src="img/demos/real-estate/listings/listing-detail-4-thumb.jpg" class="img-responsive cur-pointer">
-                                          </div>
-                                      </div> -->
+                <div>
+                  <img alt="Property Detail" src="img/demos/real-estate/listings/listing-detail-1-thumb.jpg" class="img-responsive cur-pointer">
+                </div>
+                <div>
+                  <img alt="Property Detail" src="img/demos/real-estate/listings/listing-detail-2-thumb.jpg" class="img-responsive cur-pointer">
+                </div>
+                <div>
+                  <img alt="Property Detail" src="img/demos/real-estate/listings/listing-detail-3-thumb.jpg" class="img-responsive cur-pointer">
+                </div>
+                <div>
+                  <img alt="Property Detail" src="img/demos/real-estate/listings/listing-detail-4-thumb.jpg" class="img-responsive cur-pointer">
+                </div>
+              </div> -->
             </div>
 
           </div>
@@ -158,7 +158,7 @@
                   </td>
                 </tr>
               </tbody>
-            </table>
+            </table>  
 
           </div>
         </div>
@@ -182,15 +182,11 @@
             <h2 class="mt-md mb-md" id="map">
               <strong>Location</strong>
             </h2>
-            <div id="googlemaps" class="google-map m-none mb-xlg"></div>
-
+            <!-- <div id="googlemaps" class="google-map m-none mb-xlg"></div> -->
+          <app-map></app-map>
           </div>
         </div>
-
       </div>
     </div>
-
   </div>
-
-
 </div>

@@ -1,0 +1,31 @@
+<section class="section section-no-border custom-section-padding-4 m-none" style="background: url('../../../assets/img/13.jpg'); background-size: cover;">
+  <div class="container">
+    <div class="row center">
+      <div class="col-md-12" style="margin-top: 45px">
+        <h1 class="text-color-light custom-secondary-font font-weight-bold mb-xs 
+                appear-animation" data-appear-animation="bounceInRight" data-appear-animation-delay="1">Diseases</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+      <app-add-disease></app-add-disease>
+    </div>
+  </div>
+
+  <div class="row">
+    <!--Filter-->
+    <app-disease-filter class="col-md-3"></app-disease-filter>
+    <!--Listing-->
+    <div class="col-md-9">
+      <div class="row">
+        <app-disease-oneitem (editClicked)="getDisease($event)" class="col-md-4" *ngFor="let item of diseases" [disease] = "item"></app-disease-oneitem>
+      </div>
+    </div>
+  </div>
+</div>
+<app-edit-disease [disease]="disease"></app-edit-disease>

@@ -17,6 +17,11 @@ export class AnimalService {
      public getAnimal(id: number) {
     return this.animals.find(animal => animal.id === id);
     }
+    public addAnimal(form) {
+        let animal: IAnimal;
+        animal = form.value;
+        this.animals.push(animal);
+    }
     public deleteAnimal(id){
         let animal = this.animals.map(function(item) { return item.id; }).indexOf(id);
         this.animals.splice(animal, 1);

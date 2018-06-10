@@ -1,17 +1,4 @@
-<section class="section section-no-border custom-section-padding-4 m-none" style="background: url('../../../assets/img/13.jpg'); background-size: cover;">
-  <div class="container">
-    <div class="row center">
-      <div class="col-md-12" style="margin-top: 45px">
-        <h1 class="text-color-light custom-secondary-font font-weight-bold mb-xs 
-                  appear-animation" data-appear-animation="bounceInRight" data-appear-animation-delay="1">Animals</h1>
-      </div>
-    </div>
-  </div>
-</section>
-<div role="main" class="main" style="margin-top:100px;">
-  <div class="container">
-    <div class="row">
-      <app-filter-component></app-filter-component>
+
       <div class="col-md-9">
         <div class="header-column">
           <div class="row">
@@ -23,7 +10,7 @@
                 <div class="header-search hidden-xs">
                   <form id="searchForm" action="page-search-results.html" method="get">
                     <div class="input-group">
-                      <input type="text" class="form-control" name="q" id="q" placeholder="Search..." required>
+                      <input type="text" class="form-control" [(ngModel)]="queryString" name="q" id="q" placeholder="Search..." required>
                       <span class="input-group-btn">
                         <button class="btn btn-default" type="submit">
                           <i class="fa fa-search"></i>
@@ -43,55 +30,15 @@
                 <i class="fa fa-plus-square fa-2x" style="text-align: right; margin-left:10px;"></i>
               </a>
             </div>
-            <!-- <div class="row">
+            <!-- <div class="row"  sort-destination>
               <app-one-small-component class="col-md-4" *ngFor="let a of animals" [animal]="a" (id)="editform($event)"></app-one-small-component>
             </div> -->
             <ul class="portfolio-list" data-sort-id="portfolio">
-                <app-one-small-component *ngFor="let a of animals" class="col-md-4" [animal]="a" (id)="editform($event)"></app-one-small-component>
-              </ul>
+              <app-one-small-component *ngFor="let a of animals| searchdata: queryString : 'name'| searchdata: data: 'type' ; let i = index"
+                class="col-md-4" [animal]="a" (id)="editform($event)"></app-one-small-component>
+            </ul>
           </div>
         </div>
-        <app-add-animal></app-add-animal>
-        <app-edit-animal [Animal]="animal"></app-edit-animal>
       </div>
-    </div>
-  </div>
-</div>
-<div class="container">
-  <div class="col-md-12 center">
-
-    <ul class="pagination">
-
-      <li>
-        <a href="#">1</a>
-      </li>
-      <li>
-        <a href="#">2</a>
-      </li>
-      <li>
-        <a href="#">3</a>
-      </li>
-      <li>
-        <a href="#">4</a>
-      </li>
-      <li>
-        <a href="#">5</a>
-      </li>
-      <li>
-        <a href="#">6</a>
-      </li>
-      <li>
-        <a href="#">7</a>
-      </li>
-      <li>
-        <a href="#">8</a>
-      </li>
-      <li>
-        <a href="#">9</a>
-      </li>
-      <li>
-        <a href="#">NEXT</a>
-      </li>
-    </ul>
-  </div>
-</div>
+      <app-add-animal></app-add-animal>
+      <app-edit-animal [Animal]="animal"></app-edit-animal>

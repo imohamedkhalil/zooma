@@ -10,7 +10,7 @@
       true,
       "check-space"
     ],
-    "curly": true,
+    "curly": false,
     "deprecation": {
       "severity": "warn"
     },
@@ -93,7 +93,7 @@
       "always"
     ],
     "triple-equals": [
-      true,
+      false,
       "allow-null-check"
     ],
     "typedef-whitespace": [

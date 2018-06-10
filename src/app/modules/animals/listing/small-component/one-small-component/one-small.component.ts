@@ -14,6 +14,7 @@ export class OneSmallComponent implements OnInit {
   animals: IAnimal [];
   @Input() animal: IAnimal;
   @Output() id= new EventEmitter<number>();
+ 
   
   constructor(private animalService: AnimalService, private router:Router) { }
  

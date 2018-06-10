@@ -4,4 +4,5 @@ export class Medicine {
     smalldescription?: string;
     description? :string;
     type?: string;
+    animals? : string;
 }

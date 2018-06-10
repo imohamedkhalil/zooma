@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Medicine } from 'src/app/shared/interfaces/medicine';
 import { MedicineService } from 'src/app/shared/services/medicineservice/medicine.service';
@@ -9,10 +9,17 @@ import { MedicineService } from 'src/app/shared/services/medicineservice/medicin
   styleUrls: ['./medicine-listing.component.css']
 })
 export class MedicineListingComponent implements OnInit {
-
+  
   medicines: Medicine[];
   medicine: Medicine;
- 
+  filterdata: string;
+
+  filterData(data:string){
+    console.log(data);
+    debugger;
+    this.filterdata=data;
+  } 
+  
   getMedicines() {
     this.medicines = this.medicineService.getMedicines();
   }

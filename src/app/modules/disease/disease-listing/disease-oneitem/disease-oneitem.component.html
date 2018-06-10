@@ -1,0 +1,24 @@
+<div>
+  <div style="text-align: right;">
+
+    <a href="#" (click)="editDisease(disease.id)" data-target="#editDisease" data-toggle="modal">
+      <i class="fa fa-pencil" style="text-align: right; margin-left:10px;"></i>
+    </a>
+
+    <a (click)="deleteDisease(disease.id)">
+      <i class="fa fa-trash" style="text-align: center; margin-left:10px;"></i>
+    </a>
+  </div>
+  <div class="listing-component featured-box featured-box-primary featured-box-effect-1">
+    <div class="box-content">
+      <i class="icon-featured fa fa-stethoscope"></i>
+      <h4>{{disease.name}}</h4>
+      <p>{{disease.smalldescription}}</p>
+      <p>
+        <a [routerLink]="['../disease/details', disease.id]" class="lnk-primary learn-more">Learn more
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>

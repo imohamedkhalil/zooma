@@ -1,4 +1,4 @@
-import { Medicine } from './../../interfaces/medicine'
+import { Medicine } from './../../interfaces/medicine';
 
 export const MEDICINES: Medicine[] = [
     {
@@ -64,3 +64,4 @@ export const MEDICINES: Medicine[] = [
         animals: 'Cats'
     }
 ];
+  

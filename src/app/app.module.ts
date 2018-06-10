@@ -71,6 +71,13 @@ import { FoodlistingComponent } from 'src/app/modules/food/foodlisting/foodlisti
 import { FoodService } from 'src/app/shared/services/foodservice/food.service';
 import { AddfoodComponent } from 'src/app/modules/food/addfood/addfood.component';
 import { FoodeditComponent } from 'src/app/modules/food/foodedit/foodedit.component';
+import { MapComponent } from 'src/app/modules/animals/listing/animalitem/map/map.component';
+import { DiseaseDetailComponent } from 'src/app/modules/disease/details/disease-detail/disease-detail.component';
+import { DiseaseListingComponent } from 'src/app/modules/disease/disease-listing/disease-listing.component';
+import { AddDiseaseComponent } from 'src/app/modules/disease/add-disease/add-disease.component';
+import { EditDiseaseComponent } from 'src/app/modules/disease/edit-disease/edit-disease.component';
+import { DiseaseFilterComponent } from 'src/app/modules/disease/disease-listing/disease-filter/disease-filter.component';
+import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing/disease-oneitem/disease-oneitem.component';
 
 @NgModule({
   declarations: [
@@ -129,6 +136,13 @@ import { FoodeditComponent } from 'src/app/modules/food/foodedit/foodedit.compon
     FilterComponent,
     AddfoodComponent, 
     FoodeditComponent,
+    MapComponent,
+    DiseaseListingComponent,
+    DiseaseFilterComponent,
+    DiseaseOneitemComponent,
+    DiseaseDetailComponent,
+    AddDiseaseComponent,
+    EditDiseaseComponent
   ],
   imports: [
     BrowserModule,
@@ -153,6 +167,8 @@ import { FoodeditComponent } from 'src/app/modules/food/foodedit/foodedit.compon
       {path:'createzoo',component:CreatezooComponent},
       { path:'food', component: FoodlistingComponent },
       { path:'food/details/:id', component: FooddetailsComponent },
+      { path: 'disease', component: DiseaseListingComponent },
+      { path: 'disease/details/:id', component: DiseaseDetailComponent },
       { path:'', component: HomepageviewComponent },
     ])
   ],

@@ -19,11 +19,11 @@
 
   <div class="row">
     <!--Filter-->
-    <app-filter class="col-md-3"></app-filter>
+    <app-filter class="col-md-3" (filter)="filterData($event)"></app-filter>
     <!--Listing-->
     <div class="col-md-9">
       <div class="row">
-        <app-medicine-oneitem (editClicked)="getMedicine($event)" class="col-md-4" *ngFor="let item of medicines" [medicine] = "item"></app-medicine-oneitem>
+        <app-medicine-oneitem (editClicked)="getMedicine($event)" class="col-md-4" *ngFor="let item of medicines | searchdata: filterdata: 'animals'" [medicine] = "item"></app-medicine-oneitem>
       </div>
     </div>
   </div>

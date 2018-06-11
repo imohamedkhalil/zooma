@@ -10,7 +10,7 @@ import { ZooheaderComponent } from './zoodetails/zoodetailspage/zooheader/zoohea
 import { ZoosliderComponent } from './zoodetails/zoodetailspage/zooslider/zooslider.component';
 import { AddZooFormComponent } from './zoolisting/add-zoo-form/add-zoo-form.component';
 import { EditZooComponent } from './edit-zoo/edit-zoo.component';
-import { DiseaseComponent } from '.c:/Users/o0ihi/Desktop/zooma/src/app/modules/disease/disease.component';
+// import { DiseaseComponent } from './src/app/modules/disease/disease.component';
 
 @NgModule({
   imports: [
@@ -26,8 +26,8 @@ import { DiseaseComponent } from '.c:/Users/o0ihi/Desktop/zooma/src/app/modules/
     ZooheaderComponent,
     ZoosliderComponent,
     AddZooFormComponent,
-    EditZooComponent,,
-    DiseaseComponent
+    EditZooComponent
+
 ]
 })
 export class ZoosModule { }

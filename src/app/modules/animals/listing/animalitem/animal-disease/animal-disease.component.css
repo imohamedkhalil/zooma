@@ -1,13 +1,17 @@
-/* .fa-stethoscope{
+.fa-stethoscope{
     font-size: 400%;
     text-align: center;
     padding-top: 13%;
-}
-
-.container{
-    margin-top: 100px;
+    margin-left: 30%;
+    margin-top: 10%;
 }
 
 .listing-component{
     margin-top: 0px;
-} */
+}
+.thumb-info-wrapper{
+height: 180px;
+}
+.thumb-info-lighten{
+    width: 99%;
+}

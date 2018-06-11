@@ -18,8 +18,7 @@
           </div>
         </div>
         <div class="owl-carousel owl-theme" data-plugin-options="{'items': 4, 'margin': 20, 'loop': false}">
-          <app-medicine-oneitem *ngFor="let disease of diseases"></app-medicine-oneitem>
-          <!-- <div class="portfolio-item"  *ngFor="let disease of diseases">
+          <div class="portfolio-item"  *ngFor="let disease of diseases">
             <div class="product-label" style="text-align:right; margin-left:10px;">
               <a href="#">
                 <i class="fa fa-edit"></i>
@@ -28,10 +27,10 @@
                 <i class="fa fa-trash" style="margin-left:10px;"></i>
               </a>
             </div>
-            <a href="#" data-portfolio-on-modal>
+            <a  [routerLink]="['../../../disease/details', disease.id]" data-portfolio-on-modal>
               <span class="thumb-info thumb-info-lighten">
                 <span class="thumb-info-wrapper">
-                  <img src="img/projects/project.jpg" class="img-responsive" alt="">
+                    <i class="icon-featured fa fa-stethoscope"></i>
                   <span class="thumb-info-title">
                     <span class="thumb-info-inner">{{disease.name}}</span>
                     <span class="thumb-info-type">{{disease.type}}</span>
@@ -39,7 +38,7 @@
                 </span>
               </span>
             </a>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Medicine } from 'src/app/shared/interfaces/medicine';
-import { MedicineService } from 'src/app/shared/services/medicineservice/medicine.service';
+import { DiseaseService } from 'src/app/shared/services/diseaseservice/disease.service';
+import { IDisease } from 'src/app/shared/interfaces/IDisease';
 
 @Component({
   selector: 'app-animal-disease',
@@ -8,10 +8,10 @@ import { MedicineService } from 'src/app/shared/services/medicineservice/medicin
   styleUrls: ['./animal-disease.component.css']
 })
 export class AnimalDiseaseComponent implements OnInit {
-  diseases: Medicine[];
-  constructor(private diseaseService: MedicineService) { }
+  diseases: IDisease[];
+  constructor(private diseaseService: DiseaseService) { }
   getDisease() {
-    this.diseases = this.diseaseService.getMedicines();
+    this.diseases = this.diseaseService.getDiseases();
   }
   ngOnInit() {
     this.getDisease();

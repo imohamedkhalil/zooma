@@ -65,6 +65,8 @@ import { SearchdataPipe } from './searchdata.pipe';
 import { CreatezooComponent } from './modules/createzoo/createzoo.component';
 import { EditAnimalComponent } from 'src/app/modules/animals/listing/edit-animal/edit-animal/edit-animal.component';
 import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-oneitem/medicine-oneitem.component';
+import { CheckoutComponent } from './modules/createzoo/checkout/checkout.component';
+
 
 @NgModule({
   declarations: [
@@ -116,7 +118,9 @@ import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-on
     SearchdataPipe,
     CreatezooComponent,
     EditAnimalComponent,
-    MedicineOneitemComponent
+    MedicineOneitemComponent,
+    CheckoutComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -139,6 +143,7 @@ import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-on
       { path: 'showdetails', component: ShowdetailsComponent },
       { path: 'addshow', component: ShowaddComponent },
       {path:'createzoo',component:CreatezooComponent},
+      {path:'checkout',component: CheckoutComponent},
       { path: '', component: HomepageviewComponent }
     ])
   ],

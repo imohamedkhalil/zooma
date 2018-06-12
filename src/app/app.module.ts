@@ -65,6 +65,9 @@ import { SearchdataPipe } from './searchdata.pipe';
 import { CreatezooComponent } from './modules/createzoo/createzoo.component';
 import { EditAnimalComponent } from 'src/app/modules/animals/listing/edit-animal/edit-animal/edit-animal.component';
 import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-oneitem/medicine-oneitem.component';
+
+import { CheckoutComponent } from './modules/createzoo/checkout/checkout.component';
+
 import { FooddetailsComponent } from 'src/app/modules/food/fooddetails/fooddetails.component';
 import { FooditemComponent } from 'src/app/modules/food/foodlisting/fooditem/fooditem.component';
 import { FoodlistingComponent } from 'src/app/modules/food/foodlisting/foodlisting.component';
@@ -130,6 +133,7 @@ import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing
     CreatezooComponent,
     EditAnimalComponent,
     MedicineOneitemComponent,
+    CheckoutComponent,
     FooditemComponent,
     FoodlistingComponent,
     FooddetailsComponent,
@@ -165,6 +169,7 @@ import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing
       { path: 'showdetails', component: ShowdetailsComponent },
       { path: 'addshow', component: ShowaddComponent },
       {path:'createzoo',component:CreatezooComponent},
+      {path:'checkout',component: CheckoutComponent},
       { path:'food', component: FoodlistingComponent },
       { path:'food/details/:id', component: FooddetailsComponent },
       { path: 'disease', component: DiseaseListingComponent },

@@ -9,7 +9,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="zooname">Name</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control input-sm" name="name" [(ngModel)]="name" placeholder="{{Zoo.name}}" id="zooname" required>
+                  <input type="text" class="form-control input-sm" name="name" [(ngModel)]="name" placeholder="{{Zoo.name}}" id="zooname">
                 </div>
               </div>
               <div class="form-group">
@@ -30,7 +30,7 @@
                 <label class="col-sm-2 control-label" for="w1-username">Email</label>
                 <div class="col-sm-10">
                   <input class="form-control input-sm" name="email" [(ngModel)]="email" placeholder="{{Zoo.email}}" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                    required id="w1-username">
+                     id="w1-username">
                 </div>
               </div>
               <div method="post" enctype="multipart/form-data">
@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-md-3 ">
                   <input type="button" (click)="cancelZoo()" value="Cancel" class="btn btn-default pull-right mb-xl" data-dismiss="modal">
-                  <input (click)="editZoo(f)" [disabled]="!f.valid" data-dismiss="modal" type="submit" value="Edit" class="btn btn-primary pull-left mb-xl"
+                  <input (click)="editZoo(f)"  data-dismiss="modal" type="submit" value="Edit" class="btn btn-primary pull-left mb-xl"
                     data-loading-text="Loading...">
                 </div>
               </div>

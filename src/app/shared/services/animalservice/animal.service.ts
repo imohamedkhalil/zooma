@@ -12,6 +12,7 @@ export class AnimalService {
         { id: 6, name: 'Fish', category: 'Fish', contienent: 'Europe', type: 'bird', lifeSpan: 20, date: 'Month', description: 'mjhghghgv', image: '../assets/slides/Fishes.png' },
     ];
     public getAnimals() {
+        debugger;
         return this.animals;
     }
      public getAnimal(id: number) {

@@ -11,6 +11,7 @@ import { MEDICINES } from '../../../../shared/services/medicineservice/mock-medi
 })
 export class MedicineOneitemComponent implements OnInit {
 
+  @Input() data: string;  
   @Input() medicine: Medicine;
   @Output() editClicked = new EventEmitter<number>();
 

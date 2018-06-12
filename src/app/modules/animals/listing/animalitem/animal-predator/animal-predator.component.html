@@ -17,13 +17,13 @@
             </div>
           </div>
         </div>
-        <div class="owl-carousel owl-theme" data-plugin-options="{'items': 5, 'margin': 20, 'loop': false}">
+        <div class="owl-carousel owl-theme" data-plugin-options="{'items': 4, 'margin': 20, 'loop': false}">
           <div class="portfolio-item" *ngFor = "let animal of animals">
             <div style="text-align: right;">
               <i class="fa fa-edit" style="text-align: right;margin-left:10px;"></i>
               <i class="fa fa-trash" style="text-align: center;margin-left:10px;"></i>
             </div>
-            <a href="#" data-portfolio-on-modal>
+            <a [routerLink]="['../../../animals/details', animal.id]" data-portfolio-on-modal>
               <span class="thumb-info thumb-info-lighten">
                 <span class="thumb-info-wrapper">
                   <img src="{{animal.image}}" class="img-responsive" alt="">

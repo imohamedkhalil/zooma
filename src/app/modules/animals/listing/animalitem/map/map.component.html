@@ -1,0 +1,17 @@
+<!-- <div id="map"></div> -->
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" (mapClick)="mapClicked($event)">
+
+  <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(m.label, i)" [latitude]="m.lat" [longitude]="m.lng"
+    [label]="m.label" [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m, $event)">
+
+    <agm-info-window>
+      <strong>InfoWindow content</strong>
+    </agm-info-window>
+
+  </agm-marker>
+
+  <agm-circle [latitude]="lat + 0.3" [longitude]="lng" [radius]="5000" [fillColor]="'red'" [circleDraggable]="true" [editable]="true">
+  </agm-circle>
+</agm-map>
+
+<!-- <iframe id="map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.5698866720313!2d31.337237885280018!3d30.106502281859836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14581587dac6165b%3A0x2f984c682d69cc4c!2z2LTYp9ix2Lkg2KfZhNit2KzYp9iy2Iwg2KfZhNmG2LLZh9ip2Iwg2YLYs9mFINin2YTZhtiy2YfYqdiMINmF2K3Yp9mB2LjYqSDYp9mE2YLYp9mH2LHYqeKArA!5e0!3m2!1sar!2seg!4v1527947441487" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> -->

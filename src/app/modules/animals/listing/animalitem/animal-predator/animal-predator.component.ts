@@ -9,13 +9,13 @@ import { AnimalService } from 'src/app/shared/services/animalservice/animal.serv
 })
 export class AnimalPredatorComponent implements OnInit {
   animals: IAnimal [];
-  getAnimals() {
+  getAnimal() {
     this.animals = this.animalService.getAnimals();
   }
   constructor(private animalService: AnimalService) { }
 
   ngOnInit() {
-    this.getAnimals();
+    this.getAnimal();
 }
 
 }

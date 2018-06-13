@@ -72,22 +72,11 @@
                     <input type="text" class="form-control populate" name="description" id="description" [(ngModel)] = "description" rows="20">
                   </div>
                 </div>
-            <!--    <div class="form-group">
-                  <label class="col-sm-2 control-label" for="w1-username">Upload Image</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control input-sm" id="files" type="file" style="margin:10px;">
-                    <button type="button" id="clear">Clear</button>
-                    <div id="message"> </div>
-                    <output id="result">
-                  </div>
-                </div>-->
-
-
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="image">Upload Image</label>
                   <div action="multiupload.php" method="post" id="image" enctype="multipart/form-data">
                     <div class="col-md-6">
-                      <input type="file" class="form-control" id="images" name="images[]" onchange="preview_images();" multiple />
+                      <input type="file" class="form-control" id="images" name="images[]" accept="image/*" onchange="preview_images();" multiple />
                     </div>
                     <div class="col-md-4">
                       <input type="submit" class="btn btn-primary" name='submit_image' value="Upload Multiple Image" />

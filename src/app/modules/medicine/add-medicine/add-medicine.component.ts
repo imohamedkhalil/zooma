@@ -14,19 +14,13 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service'
 export class AddMedicineComponent implements OnInit {
 
   medicines: Medicine[] = MEDICINES;
-  modalRef: BsModalRef;
-
+  
   onSubmit(form) {
     this.medicineService.addMedicine(form);
   }
 
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template);
-  }
-
   constructor(
     private medicineService: MedicineService,
-    private modalService: BsModalService
   ) { }
 
   ngOnInit() {

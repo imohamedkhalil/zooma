@@ -5,7 +5,9 @@ import { AppComponent } from './app.component';
 import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { AgmCoreModule } from '@agm/core';
 
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import './modules/homepage/homepage.module.ts';
 
@@ -65,6 +67,9 @@ import { SearchdataPipe } from './searchdata.pipe';
 import { CreatezooComponent } from './modules/createzoo/createzoo.component';
 import { EditAnimalComponent } from 'src/app/modules/animals/listing/edit-animal/edit-animal/edit-animal.component';
 import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-oneitem/medicine-oneitem.component';
+
+import { CheckoutComponent } from './modules/createzoo/checkout/checkout.component';
+
 import { FooddetailsComponent } from 'src/app/modules/food/fooddetails/fooddetails.component';
 import { FooditemComponent } from 'src/app/modules/food/foodlisting/fooditem/fooditem.component';
 import { FoodlistingComponent } from 'src/app/modules/food/foodlisting/foodlisting.component';
@@ -72,6 +77,14 @@ import { FoodService } from 'src/app/shared/services/foodservice/food.service';
 import { AddfoodComponent } from 'src/app/modules/food/addfood/addfood.component';
 import { FoodeditComponent } from 'src/app/modules/food/foodedit/foodedit.component';
 import { SmallfoodComponent } from 'src/app/modules/food/fooddetails/smallfood/smallfood.component';
+import { MapComponent } from 'src/app/modules/animals/listing/animalitem/map/map.component';
+import { DiseaseDetailComponent } from 'src/app/modules/disease/details/disease-detail/disease-detail.component';
+import { DiseaseListingComponent } from 'src/app/modules/disease/disease-listing/disease-listing.component';
+import { AddDiseaseComponent } from 'src/app/modules/disease/add-disease/add-disease.component';
+import { EditDiseaseComponent } from 'src/app/modules/disease/edit-disease/edit-disease.component';
+import { DiseaseFilterComponent } from 'src/app/modules/disease/disease-listing/disease-filter/disease-filter.component';
+import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing/disease-oneitem/disease-oneitem.component';
+
 
 @NgModule({
   declarations: [
@@ -124,6 +137,7 @@ import { SmallfoodComponent } from 'src/app/modules/food/fooddetails/smallfood/s
     CreatezooComponent,
     EditAnimalComponent,
     MedicineOneitemComponent,
+    CheckoutComponent,
     FooditemComponent,
     FoodlistingComponent,
     FooddetailsComponent,
@@ -131,13 +145,27 @@ import { SmallfoodComponent } from 'src/app/modules/food/fooddetails/smallfood/s
     AddfoodComponent, 
     FoodeditComponent,
     SmallfoodComponent
+    MapComponent,
+    DiseaseListingComponent,
+    DiseaseFilterComponent,
+    DiseaseOneitemComponent,
+    DiseaseDetailComponent,
+    AddDiseaseComponent,
+    EditDiseaseComponent,
+    MapComponent,
+    SliderOneitemComponent
+
   ],
   imports: [
     BrowserModule,
     ModalModule.forRoot(),
+    CarouselModule.forRoot(),
     FormsModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
+     AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBuDz7GbyoAEHd9Q3VgmSREX-J4Ian2NUw'
+    }),
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },
@@ -153,8 +181,11 @@ import { SmallfoodComponent } from 'src/app/modules/food/fooddetails/smallfood/s
       { path: 'showdetails', component: ShowdetailsComponent },
       { path: 'addshow', component: ShowaddComponent },
       {path:'createzoo',component:CreatezooComponent},
+      {path:'checkout',component: CheckoutComponent},
       { path:'food', component: FoodlistingComponent },
       { path:'food/details/:id', component: FooddetailsComponent },
+      { path: 'disease', component: DiseaseListingComponent },
+      { path: 'disease/details/:id', component: DiseaseDetailComponent },
       { path:'', component: HomepageviewComponent },
     ])
   ],

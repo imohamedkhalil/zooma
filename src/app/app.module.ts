@@ -71,6 +71,7 @@ import { FoodlistingComponent } from 'src/app/modules/food/foodlisting/foodlisti
 import { FoodService } from 'src/app/shared/services/foodservice/food.service';
 import { AddfoodComponent } from 'src/app/modules/food/addfood/addfood.component';
 import { FoodeditComponent } from 'src/app/modules/food/foodedit/foodedit.component';
+import { SmallfoodComponent } from 'src/app/modules/food/fooddetails/smallfood/smallfood.component';
 
 @NgModule({
   declarations: [
@@ -129,6 +130,7 @@ import { FoodeditComponent } from 'src/app/modules/food/foodedit/foodedit.compon
     FilterComponent,
     AddfoodComponent, 
     FoodeditComponent,
+    SmallfoodComponent
   ],
   imports: [
     BrowserModule,

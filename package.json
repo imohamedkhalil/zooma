@@ -24,6 +24,7 @@
     "core-js": "^2.5.4",
     "fontawesome": "^4.7.2",
     "ngx-bootstrap": "^3.0.0",
+    "ngx-owl-carousel": "^2.0.7",
     "rxjs": "^6.1.0",
     "zone.js": "^0.8.26"
   },

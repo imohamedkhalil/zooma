@@ -6,6 +6,7 @@ import { IFood } from 'src/app/shared/interfaces/IFood';
 import { FoodService } from 'src/app/shared/services/foodservice/food.service';
 import { Medicine } from 'src/app/shared/interfaces/medicine';
 import { MedicineService } from 'src/app/shared/services/medicineservice/medicine.service';
+
 @Component({
   selector: 'app-animalitem',
   templateUrl: './animalitem.component.html',

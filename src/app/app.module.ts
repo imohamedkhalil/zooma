@@ -5,7 +5,9 @@ import { AppComponent } from './app.component';
 import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { AgmCoreModule } from '@agm/core';
 
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import './modules/homepage/homepage.module.ts';
 
@@ -81,6 +83,7 @@ import { AddDiseaseComponent } from 'src/app/modules/disease/add-disease/add-dis
 import { EditDiseaseComponent } from 'src/app/modules/disease/edit-disease/edit-disease.component';
 import { DiseaseFilterComponent } from 'src/app/modules/disease/disease-listing/disease-filter/disease-filter.component';
 import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing/disease-oneitem/disease-oneitem.component';
+import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalitem/slider-oneitem/slider-oneitem.component';
 
 @NgModule({
   declarations: [
@@ -146,14 +149,20 @@ import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing
     DiseaseOneitemComponent,
     DiseaseDetailComponent,
     AddDiseaseComponent,
-    EditDiseaseComponent
+    EditDiseaseComponent,
+    MapComponent,
+    SliderOneitemComponent
   ],
   imports: [
     BrowserModule,
     ModalModule.forRoot(),
+    CarouselModule.forRoot(),
     FormsModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
+     AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBuDz7GbyoAEHd9Q3VgmSREX-J4Ian2NUw'
+    }),
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },

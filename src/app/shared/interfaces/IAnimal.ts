@@ -1,6 +1,6 @@
 export interface IAnimal {
     id?: number;
-    image?: string;
+    image?: string[];
     name?: string;
     type?: string;
     contienent?: string;

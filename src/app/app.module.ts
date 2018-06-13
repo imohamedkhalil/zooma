@@ -76,6 +76,7 @@ import { FoodlistingComponent } from 'src/app/modules/food/foodlisting/foodlisti
 import { FoodService } from 'src/app/shared/services/foodservice/food.service';
 import { AddfoodComponent } from 'src/app/modules/food/addfood/addfood.component';
 import { FoodeditComponent } from 'src/app/modules/food/foodedit/foodedit.component';
+import { SmallfoodComponent } from 'src/app/modules/food/fooddetails/smallfood/smallfood.component';
 import { MapComponent } from 'src/app/modules/animals/listing/animalitem/map/map.component';
 import { DiseaseDetailComponent } from 'src/app/modules/disease/details/disease-detail/disease-detail.component';
 import { DiseaseListingComponent } from 'src/app/modules/disease/disease-listing/disease-listing.component';
@@ -83,7 +84,7 @@ import { AddDiseaseComponent } from 'src/app/modules/disease/add-disease/add-dis
 import { EditDiseaseComponent } from 'src/app/modules/disease/edit-disease/edit-disease.component';
 import { DiseaseFilterComponent } from 'src/app/modules/disease/disease-listing/disease-filter/disease-filter.component';
 import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing/disease-oneitem/disease-oneitem.component';
-import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalitem/slider-oneitem/slider-oneitem.component';
+
 
 @NgModule({
   declarations: [
@@ -143,6 +144,7 @@ import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalit
     FilterComponent,
     AddfoodComponent, 
     FoodeditComponent,
+    SmallfoodComponent
     MapComponent,
     DiseaseListingComponent,
     DiseaseFilterComponent,
@@ -152,6 +154,7 @@ import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalit
     EditDiseaseComponent,
     MapComponent,
     SliderOneitemComponent
+
   ],
   imports: [
     BrowserModule,

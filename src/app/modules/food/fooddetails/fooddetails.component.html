@@ -4,116 +4,20 @@
       <br>
       <br>
       <div class="col-md-2">
-        <h4>Related Food</h4>
-        <div class="owl-carousel owl-theme" data-plugin-options="{'items':1, 'margin': 5, 'dots': false, 'nav': true}">
-          <div>
-            <div class="product product-sm">
-              <figure class="product-image-area">
-                <a href="demo-shop-18-product-details.html" title="Product Name" class="product-image">
-                  <img src="../img/animal/x1.png" alt="Product Name">
-                  <img src="../img/animal/x8.jpg" alt="Product Name" class="product-hover-image">
-                </a>
-              </figure>
-              <div class="product-details-area">
-                <h2 class="product-name">
-                  <a href="demo-shop-18-product-details.html" title="Product Name">Zoo Med </a>
-                </h2>
-                <div class="product-price-box">
-                  <span class="product-price">Tortoise Food</span>
-                </div>
-              </div>
-            </div>
-            <div class="product product-sm">
-              <figure class="product-image-area">
-                <a href="demo-shop-18-product-details.html" title="Product Name" class="product-image">
-                  <img src="../img/animal/x2.jpg" alt="Product Name">
-                </a>
-              </figure>
-              <div class="product-details-area">
-                <h2 class="product-name">
-                  <a href="demo-shop-18-product-details.html" title="Product Name">Whole Hearted</a>
-                </h2>
-                <div class="product-price-box">
-                  <span class="product-price">Dog Food</span>
-                </div>
-              </div>
-            </div>
-            <div class="product product-sm">
-              <figure class="product-image-area">
-                <a href="demo-shop-18-product-details.html" title="Product Name" class="product-image">
-                  <img src="../img/animal/x3.jpg" alt="Product Name">
-                </a>
-              </figure>
-              <div class="product-details-area">
-                <h2 class="product-name">
-                  <a href="demo-shop-18-product-details.html" title="Product Name">Ocean Nutrition </a>
-                </h2>
-                <div class="product-price-box">
-                  <span class="product-price">Fish food</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="product product-sm">
-              <figure class="product-image-area">
-                <a href="demo-shop-18-product-details.html" title="Product Name" class="product-image">
-                  <img src="../img/animal/x4.jpg" alt="Product Name">
-                  <img src="../img/animal/x7.jpg" alt="Product Name" class="product-hover-image">
-                </a>
-              </figure>
-              <div class="product-details-area">
-                <h2 class="product-name">
-                  <a href="demo-shop-18-product-details.html" title="Product Name">Corn</a>
-                </h2>
-                <div class="product-price-box">
-                  <span class="product-price">Hen food</span>
-                </div>
-              </div>
-            </div>
-            <div class="product product-sm">
-              <figure class="product-image-area">
-                <a href="demo-shop-18-product-details.html" title="Product Name" class="product-image">
-                  <img src="../img/animal/x3.jpg" alt="Product Name">
-                </a>
-              </figure>
-              <div class="product-details-area">
-                <h2 class="product-name">
-                  <a href="demo-shop-18-product-details.html" title="Product Name">Ocean Nutrition</a>
-                </h2>
-                <div class="product-price-box">
-                  <span class="product-price">Fish food</span>
-                </div>
-              </div>
-            </div>
-            <div class="product product-sm">
-              <figure class="product-image-area">
-                <a href="demo-shop-18-product-details.html" title="Product Name" class="product-image">
-                  <img src="../img/animal/x2.jpg" alt="Product Name">
-                </a>
-              </figure>
-              <div class="product-details-area">
-                <h2 class="product-name">
-                  <a href="demo-shop-18-product-details.html" title="Product Name">Sun SeedL</a>
-                </h2>
-                <div class="product-price-box">
-                  <span class="product-price">Rabbit food</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <app-smallfood></app-smallfood> 
       </div>
       <div class="col-md-10">
         <div class="row">
           <div class="owl-carousel boxed-banner-carosel owl-theme" data-plugin-options="{'items':1}">
             <div class="boxed-banner">
-              <img src="{{food.image}}" alt="Banner">
+              <img class="caimg" src="{{food.image}}" alt="Banner">
               <div class="banner-content">
+                <div>
                 <h2>
                   <strong> {{food.title}} </strong>
                 </h2>
-                <p>{{food.subtitle}}</p>
+                <p>{{food.describtion}}</p>
+                </div>
             </div>
           </div>
           <div class="boxed-banner">
@@ -251,5 +155,5 @@
       </div>
     </div>
   </div>
-</div>
+ </div>
 </div>

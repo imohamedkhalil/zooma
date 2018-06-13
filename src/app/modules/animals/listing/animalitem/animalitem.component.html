@@ -18,70 +18,80 @@
       <div class="col-md-12">
         <div class="row">
           <div class="col-md-7">
+            <carousel>
+              <slide>
+                <img [src]="animal.image[0]" alt="first slide" style="display: block; width: 100%; height:300px;">
+              </slide>
+              <slide>
+                <img [src]="animal.image[1]" alt="second slide" style="display: block; width: 100%; height:300px;">
+              </slide>
+              <!-- <app-slider-oneitem *ngFor="let item of animal.image let i=index;" [image]="item"></app-slider-oneitem> -->
+            </carousel>
+            <!--<div class="thumb-gallery">
+              <div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}}"> 
+              
+               <div class="owl-carousel owl-theme manual thumb-gallery-detail show-nav-hover" id="thumbGalleryDetail">
+                  <app-slider-oneitem *ngFor="let i of animal.image" [image]="i"></app-slider-oneitem>
+                  <div>
+                    <a href="{{animal.image}}">
+                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
+                        <span class="thumb-info-wrapper font-size-xl">
+                          <img alt="Property Detail" src="{{animal.image}}" class="img-responsive">
+                          <span class="thumb-info-title font-size-xl">
+                            <span class="thumb-info-inner font-size-xl">
+                              <i class="icon-magnifier icons font-size-xl"></i>
+                            </span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="{{animal.image}}">
+                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
+                        <span class="thumb-info-wrapper font-size-xl">
+                          <img alt="Property Detail" src="{{animal.image}}" class="img-responsive">
+                          <span class="thumb-info-title font-size-xl">
+                            <span class="thumb-info-inner font-size-xl">
+                              <i class="icon-magnifier icons font-size-xl"></i>
+                            </span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="{{animal.image}}">
+                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
+                        <span class="thumb-info-wrapper font-size-xl">
+                          <img alt="Property Detail" src="{{animal.image}}" class="img-responsive">
+                          <span class="thumb-info-title font-size-xl">
+                            <span class="thumb-info-inner font-size-xl">
+                              <i class="icon-magnifier icons font-size-xl"></i>
+                            </span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="{{animal.image}}">
+                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
+                        <span class="thumb-info-wrapper font-size-xl">
+                          <img alt="Property Detail" src="{{animal.image}}" class="img-responsive">
+                          <span class="thumb-info-title font-size-xl">
+                            <span class="thumb-info-inner font-size-xl">
+                              <i class="icon-magnifier icons font-size-xl"></i>
+                            </span>
+                          </span>
+                        </span>
+                      </span>
+                    </a>
+                  </div>
+                </div> 
+              </div> 
 
-            <div class="thumb-gallery">
-              <div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}}">
-                <div class="owl-carousel owl-theme manual thumb-gallery-detail show-nav-hover" id="thumbGalleryDetail">
-                  <div>
-                    <a href="{{animal.image}}">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
-                        <span class="thumb-info-wrapper font-size-xl">
-                          <img alt="Property Detail" src="{{animal.image}}" class="img-responsive">
-                          <span class="thumb-info-title font-size-xl">
-                            <span class="thumb-info-inner font-size-xl">
-                              <i class="icon-magnifier icons font-size-xl"></i>
-                            </span>
-                          </span>
-                        </span>
-                      </span>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="{{animal.image}}">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
-                        <span class="thumb-info-wrapper font-size-xl">
-                          <img alt="Property Detail" src="{{animal.image}}" class="img-responsive">
-                          <span class="thumb-info-title font-size-xl">
-                            <span class="thumb-info-inner font-size-xl">
-                              <i class="icon-magnifier icons font-size-xl"></i>
-                            </span>
-                          </span>
-                        </span>
-                      </span>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="{{animal.image}}">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
-                        <span class="thumb-info-wrapper font-size-xl">
-                          <img alt="Property Detail" src="{{animal.image}}" class="img-responsive">
-                          <span class="thumb-info-title font-size-xl">
-                            <span class="thumb-info-inner font-size-xl">
-                              <i class="icon-magnifier icons font-size-xl"></i>
-                            </span>
-                          </span>
-                        </span>
-                      </span>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="{{animal.image}}">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
-                        <span class="thumb-info-wrapper font-size-xl">
-                          <img alt="Property Detail" src="{{animal.image}}" class="img-responsive">
-                          <span class="thumb-info-title font-size-xl">
-                            <span class="thumb-info-inner font-size-xl">
-                              <i class="icon-magnifier icons font-size-xl"></i>
-                            </span>
-                          </span>
-                        </span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- <div class="owl-carousel owl-theme manual thumb-gallery-thumbs mt" id="thumbGalleryThumbs">
+               <div class="owl-carousel owl-theme manual thumb-gallery-thumbs mt" id="thumbGalleryThumbs">
                 <div>
                   <img alt="Property Detail" src="img/demos/real-estate/listings/listing-detail-1-thumb.jpg" class="img-responsive cur-pointer">
                 </div>
@@ -94,8 +104,8 @@
                 <div>
                   <img alt="Property Detail" src="img/demos/real-estate/listings/listing-detail-4-thumb.jpg" class="img-responsive cur-pointer">
                 </div>
-              </div> -->
-            </div>
+              </div>
+            </div> -->
 
           </div>
           <div class="col-md-5">
@@ -158,7 +168,7 @@
                   </td>
                 </tr>
               </tbody>
-            </table>  
+            </table>
 
           </div>
         </div>
@@ -183,7 +193,7 @@
               <strong>Location</strong>
             </h2>
             <!-- <div id="googlemaps" class="google-map m-none mb-xlg"></div> -->
-          <app-map></app-map>
+            <app-map></app-map>
           </div>
         </div>
       </div>

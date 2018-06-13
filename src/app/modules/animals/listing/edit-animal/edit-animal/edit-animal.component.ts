@@ -19,7 +19,7 @@ export class EditAnimalComponent implements OnInit {
   category:string;
   lifeSpan:number;
   date:string;
-  image:string;
+  image:string[];
   constructor(private router: Router,private animalService: AnimalService,private route: ActivatedRoute) { }
 
   editAnimal(form) {

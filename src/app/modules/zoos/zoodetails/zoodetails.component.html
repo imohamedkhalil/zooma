@@ -1,3 +1,267 @@
-<app-zooslider></app-zooslider>
-<app-showhomepage></app-showhomepage>
-<app-newshomepage></app-newshomepage>
+<div class="body">
+    <carousel>
+        <slide>
+            <img src="{{zoo.sliderimage1}}" alt="first slide" style="display: block; width: 100%;">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>"{{zoo.description}}"</h3>
+                <p>"{{zoo.address}}"</p>
+            </div>
+        </slide>
+        <slide>
+            <img src="{{zoo.sliderimage2}}" alt="second slide" style="display: block; width: 100%;">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>{{zoo.description}}</h3>
+                <p>{{zoo.address}}</p>
+            </div>
+        </slide>
+        <slide>
+            <img src={{zoo.sliderimage3}} alt="third slide" style="display: block; width: 100%;">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>{{zoo.description}}</h3>
+                <p>{{zoo.address}}</p>
+            </div>
+        </slide>
+    </carousel>
+    <section class="section section-no-border custom-position-relative custom-section-padding-1 custom-overflow-hidden background-color-light m-none">
+        <img  class="custom-cloud left-pos hidden-xs appear-animation" data-appear-animation="customFadeInLeftNoRotate" data-appear-animation-delay="0"
+            data-plugin-options="{'accY': -300}" src="assets/image/left-cloud.png" alt />
+           
+        <div class="custom-big-square left-pos hidden-xs custom-box-shadow appear-animation" data-appear-animation=" [@bounce]={ value: bounce, params: { timing: myTiming || 5, delay: myDelay || 2 } }"
+            data-appear-animation-delay="500" data-plugin-options="{'accY': -300}" style="background: url('assets/image/s10.jpg'); background-size: cover;"></div>
+        <div class="custom-small-square left-pos hidden-xs custom-box-shadow appear-animation" data-appear-animation="customFadeInLeft"
+            data-appear-animation-delay="1000" data-plugin-options="{'accY': -300}" style="background: url('assets/image/s8.jpg'); background-size: cover;"></div>
+        <img class="custom-cloud right-pos hidden-xs appear-animation" data-appear-animation="customFadeInRightNoRotate" data-appear-animation-delay="0"
+            data-plugin-options="{'accY': -300}" src="assets/image/right-cloud.png" alt />
+        <div class="custom-big-square right-pos hidden-xs custom-box-shadow appear-animation" data-appear-animation="customFadeInRight"
+            data-appear-animation-delay="500" data-plugin-options="{'accY': -300}" style="background: url('assets/image/s7.jpg'); background-size: cover;"></div>
+        <div class="custom-small-square right-pos hidden-xs custom-box-shadow appear-animation" data-appear-animation="customFadeInRight"
+            data-appear-animation-delay="1000" data-plugin-options="{'accY': -300}" style="background: url('assets/image/s9.jpg'); background-size: cover;"></div>
+        <div class="container">
+            <div class="row center">
+                <div class="col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2">
+                    <h1 class="font-weight-bold" style=color:orangered>Explore the {{zoo.name}}</h1>
+                    <p style=font:large>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When you visit the
+                        {{zoo.name}}, you’ll have no shortage of things to see and do. The Zoo has 90 acres of animal exhibits,
+                        attractions, shopping &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        dining for you and your family to enjoy. You can also find Zoo activities and programs for people
+                        of all ages and abilities. Check out our Zoo zones below, which highlight unique habitats and animals
+                        you can see..</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-no-border background-color-light m-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 center">
+                    <h2 class="font-weight-bold">Shows & Events</h2>
+
+
+                    <hr class="custom-divider">
+                </div>
+                <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2 custom-sm-margin-bottom-1">
+                    <h2 class="font-weight-bold">Next Event</h2>
+                    <article class="thumb-info custom-thumb-info custom-box-shadow">
+                        <span class="thumb-info-wrapper">
+                            <a href="demo-church-events-detail.html">
+                                <img src="{{zoo.showimg}}" alt class="img-responsive" />
+                            </a>
+                        </span>
+                        <span class="thumb-info-caption">
+                            <span class="custom-event-infos">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-clock-o"></i>
+                                        {{zoo.showdate}}
+                                    </li>
+                                    <li class="text-uppercase">
+                                        <i class="fa fa-map-marker"></i>
+                                        {{zoo.showloc}}
+                                    </li>
+                                </ul>
+                            </span>
+                            <span class="thumb-info-caption-text">
+                                <h4 class="font-weight-bold mb-sm">
+                                    <a href="demo-church-events-detail.html" class="text-decoration-none custom-secondary-font text-color-dark">
+                                        {{zoo.showname}}
+                                    </a>
+                                </h4>
+                                <p>{{zoo.showdescription}}</p>
+                            </span>
+                        </span>
+                    </article>
+                </div>
+                <div class="col-md-6 col-sm-8 col-md-offset-0 col-sm-offset-2">
+                    <h2 class="font-weight-bold">Upcoming Event</h2>
+                    <article class="custom-post-event">
+                        <div class="post-event-date background-color-primary center">
+                            <span class="month text-uppercase custom-secondary-font text-color-light">Nov</span>
+                            <span class="day font-weight-bold text-color-light">10</span>
+                            <span class="year text-color-light">2016</span>
+                        </div>
+                        <div class="post-event-content custom-margin-1">
+                            <span class="custom-event-infos">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-clock-o"></i>
+                                        {{zoo.upshowdate}}
+                                    </li>
+                                    <li class="text-uppercase">
+                                        <i class="fa fa-map-marker"></i>
+                                        {{zoo.upshowloc}}
+                                    </li>
+                                </ul>
+                            </span>
+                            <h4 class="font-weight-bold">
+                                <a href="demo-church-events-detail.html" class="text-decoration-none custom-secondary-font text-color-dark">{{zoo.upshowname}} </a>
+                            </h4>
+                            <p>{{zoo. upshowdescription}}</p>
+                        </div>
+                    </article>
+                    <hr class="solid">
+                    <article class="custom-post-event">
+                        <div class="post-event-date background-color-primary center">
+                            <span class="month text-uppercase custom-secondary-font text-color-light">Nov</span>
+                            <span class="day font-weight-bold text-color-light">11</span>
+                            <span class="year text-color-light">2016</span>
+                        </div>
+                        <div class="post-event-content custom-margin-1">
+                            <span class="custom-event-infos">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-clock-o"></i>
+                                        {{zoo.upshowdate}}
+                                    </li>
+                                    <li class="text-uppercase">
+                                        <i class="fa fa-map-marker"></i>
+                                        {{zoo.upshowloc}}
+                                    </li>
+                                </ul>
+                            </span>
+                            <h4 class="font-weight-bold">
+                                <a href="demo-church-events-detail.html" class="text-decoration-none custom-secondary-font text-color-dark">Curabitur vehicula massa</a>
+                            </h4>
+                            <p>{{zoo.upshowdescription}}</p>
+                        </div>
+                    </article>
+                    <a href="demo-church-events.html" class="btn btn-primary custom-btn-style-1 text-uppercase custom-margin-1 mt-xlg">All Events</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br/>
+    <!--newssssssss-->
+    <section class="section section-no-border background-color-light m-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-8 col-md-offset-0 col-sm-offset-2">
+                    <h2 class="font-weight-bold">Recent News</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-8 col-md-offset-0 col-sm-offset-2 custom-sm-margin-bottom-1">
+                    <article class="custom-post-blog">
+                        <span class="thumb-info custom-thumb-info-2">
+                            <span class="thumb-info-wrapper">
+                                <a href="demo-church-blog-detail.html">
+                                    <img src="{{zoo.newsimg}}" alt class="img-responsive" />
+                                </a>
+                            </span>
+                            <span class="thumb-info-caption custom-box-shadow">
+                                <span class="thumb-info-caption-text">
+                                    <h4 class="font-weight-bold mb-lg">
+                                        <a href="demo-church-blog-detail.html" class="text-decoration-none custom-secondary-font text-color-dark">
+                                            {{zoo.newsname}}
+                                        </a>
+                                    </h4>
+                                    <p> {{zoo.newsdescription}}</p>
+                                </span>
+                                <span class="custom-thumb-info-post-infos center">
+                                    <ul>
+                                        <li class="text-uppercase">
+                                            <i class="icon-calendar icons"></i>
+                                            {{zoo.newsdate}}
+                                        </li>
+                                        <li class="text-uppercase">
+                                            <i class="icon-user icons"></i>
+                                            {{zoo. writer}}
+                                        </li>
+                                    </ul>
+                                </span>
+                            </span>
+                        </span>
+                    </article>
+                </div>
+                <div class="col-md-4 col-sm-8 col-md-offset-0 col-sm-offset-2 custom-sm-margin-bottom-1">
+                    <article class="custom-post-blog">
+                        <span class="thumb-info custom-thumb-info-2">
+                            <span class="thumb-info-wrapper">
+                                <a href="demo-church-blog-detail.html">
+                                    <img src="{{zoo.newsimg1}}" alt class="img-responsive" />
+                                </a>
+                            </span>
+                            <span class="thumb-info-caption custom-box-shadow">
+                                <span class="thumb-info-caption-text">
+                                    <h4 class="font-weight-bold mb-lg">
+                                        <a href="demo-church-blog-detail.html" class="text-decoration-none custom-secondary-font text-color-dark">
+                                            {{zoo.newsname1}}
+                                        </a>
+                                    </h4>
+                                    <p>{{zoo.newsdescription1}}</p>
+                                </span>
+                                <span class="custom-thumb-info-post-infos center">
+                                    <ul>
+                                        <li class="text-uppercase">
+                                            <i class="icon-calendar icons"></i>
+                                            {{zoo.newsdate1}}
+                                        </li>
+                                        <li class="text-uppercase">
+                                            <i class="icon-user icons"></i>
+                                            {{zoo. writer1}}
+                                        </li>
+                                    </ul>
+                                </span>
+                            </span>
+                        </span>
+                    </article>
+                </div>
+                <div class="col-md-4 col-sm-8 col-md-offset-0 col-sm-offset-2">
+                    <article class="custom-post-blog">
+                        <span class="thumb-info custom-thumb-info-2">
+                            <span class="thumb-info-wrapper">
+                                <a href="demo-church-blog-detail.html">
+                                    <img src="{{zoo.newsimg2}}" alt class="img-responsive" />
+                                </a>
+                            </span>
+                            <span class="thumb-info-caption custom-box-shadow">
+                                <span class="thumb-info-caption-text">
+                                    <h4 class="font-weight-bold mb-lg">
+                                        <a href="demo-church-blog-detail.html" class="text-decoration-none custom-secondary-font text-color-dark">
+                                            {{zoo.newsname2}}
+                                        </a>
+                                    </h4>
+                                    <p>{{zoo.newsdescription2}}</p>
+                                </span>
+                                <span class="custom-thumb-info-post-infos center">
+                                    <ul>
+                                        <li class="text-uppercase">
+                                            <i class="icon-calendar icons"></i>
+                                            {{zoo.newsdate2}}
+                                        </li>
+                                        <li class="text-uppercase">
+                                            <i class="icon-user icons"></i>
+                                            {{zoo. writer2}}
+                                        </li>
+                                    </ul>
+                                </span>
+                            </span>
+                        </span>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Animal section--> 
+
+    <!-- home page ////// -->

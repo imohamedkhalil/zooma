@@ -9,6 +9,7 @@ import { AgmCoreModule } from '@agm/core';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
+
 import './modules/homepage/homepage.module.ts';
 
 import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing.component';
@@ -55,11 +56,8 @@ import { ShowitemComponent } from './modules/shows/showslist/showitem/showitem.c
 import { ShowdetailsComponent } from './modules/shows/showdetails/showdetails.component';
 import { ShowService } from 'src/app/shared/services/showservice/show.service';
 import { ShowaddComponent } from './modules/shows/showadd/showadd.component';
-
 import { ZooserviceService } from 'src/app/shared/services/zooservice/zooservice.service';
 import { ZoodetailsComponent } from 'src/app/modules/zoos/zoodetails/zoodetails.component';
-import { ZooheaderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspage/zooheader/zooheader.component';
-import { ZoosliderComponent } from 'src/app/modules/zoos/zoodetails/zoodetailspage/zooslider/zooslider.component';
 import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-form/add-zoo-form.component';
 import { EditshowComponent } from './modules/shows/editshow/editshow.component';
 import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.component';
@@ -84,6 +82,7 @@ import { AddDiseaseComponent } from 'src/app/modules/disease/add-disease/add-dis
 import { EditDiseaseComponent } from 'src/app/modules/disease/edit-disease/edit-disease.component';
 import { DiseaseFilterComponent } from 'src/app/modules/disease/disease-listing/disease-filter/disease-filter.component';
 import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing/disease-oneitem/disease-oneitem.component';
+import { CarouselModule } from 'ngx-bootstrap';
 
 
 @NgModule({
@@ -125,8 +124,6 @@ import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing
     ShowdetailsComponent,
     ShowaddComponent,
     ZoodetailsComponent,
-    ZooheaderComponent,
-    ZoosliderComponent,
     AddZooFormComponent,
     EditshowComponent,
     AddMedicineComponent,

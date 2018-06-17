@@ -17,6 +17,7 @@ export class MedicineDetailComponent implements OnInit {
   medicine: Medicine;
   animals:IAnimal[];
   diseases:IDisease[];
+  
   getMedicine(){
     const id = +this.route.snapshot.paramMap.get('id');
     this.medicine = this.medicineService.getMedicine(id);
@@ -40,3 +41,4 @@ export class MedicineDetailComponent implements OnInit {
     this.getAnimals();
   }
 }
+

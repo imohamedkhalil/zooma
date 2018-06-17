@@ -5,7 +5,9 @@ import { AppComponent } from './app.component';
 import { RouterModule, Router, ActivatedRoute, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { AgmCoreModule } from '@agm/core';
 
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 import './modules/homepage/homepage.module.ts';
@@ -72,6 +74,7 @@ import { FoodlistingComponent } from 'src/app/modules/food/foodlisting/foodlisti
 import { FoodService } from 'src/app/shared/services/foodservice/food.service';
 import { AddfoodComponent } from 'src/app/modules/food/addfood/addfood.component';
 import { FoodeditComponent } from 'src/app/modules/food/foodedit/foodedit.component';
+import { SmallfoodComponent } from 'src/app/modules/food/fooddetails/smallfood/smallfood.component';
 import { MapComponent } from 'src/app/modules/animals/listing/animalitem/map/map.component';
 import { DiseaseDetailComponent } from 'src/app/modules/disease/details/disease-detail/disease-detail.component';
 import { DiseaseListingComponent } from 'src/app/modules/disease/disease-listing/disease-listing.component';
@@ -80,6 +83,7 @@ import { EditDiseaseComponent } from 'src/app/modules/disease/edit-disease/edit-
 import { DiseaseFilterComponent } from 'src/app/modules/disease/disease-listing/disease-filter/disease-filter.component';
 import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing/disease-oneitem/disease-oneitem.component';
 import { CarouselModule } from 'ngx-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -137,13 +141,17 @@ import { CarouselModule } from 'ngx-bootstrap';
     FilterComponent,
     AddfoodComponent, 
     FoodeditComponent,
+    SmallfoodComponent
     MapComponent,
     DiseaseListingComponent,
     DiseaseFilterComponent,
     DiseaseOneitemComponent,
     DiseaseDetailComponent,
     AddDiseaseComponent,
-    EditDiseaseComponent
+    EditDiseaseComponent,
+    MapComponent,
+    SliderOneitemComponent
+
   ],
   imports: [
     BrowserModule,
@@ -152,6 +160,9 @@ import { CarouselModule } from 'ngx-bootstrap';
     FormsModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
+     AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBuDz7GbyoAEHd9Q3VgmSREX-J4Ian2NUw'
+    }),
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },

@@ -30,4 +30,4 @@ export class ZooCollectionComponent implements OnInit {
   console.log(this.zoo);
  }
 }
- 
+  

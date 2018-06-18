@@ -1,6 +1,6 @@
 import { IAnimal } from './../../interfaces/IAnimal';
 
-export const ANIMALS: IAnimal[] = [
+export const ANIMALS: any[] = [
     {
         id: 1,
         name: 'Cat',

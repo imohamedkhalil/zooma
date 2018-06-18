@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AgmCoreModule } from '@agm/core';
 
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 
 
 import './modules/homepage/homepage.module.ts';
@@ -83,6 +83,7 @@ import { EditDiseaseComponent } from 'src/app/modules/disease/edit-disease/edit-
 import { DiseaseFilterComponent } from 'src/app/modules/disease/disease-listing/disease-filter/disease-filter.component';
 import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing/disease-oneitem/disease-oneitem.component';
 import { CarouselModule } from 'ngx-bootstrap';
+import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalitem/slider-oneitem/slider-oneitem.component';
 
 
 @NgModule({
@@ -141,8 +142,7 @@ import { CarouselModule } from 'ngx-bootstrap';
     FilterComponent,
     AddfoodComponent, 
     FoodeditComponent,
-    SmallfoodComponent
-    MapComponent,
+    SmallfoodComponent,
     DiseaseListingComponent,
     DiseaseFilterComponent,
     DiseaseOneitemComponent,

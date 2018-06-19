@@ -1,0 +1,57 @@
+<section class="section section-no-border custom-section-padding-4 m-none" style="background: url('../../../assets/img/13.jpg'); background-size: cover;">
+    <div class="container">
+      <div class="row center">
+        <div class="col-md-12" style="margin-top: 45px">
+          <h1 class="text-color-light custom-secondary-font font-weight-bold mb-xs 
+                  appear-animation" data-appear-animation="bounceInRight" data-appear-animation-delay="1">Our News</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<br>
+<br>
+<div class="container">
+<div class="col-md-12">
+<app-add-news></app-add-news>
+<app-one-item-news (editClicked)="getNew($event)" *ngFor = "let New of news"   [New]= "New" ></app-one-item-news>
+<br>
+<br>
+<article class="post post-large">
+
+    <div class="post-date">
+        <span class="day">10</span>
+        <span class="month">Jan</span>
+    </div>
+
+    <div class="post-content">
+
+        <blockquote>
+            Post Format - Blockquote - Mauris aliquet ultricies ante, non faucibus ante gravida sed. Sed ultrices pellentesque purus, vulputate volutpat ipsum hendrerit sed neque sed sapien rutrum laoreet justo ultrices. In pellentesque lorem condimentum dui morbi pulvinar dui non quam pretium ut lacinia tortor.
+            <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+        </blockquote>
+
+        <div class="post-meta">
+            <span><i class="fa fa-user"></i> By <a href="#">John Doe</a> </span>
+            <span><i class="fa fa-tag"></i> <a href="#">Duis</a>, <a href="#">News</a> </span>
+            <a [routerLink]="['/Readmore',1]" class="btn btn-xs btn-primary pull-right">Read more...</a>
+        </div>
+
+    </div>
+</article>
+
+<ul class="pagination pagination-lg pull-right">
+    <li><a [routerLink]="['/news']">«</a></li>
+    <li class="active"><a [routerLink]="['/news']">1</a></li>
+    <li><a [routerLink]="['/news']">2</a></li>
+    <li><a [routerLink]="['/news']">3</a></li>
+    <li><a [routerLink]="['/news']">»</a></li>
+</ul>
+
+</div>
+</div>
+<!--<div class="col-md-3">
+  <app-filter-news (filter)="filterData($event)" ></app-filter-news>
+</div>-->
+   
+<app-edit-news [New]="New"></app-edit-news>

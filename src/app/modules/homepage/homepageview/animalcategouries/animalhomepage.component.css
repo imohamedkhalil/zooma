@@ -1,0 +1,8 @@
+.image{
+    height: 250px;
+    background-size: cover;
+}
+.large-image{
+    height: 400px;
+    background-size: cover;
+}

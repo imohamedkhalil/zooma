@@ -84,6 +84,13 @@ import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalit
 import { AboutUsComponent } from './about-us/about-us.component';
 
 
+import { AddNewsComponent } from 'src/app/modules/news/add-news/add-news.component';
+import { EditNewsComponent } from 'src/app/modules/news/edit-news/edit-news.component';
+import { NewsListingComponent } from './modules/news/news-listing/news-listing.component';
+import { OneItemNewsComponent } from 'src/app/modules/news/news-listing/one-item-news/one-item-news.component';
+import { ReadmoreNewsComponent } from 'src/app/modules/news/readmore-news/readmore-news.component';
+import { NewsServiceService } from 'src/app/shared/services/newsService/news-service.service';
+
 
 @NgModule({
   declarations: [
@@ -139,7 +146,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     FoodlistingComponent,
     FooddetailsComponent,
     FilterComponent,
-    AddfoodComponent, 
+    AddfoodComponent,
     FoodeditComponent,
     SmallfoodComponent,
     MapComponent,
@@ -149,6 +156,13 @@ import { AboutUsComponent } from './about-us/about-us.component';
     DiseaseDetailComponent,
     AddDiseaseComponent,
     EditDiseaseComponent,
+    MapComponent,
+    SliderOneitemComponent,
+    AddNewsComponent,
+    EditNewsComponent,
+    NewsListingComponent,
+    OneItemNewsComponent,
+    ReadmoreNewsComponent,
     SliderOneitemComponent,
     AboutUsComponent
   ],
@@ -159,14 +173,12 @@ import { AboutUsComponent } from './about-us/about-us.component';
     FormsModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
-     AgmCoreModule.forRoot({
+    AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBuDz7GbyoAEHd9Q3VgmSREX-J4Ian2NUw'
     }),
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },
-      // { path: 'medicine/edit/:id', component: EditMedicineComponent },
-      // { path: 'listing', component: ListingComponent },
       { path: 'animals', component: ListingComponent },
       { path: 'animals/details/:id', component: AnimalitemComponent },
       { path: 'add', component: AddAnimalComponent },
@@ -176,23 +188,29 @@ import { AboutUsComponent } from './about-us/about-us.component';
       { path: 'show', component: ShowlistingComponent },
       { path: 'showdetails', component: ShowdetailsComponent },
       { path: 'addshow', component: ShowaddComponent },
-      {path:'createzoo',component:CreatezooComponent},
-      {path:'checkout',component: CheckoutComponent},
-      { path:'food', component: FoodlistingComponent },
-      { path:'food/details/:id', component: FooddetailsComponent },
+      { path: 'createzoo', component: CreatezooComponent },
+      { path: 'checkout', component: CheckoutComponent },
+      { path: 'food', component: FoodlistingComponent },
+      { path: 'food/details/:id', component: FooddetailsComponent },
       { path: 'disease', component: DiseaseListingComponent },
       { path: 'disease/details/:id', component: DiseaseDetailComponent },
+      { path: 'news', component: NewsListingComponent },
+      { path: 'Readmore/:id', component: ReadmoreNewsComponent },
+      { path: 'newsAdd', component: AddNewsComponent },
+      { path: 'oneItemNews', component: OneItemNewsComponent },
+      { path: 'newsEdit/:id', component: EditNewsComponent }
       {path:'aboutus',component: AboutUsComponent},
-      { path:'', component: HomepageviewComponent },
+      { path:'', component: HomepageviewComponent }
     ])
   ],
-  
+
   providers: [
     AnimalService,
     ZooserviceService,
     MedicineService,
     ShowService,
-    FoodService
+    FoodService,
+    NewsServiceService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,82 @@
+    
+
+    <div role="main" class="main">
+
+      <section class="section section-no-border custom-section-padding-4 m-none" style="background: url('../../../assets/img/13.jpg'); background-size: cover;">
+        <div class="container">
+          <div class="row center">
+            <div class="col-md-12" style="margin-top: 45px">
+              <h1 class="text-color-light custom-secondary-font font-weight-bold mb-xs 
+                      appear-animation" data-appear-animation="bounceInRight" data-appear-animation-delay="1">Read More About This News</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+<br>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="blog-posts single-post">
+
+              <article class="post post-large blog-single-post">
+                <div class="post-image">
+                  <br>
+               <!--  <a (click)="editNew(New.id)" data-target="#editNew" data-toggle="modal"><i class="fa fa-edit" style="float: right"></i></a>-->
+                 <br>
+                  <div class="owl-carousel owl-theme" data-plugin-options="{'items':1}">
+                    <div>
+                      
+                        <br>
+                      <div class="img-thumbnail">
+                        <img class="img-responsive" src="{{New.image}}" alt="">
+                      </div>
+                    </div>
+                    <div>
+                      <br>
+                      <div class="img-thumbnail">
+                        <img class="img-responsive" src="{{New.image}}" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post-date">
+                  <span class="day">{{New.date}}</span>
+                  <span class="month">Jan</span>
+                </div>
+
+                <div class="post-content">
+
+                  <h2><a href="#">{{New.title}}</a></h2>
+
+                  <div class="post-meta">
+                    <span><i class="fa fa-user"></i> By <a href="#">{{New.bySomeone}}</a> </span>
+                    <span><i class="fa fa-tag"></i> <a href="#">Duis</a>, <a href="#">News</a> </span>
+                    
+                  </div>
+
+                  <p>{{New.description}}</p>
+                  <p>{{New.description}}</p>
+                  <p>{{New.description}}</p>
+                  <p>{{New.description}}</p>
+                  <p>{{New.description}}</p>
+
+                          </div>
+              </article>
+
+            </div>
+          </div>
+
+          
+        </div>
+
+      </div>
+
+    </div>
+<app-edit-news [New]="New" ></app-edit-news>
+
+  <!-- Vendor -->
+ 
+
+

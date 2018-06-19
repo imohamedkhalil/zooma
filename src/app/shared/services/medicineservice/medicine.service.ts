@@ -14,6 +14,7 @@ export class MedicineService {
     public addMedicine(form) {
         var medicine: Medicine;
         medicine = form.value;
+        console.log(medicine);
         MEDICINES.push(medicine);
     }
 

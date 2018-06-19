@@ -1,0 +1,38 @@
+<br>
+<aside class="sidebar">
+  <form>
+    <div class="input-group input-group-lg">
+      <input class="form-control" placeholder="Search..." name="s" id="s" type="text">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-search"></i></button>
+      </span>
+    </div>
+  </form>
+
+  <hr>
+  <h4 class="heading-primary">
+    <strong>Filter</strong> 
+  </h4>
+
+
+  <ul class="nav nav-list mb-xlg sort-source" data-sort-id="portfolio" data-option-key="filter" data-plugin-options="{'layoutMode': 'fitRows', 'filter': '*'}">
+    <li data-option-value="*" class="active">
+      <a href="#" routerLink="/news" (click)="set('showall')">Show All News</a>
+    </li>
+    <li data-option-value=".TopNews">
+      <a href="#" routerLink="/news" (click)="set('TopNews')">Top News</a>
+    </li>
+    <li data-option-value=".LatestNews">
+      <a href="#" routerLink="/news" (click)="set('LatestNews')">Latest News</a>
+    </li>
+    <li data-option-value=".ZooNews">
+      <a href="#" routerLink="/news" (click)="set('ZooNews')">Zoo News</a>
+    </li>
+    <li data-option-value=".AnimalNews">
+      <a href="#" routerLink="/news" (click)="set('AnimalNews')">Animal News</a>
+    </li>
+    <li data-option-value=".OldNews">
+      <a href="#" routerLink="/news" (click)="set('OldNews')">Old News</a>
+    </li>
+  </ul>
+</aside>

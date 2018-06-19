@@ -1,0 +1,33 @@
+
+    <article class="post post-large">
+
+        <a (click)="deleteNews(New.id)">
+          <i class="fa fa-trash" style="float:right; margin-right: 5px;"></i>
+        </a>
+        <a (click)="editNew(New.id)" data-target="#editNew" data-toggle="modal"><i class="fa fa-edit" style="float: right; margin-right: 5px;"></i></a>
+        <br>
+      <div class="post-image single">
+          <img class="img-thumbnail" src="{{New.image}}" alt="">
+      </div>
+      
+      <div class="post-date">
+          <span class="day">{{New.date}}</span>
+          <span class="month">Jan</span>
+      </div>
+      
+      <div class="post-content">
+      
+          <h2><a>{{New.title}}</a></h2>
+      
+          <p>{{New.description}}</p>
+      
+          <div class="post-meta">
+              <span><i class="fa fa-user"></i> By <a href="#">{{New.bySomeone}}</a> </span>
+              <span><i class="fa fa-tag"></i> <a href="#">Duis</a>, <a href="#">News</a> </span>
+              <a [routerLink]="['/Readmore', New.id]" class="btn btn-xs btn-primary pull-right">Read more...</a>
+          </div>
+      
+      </div>
+      <hr/>
+      <br>
+  </article>

@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AgmCoreModule } from '@agm/core';
 
-import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 import './modules/homepage/homepage.module.ts';
@@ -83,6 +82,8 @@ import { EditDiseaseComponent } from 'src/app/modules/disease/edit-disease/edit-
 import { DiseaseFilterComponent } from 'src/app/modules/disease/disease-listing/disease-filter/disease-filter.component';
 import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing/disease-oneitem/disease-oneitem.component';
 import { CarouselModule } from 'ngx-bootstrap';
+import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalitem/slider-oneitem/slider-oneitem.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -141,7 +142,7 @@ import { CarouselModule } from 'ngx-bootstrap';
     FilterComponent,
     AddfoodComponent, 
     FoodeditComponent,
-    SmallfoodComponent
+    SmallfoodComponent,
     MapComponent,
     DiseaseListingComponent,
     DiseaseFilterComponent,
@@ -149,8 +150,8 @@ import { CarouselModule } from 'ngx-bootstrap';
     DiseaseDetailComponent,
     AddDiseaseComponent,
     EditDiseaseComponent,
-    MapComponent,
-    SliderOneitemComponent
+    SliderOneitemComponent,
+    AboutUsComponent
 
   ],
   imports: [
@@ -183,6 +184,7 @@ import { CarouselModule } from 'ngx-bootstrap';
       { path:'food/details/:id', component: FooddetailsComponent },
       { path: 'disease', component: DiseaseListingComponent },
       { path: 'disease/details/:id', component: DiseaseDetailComponent },
+      {path:'aboutus',component: AboutUsComponent},
       { path:'', component: HomepageviewComponent },
     ])
   ],

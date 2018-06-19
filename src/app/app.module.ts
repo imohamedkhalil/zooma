@@ -7,8 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AgmCoreModule } from '@agm/core';
 
-
-
 import './modules/homepage/homepage.module.ts';
 
 import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing.component';
@@ -86,6 +84,7 @@ import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalit
 import { AboutUsComponent } from './about-us/about-us.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -152,7 +151,6 @@ import { AboutUsComponent } from './about-us/about-us.component';
     EditDiseaseComponent,
     SliderOneitemComponent,
     AboutUsComponent
-
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Medicine} from './../../../../shared/interfaces/medicine';
-import { MEDICINES } from "./../../../../shared/services/medicineservice/mock-medicines";
+import { MEDICINES } from './../../../../shared/services/medicineservice/mock-medicines';
 import { MedicineService } from './../../../../shared/services/medicineservice/medicine.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -13,12 +13,12 @@ export class MedicineListingComponent implements OnInit {
 
   medicines: Medicine[];
   medicine: Medicine;
- 
-  getMedicines(): void{
+
+  getMedicines(): void {
     this.medicines = this.medicineService.getMedicines();
   }
 
-  public deleteMedicine(id){
+  public deleteMedicine(id) {
     this.medicineService.deleteZoo(id);
   }
 
@@ -29,5 +29,5 @@ export class MedicineListingComponent implements OnInit {
 
   ngOnInit() {
     this.getMedicines();
-  } 
+  }
 }

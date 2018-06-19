@@ -10,15 +10,15 @@ import {Router} from '@angular/router';
   styleUrls: ['./add-medicine.component.css']
 })
 export class AddMedicineComponent implements OnInit {
-  
+
   medicines: Medicine[] = MEDICINES;
-  
-  addMedicine(form){
-    debugger;
-    var medicine: Medicine;
+
+  addMedicine(form) {
+
+    let medicine: Medicine;
     medicine = form.value;
     this.medicines.push(medicine);
-    this.router.navigate(['/medicine']);  
+    this.router.navigate(['/medicine']);
   }
  constructor(private router: Router) { }
 

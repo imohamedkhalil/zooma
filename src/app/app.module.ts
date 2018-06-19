@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -61,6 +62,17 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
 import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.component';
 
 
+
+
+
+import { NewsListingComponent } from './modules/news/news-listing/news-listing.component';
+import { OneItemNewsComponent } from './modules/news/news-listing/one-item-news/one-item-news.component';
+import { NewsServiceService } from './shared/services/newsService/news-service.service';
+import { AddNewsComponent } from './modules/news/add-news/add-news.component';
+import { FilterNewsComponent } from './modules/news/news-listing/filter-news/filter-news.component';
+import { EditNewsComponent } from './modules/news/edit-news/edit-news.component';
+import { ReadmoreNewsComponent } from './modules/news/readmore-news/readmore-news.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -105,7 +117,13 @@ import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.compone
     AddMedicineComponent,
     EditMedicineComponent,
     AddZooFormComponent,
-    EditZooComponent
+    EditZooComponent,
+    NewsListingComponent,
+    OneItemNewsComponent,
+    AddNewsComponent,
+    FilterNewsComponent,
+    EditNewsComponent,
+    ReadmoreNewsComponent
   ],
   imports: [
     BrowserModule,
@@ -113,7 +131,7 @@ import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.compone
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },
-      { path: 'medicine/edit/:id', component:EditMedicineComponent },
+      { path: 'medicine/edit/:id', component: EditMedicineComponent },
       { path: 'listing', component: ListingComponent },
       {path: 'animals' , component: ListingComponent},
       // {path: 'animals', component: SmallComponentComponent},
@@ -121,18 +139,24 @@ import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.compone
       {path: 'add', component: AddAnimalComponent},
       { path: 'zoo', component: ZoolistingComponent },
       { path: 'zoo/details/:id', component: ZoodetailsComponent },
-      { path: 'zoo/edit/:id', component:EditZooComponent },
+      { path: 'zoo/edit/:id', component: EditZooComponent },
       { path: 'show', component: ShowlistingComponent },
       { path: 'showdetails', component: ShowdetailsComponent },
       { path: 'addshow', component: ShowaddComponent },
-      { path: '', component: HomepageviewComponent }
+      { path: '', component: HomepageviewComponent },
+      {path: 'news', component: NewsListingComponent},
+      {path: 'oneItem', component: OneItemNewsComponent},
+      {path: 'newsEdit/:id', component: EditNewsComponent},
+      {path: 'newsAdd', component: AddNewsComponent},
+      {path: 'Readmore/:id', component: ReadmoreNewsComponent}
   ])
 ],
   providers: [
     AnimalService,
-    ZooserviceService, 
-    MedicineService, 
-    ShowService
+    ZooserviceService,
+    MedicineService,
+    ShowService,
+    NewsServiceService
   ],
   bootstrap: [AppComponent]
 })

@@ -8,24 +8,24 @@ import { IShow } from 'src/app/shared/interfaces/IShowHomePage';
   styleUrls: ['./showadd.component.css']
 })
 export class ShowaddComponent implements OnInit {
-imgUrl:string;
-time:string;
-location:string;
-title:string;
-description:string;
-newShow:IShow;
-  constructor(private showService:ShowService) { }
+imgUrl: string;
+time: string;
+location: string;
+title: string;
+description: string;
+newShow: IShow;
+  constructor(private showService: ShowService) { }
 
   ngOnInit() {
   }
-  add(){
-   this.newShow={
-     imgUrl:this.imgUrl,
-     time:this.time,
-     location:this.location,
-     title:this.title,
-     description:this.description
-   }
+  add() {
+   this.newShow = {
+     imgUrl: this.imgUrl,
+     time: this.time,
+     location: this.location,
+     title: this.title,
+     description: this.description
+  };
    console.log(this.newShow);
   }
 }

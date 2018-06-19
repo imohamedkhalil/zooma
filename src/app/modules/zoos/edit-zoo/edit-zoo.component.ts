@@ -11,22 +11,23 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EditZooComponent implements OnInit {
 
-  zoo:IZooSmallComponent;
-  zoos:IZooSmallComponent[]=[];
-  
-  getzoo(){
+  zoo: IZooSmallComponent;
+  zoos: IZooSmallComponent[] = [];
+
+  getzoo() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.zoo = this.zooservice.getzoo(id);
   }
-  saveZoo(form){
+  saveZoo(form) {
+    // tslint:disable-next-line:no-var-keyword
     var zoo: IZooSmallComponent;
     zoo = form.value;
-    this.router.navigate(['/zoo']);  
+    this.router.navigate(['/zoo']);
   }
 
   constructor(private zooservice: ZooserviceService,
     private route: ActivatedRoute,
-    private router:Router
+    private router: Router
   ) { }
 
   ngOnInit() {

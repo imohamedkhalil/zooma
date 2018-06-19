@@ -12,7 +12,7 @@ export class AnimalService {
             lifeSpan: 10,
             date: 'Month',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            image:['../assets/slides/28.jpg', '../assets/slides/cat.jpg']
+            image: ['../assets/slides/28.jpg', '../assets/slides/cat.jpg']
         },
         {
             id: 2,
@@ -23,7 +23,7 @@ export class AnimalService {
             lifeSpan: 25,
             date: 'Year',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            image:[ '../assets/slides/d.jpg','../assets/slides/d2.jpg']
+            image: ['../assets/slides/d.jpg', '../assets/slides/d2.jpg']
         },
         {
             id: 3,
@@ -34,7 +34,7 @@ export class AnimalService {
             lifeSpan: 8,
             date: 'Year',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            image:['../assets/slides/d2.jpg','../assets/slides/d.jpg'] 
+            image: ['../assets/slides/d2.jpg', '../assets/slides/d.jpg']
         },
         {
             id: 4,
@@ -45,7 +45,7 @@ export class AnimalService {
             lifeSpan: 5,
             date: 'Month',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            image:['../assets/slides/horse.jpg','../assets/slides/horse.jpg']
+            image: ['../assets/slides/horse.jpg', '../assets/slides/horse.jpg']
         },
         {
             id: 5,
@@ -67,20 +67,183 @@ export class AnimalService {
             lifeSpan: 8,
             date: 'Year',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            image: ['../assets/slides/cat.jpg','../assets/slides/29.jpg']
+            image: ['../assets/slides/cat.jpg', '../assets/slides/29.jpg']
         },
         {
             id: 7,
             name: 'Fish',
             category: 'Fish',
             contienent: 'Europe',
-            type: 'bird',
+            type: 'fish',
             lifeSpan: 20,
             date: 'Month',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            image: ['../assets/slides/Fishes.png','../assets/slides/Fishes.png']
+            image: ['../assets/slides/Fishes.png', '../assets/slides/Fishes.png']
         }
     ];
+    predators: IAnimal[] = [
+        {
+            id: 1,
+            name: 'Shirazi',
+            category: 'Mamels',
+            contienent: 'Asia',
+            type: 'cat',
+            lifeSpan: 10,
+            date: 'Month',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            image: ['../assets/slides/28.jpg', '../assets/slides/cat.jpg']
+        },
+        {
+            id: 2,
+            name: 'Haski',
+            category: 'Mamels',
+            contienent: 'Africa',
+            type: 'dog',
+            lifeSpan: 25,
+            date: 'Year',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            image: ['../assets/slides/d.jpg', '../assets/slides/d2.jpg']
+        },
+        {
+            id: 3,
+            name: 'chihuahuah',
+            category: 'Mamels',
+            contienent: 'Europe',
+            type: 'dog',
+            lifeSpan: 8,
+            date: 'Year',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            image: ['../assets/slides/d2.jpg', '../assets/slides/d.jpg']
+        },
+        {
+            id: 4,
+            name: 'Brumby',
+            category: 'Amphibians',
+            contienent: 'Asia',
+            type: 'horse',
+            lifeSpan: 5,
+            date: 'Month',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            image: ['../assets/slides/horse.jpg', '../assets/slides/horse.jpg']
+        }
+    ];
+    threatens: IAnimal[] = [
+        {
+            id: 1,
+            name: 'Shirazi',
+            category: 'Mamels',
+            contienent: 'Asia',
+            type: 'cat',
+            lifeSpan: 10,
+            date: 'Month',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            image: ['../assets/slides/28.jpg', '../assets/slides/cat.jpg']
+        },
+        {
+            id: 2,
+            name: 'Haski',
+            category: 'Mamels',
+            contienent: 'Africa',
+            type: 'dog',
+            lifeSpan: 25,
+            date: 'Year',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            image: ['../assets/slides/d.jpg', '../assets/slides/d2.jpg']
+        },
+        {
+            id: 3,
+            name: 'chihuahuah',
+            category: 'Mamels',
+            contienent: 'Europe',
+            type: 'dog',
+            lifeSpan: 8,
+            date: 'Year',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            image: ['../assets/slides/d2.jpg', '../assets/slides/d.jpg']
+        },
+        {
+            id: 4,
+            name: 'Brumby',
+            category: 'Amphibians',
+            contienent: 'Asia',
+            type: 'horse',
+            lifeSpan: 5,
+            date: 'Month',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            image: ['../assets/slides/horse.jpg', '../assets/slides/horse.jpg']
+        },
+        {
+            id: 5,
+            name: 'Bird',
+            category: 'Bird',
+            contienent: 'Africa',
+            type: 'bird',
+            lifeSpan: 1,
+            date: 'Year',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            image: ['../assets/slides/20.jpg']
+        },
+        {
+            id: 6,
+            name: 'siamcese',
+            category: 'Mamels',
+            contienent: 'Europe',
+            type: 'cat',
+            lifeSpan: 8,
+            date: 'Year',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            image: ['../assets/slides/cat.jpg', '../assets/slides/29.jpg']
+        },
+        {
+            id: 7,
+            name: 'Fish',
+            category: 'Fish',
+            contienent: 'Europe',
+            type: 'fish',
+            lifeSpan: 20,
+            date: 'Month',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            image: ['../assets/slides/Fishes.png', '../assets/slides/Fishes.png']
+        }
+    ];
+
+
+    public getPredators() {
+        return this.predators;
+    }
+    public getPredator(id: number) {
+        return this.predators.find(predator => predator.id === id);
+    }
+    public addPredator(form) {
+        let Predator: IAnimal;
+        Predator = form.value;
+        Predator.image = ['../assets/slides/Fishes.png'];
+        this.predators.push(Predator);
+    }
+    public deletePredator(id) {
+        let predator = this.predators.map(function (item) { return item.id; }).indexOf(id);
+        this.predators.splice(predator, 1);
+    }
+
+
+    public getThreatens() {
+        return this.threatens;
+    }
+    public getThreaten(id: number) {
+        return this.threatens.find(threaten => threaten.id === id);
+    }
+    public addThreaten(form) {
+        let threaten: IAnimal;
+        threaten = form.value;
+        threaten.image = ['../assets/slides/Fishes.png'];
+        this.threatens.push(threaten);
+    }
+    public deleteThreaten(id) {
+        let threaten = this.threatens.map(function (item) { return item.id; }).indexOf(id);
+        this.threatens.splice(threaten, 1);
+    }
+
+
     public getAnimals() {
         return this.animals;
     }
@@ -90,7 +253,7 @@ export class AnimalService {
     public addAnimal(form) {
         let animal: IAnimal;
         animal = form.value;
-        animal.image=['../assets/slides/Fishes.png'];
+        animal.image = ['../assets/slides/Fishes.png'];
         this.animals.push(animal);
     }
     public deleteAnimal(id) {

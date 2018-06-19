@@ -11,10 +11,7 @@
                 <label class="col-md-4 control-label" for="rolename">Predator_Name</label>
                 <div class="col-md-8">
                   <select data-plugin-selectTwo class="multiselect-ui" id="dates-field2" multiple="multiple">
-                    <option value="1">Cheese</option>
-                    <option value="2">Tomatoes</option>
-                    <option value="3">Mozzarella</option>
-                    <option value="4">Mushrooms</option>
+                    <option value="{{item.name}}" *ngFor="let item of threaten">{{item.name}}</option>
                   </select>
                 </div>
               </div>

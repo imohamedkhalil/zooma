@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AgmCoreModule } from '@agm/core';
 
-
 import './modules/homepage/homepage.module.ts';
 
 import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing.component';
@@ -82,6 +81,8 @@ import { DiseaseFilterComponent } from 'src/app/modules/disease/disease-listing/
 import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing/disease-oneitem/disease-oneitem.component';
 import { CarouselModule } from 'ngx-bootstrap';
 import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalitem/slider-oneitem/slider-oneitem.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+
 
 import { AddNewsComponent } from 'src/app/modules/news/add-news/add-news.component';
 import { EditNewsComponent } from 'src/app/modules/news/edit-news/edit-news.component';
@@ -148,6 +149,7 @@ import { NewsServiceService } from 'src/app/shared/services/newsService/news-ser
     AddfoodComponent,
     FoodeditComponent,
     SmallfoodComponent,
+    MapComponent,
     DiseaseListingComponent,
     DiseaseFilterComponent,
     DiseaseOneitemComponent,
@@ -161,6 +163,8 @@ import { NewsServiceService } from 'src/app/shared/services/newsService/news-ser
     NewsListingComponent,
     OneItemNewsComponent,
     ReadmoreNewsComponent,
+    SliderOneitemComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -190,12 +194,13 @@ import { NewsServiceService } from 'src/app/shared/services/newsService/news-ser
       { path: 'food/details/:id', component: FooddetailsComponent },
       { path: 'disease', component: DiseaseListingComponent },
       { path: 'disease/details/:id', component: DiseaseDetailComponent },
-      { path: '', component: HomepageviewComponent },
       { path: 'news', component: NewsListingComponent },
       { path: 'Readmore/:id', component: ReadmoreNewsComponent },
       { path: 'newsAdd', component: AddNewsComponent },
       { path: 'oneItemNews', component: OneItemNewsComponent },
       { path: 'newsEdit/:id', component: EditNewsComponent }
+      {path:'aboutus',component: AboutUsComponent},
+      { path:'', component: HomepageviewComponent }
     ])
   ],
 

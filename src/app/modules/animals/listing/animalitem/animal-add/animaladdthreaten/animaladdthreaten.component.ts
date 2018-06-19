@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
+import { IAnimal } from 'src/app/shared/interfaces/IAnimal';
 
 @Component({
   selector: 'app-animaladdthreaten',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./animaladdthreaten.component.css']
 })
 export class AnimaladdthreatenComponent implements OnInit {
-
+@Input() threaten:IAnimal[];
   constructor() { }
 
   ngOnInit() {

@@ -12,7 +12,7 @@
                     <div class="input-group">
                       <input type="text" class="form-control" [(ngModel)]="queryString" name="q" id="q" placeholder="Search..." required>
                       <span class="input-group-btn">
-                        <button class="btn btn-default" type="submit">
+                        <button class="btn btn-default fix-button" type="submit">
                           <i class="fa fa-search"></i>
                         </button>
                       </span>
@@ -27,9 +27,10 @@
           <div class="portfolio-item">
             <div style="text-align: right;">
               <a href="#" data-target="#addModal" data-toggle="modal">
-                <i class="fa fa-plus-square fa-2x" style="text-align: right; margin-left:10px;"></i>
+                <i class="fa fa-plus-square fa-2x" style="text-align: right; margin-right:15px;"></i>
               </a>
             </div>
+            <br>
             <!-- <div class="row"  sort-destination>
               <app-one-small-component class="col-md-4" *ngFor="let a of animals" [animal]="a" (id)="editform($event)"></app-one-small-component>
             </div> -->

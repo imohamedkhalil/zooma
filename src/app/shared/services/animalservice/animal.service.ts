@@ -251,9 +251,12 @@ export class AnimalService {
         return this.animals.find(animal => animal.id === id);
     }
     public addAnimal(form) {
+        console.log(form.value); 
+
         let animal: IAnimal;
         animal = form.value;
         animal.image = ['../assets/slides/Fishes.png'];
+
         this.animals.push(animal);
     }
     public deleteAnimal(id) {

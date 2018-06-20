@@ -11,6 +11,7 @@ import { AddZooFormComponent } from './zoolisting/add-zoo-form/add-zoo-form.comp
 import { EditZooComponent } from './edit-zoo/edit-zoo.component';
 // import { DiseaseComponent } from './src/app/modules/disease/disease.component';
 
+
 @NgModule({
   imports: [
     CommonModule

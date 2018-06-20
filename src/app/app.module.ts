@@ -59,11 +59,11 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
 import { EditshowComponent } from './modules/shows/editshow/editshow.component';
 import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.component';
 import { SearchdataPipe } from './searchdata.pipe';
-import { CreatezooComponent } from './modules/createzoo/createzoo.component';
+ 
 import { EditAnimalComponent } from 'src/app/modules/animals/listing/edit-animal/edit-animal/edit-animal.component';
 import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-oneitem/medicine-oneitem.component';
 
-import { CheckoutComponent } from './modules/createzoo/checkout/checkout.component';
+
 
 import { FooddetailsComponent } from 'src/app/modules/food/fooddetails/fooddetails.component';
 import { FooditemComponent } from 'src/app/modules/food/foodlisting/fooditem/fooditem.component';
@@ -81,15 +81,15 @@ import { DiseaseFilterComponent } from 'src/app/modules/disease/disease-listing/
 import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing/disease-oneitem/disease-oneitem.component';
 import { CarouselModule } from 'ngx-bootstrap';
 import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalitem/slider-oneitem/slider-oneitem.component';
+import { SigninComponent } from 'src/app/modules/signin/signin.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-
-
 import { AddNewsComponent } from 'src/app/modules/news/add-news/add-news.component';
 import { EditNewsComponent } from 'src/app/modules/news/edit-news/edit-news.component';
 import { NewsListingComponent } from './modules/news/news-listing/news-listing.component';
 import { OneItemNewsComponent } from 'src/app/modules/news/news-listing/one-item-news/one-item-news.component';
 import { ReadmoreNewsComponent } from 'src/app/modules/news/readmore-news/readmore-news.component';
 import { NewsServiceService } from 'src/app/shared/services/newsService/news-service.service';
+
 
 
 @NgModule({
@@ -138,10 +138,8 @@ import { NewsServiceService } from 'src/app/shared/services/newsService/news-ser
     AddZooFormComponent,
     EditZooComponent,
     SearchdataPipe,
-    CreatezooComponent,
     EditAnimalComponent,
     MedicineOneitemComponent,
-    CheckoutComponent,
     FooditemComponent,
     FoodlistingComponent,
     FooddetailsComponent,
@@ -158,6 +156,7 @@ import { NewsServiceService } from 'src/app/shared/services/newsService/news-ser
     EditDiseaseComponent,
     MapComponent,
     SliderOneitemComponent,
+    SigninComponent,
     AddNewsComponent,
     EditNewsComponent,
     NewsListingComponent,
@@ -165,6 +164,7 @@ import { NewsServiceService } from 'src/app/shared/services/newsService/news-ser
     ReadmoreNewsComponent,
     SliderOneitemComponent,
     AboutUsComponent
+
   ],
   imports: [
     BrowserModule,
@@ -188,10 +188,8 @@ import { NewsServiceService } from 'src/app/shared/services/newsService/news-ser
       { path: 'show', component: ShowlistingComponent },
       { path: 'showdetails', component: ShowdetailsComponent },
       { path: 'addshow', component: ShowaddComponent },
-      { path: 'createzoo', component: CreatezooComponent },
-      { path: 'checkout', component: CheckoutComponent },
-      { path: 'food', component: FoodlistingComponent },
-      { path: 'food/details/:id', component: FooddetailsComponent },
+      { path:'food', component: FoodlistingComponent },
+      { path:'food/details/:id', component: FooddetailsComponent },
       { path: 'disease', component: DiseaseListingComponent },
       { path: 'disease/details/:id', component: DiseaseDetailComponent },
       { path: 'news', component: NewsListingComponent },

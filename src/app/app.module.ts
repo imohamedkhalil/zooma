@@ -62,11 +62,11 @@ import { AddZooFormComponent } from 'src/app/modules/zoos/zoolisting/add-zoo-for
 import { EditshowComponent } from './modules/shows/editshow/editshow.component';
 import { EditZooComponent } from 'src/app/modules/zoos/edit-zoo/edit-zoo.component';
 import { SearchdataPipe } from './searchdata.pipe';
-import { CreatezooComponent } from './modules/createzoo/createzoo.component';
+ 
 import { EditAnimalComponent } from 'src/app/modules/animals/listing/edit-animal/edit-animal/edit-animal.component';
 import { MedicineOneitemComponent } from './modules/medicine/listing/medicine-oneitem/medicine-oneitem.component';
 
-import { CheckoutComponent } from './modules/createzoo/checkout/checkout.component';
+
 
 import { FooddetailsComponent } from 'src/app/modules/food/fooddetails/fooddetails.component';
 import { FooditemComponent } from 'src/app/modules/food/foodlisting/fooditem/fooditem.component';
@@ -84,6 +84,7 @@ import { DiseaseFilterComponent } from 'src/app/modules/disease/disease-listing/
 import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing/disease-oneitem/disease-oneitem.component';
 import { CarouselModule } from 'ngx-bootstrap';
 import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalitem/slider-oneitem/slider-oneitem.component';
+import { SigninComponent } from 'src/app/modules/signin/signin.component';
 
 
 @NgModule({
@@ -132,10 +133,8 @@ import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalit
     AddZooFormComponent,
     EditZooComponent,
     SearchdataPipe,
-    CreatezooComponent,
     EditAnimalComponent,
     MedicineOneitemComponent,
-    CheckoutComponent,
     FooditemComponent,
     FoodlistingComponent,
     FooddetailsComponent,
@@ -150,7 +149,8 @@ import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalit
     AddDiseaseComponent,
     EditDiseaseComponent,
     MapComponent,
-    SliderOneitemComponent
+    SliderOneitemComponent,
+    SigninComponent
 
   ],
   imports: [
@@ -177,8 +177,6 @@ import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalit
       { path: 'show', component: ShowlistingComponent },
       { path: 'showdetails', component: ShowdetailsComponent },
       { path: 'addshow', component: ShowaddComponent },
-      {path:'createzoo',component:CreatezooComponent},
-      {path:'checkout',component: CheckoutComponent},
       { path:'food', component: FoodlistingComponent },
       { path:'food/details/:id', component: FooddetailsComponent },
       { path: 'disease', component: DiseaseListingComponent },

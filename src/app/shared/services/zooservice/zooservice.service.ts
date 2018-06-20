@@ -498,6 +498,8 @@ export class ZooserviceService {
   addZoo(form) {
     var zoo: IZooSmallComponent;
     zoo = form.value;
+    zoo.imgUrl="./assets/image/aa.jpg"
+    zoo.locImg="./assets/image/pin.png"
     this.zoos.push(zoo);
   }
   public getZoos() {

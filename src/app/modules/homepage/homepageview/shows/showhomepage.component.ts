@@ -14,5 +14,6 @@ shows:IShow[]=[];
   this.shows=this.showService.getShows();
   this.shows=this.shows.slice(2)
   }
+  
 
 }

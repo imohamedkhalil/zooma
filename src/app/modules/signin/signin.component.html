@@ -1,0 +1,40 @@
+<div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document" style="width:60%">
+    <div class="modal-body">
+      <form #f="ngForm" (ngSubmit)="signIn(f)" novalidate>
+        <div class="col-sm-12 col-md-offset-1">
+          <div class="featured-box featured-box-primary align-left mt-xlg">
+            <div class="box-content">
+              <h4 class="heading-primary text-uppercase mb-md">Sign in</h4>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="name">UserName</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control input-sm" name="name" [(ngModel)]="name" placeholder="UserName" id="name" required
+                    pattern="[A-Za]{2}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="password">Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control input-sm" name="password" [(ngModel)]="password" placeholder="Passeword" id="password"
+                    required pattern="[A-Za-z]{3}">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-9">
+                  <span class="remember-box checkbox"></span>
+                </div>
+
+                <div class="col-md-3 ">
+                  <input type="button" (click)="cancel()" value="Cancel" class="btn btn-default pull-right mb-xl" data-dismiss="modal">
+                  <input (click)="signIn(f)" data-dismiss="modal" type="submit" value="Log In" class="btn btn-primary pull-left mb-xl" data-loading-text="Loading...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -5,7 +5,7 @@
       <div class="col-md-12">
         <div class="row">
           <div class="col-md-8">
-            <h2>
+            <h2 class="fix-title">
               <strong>Predators</strong>
             </h2>
           </div>
@@ -17,6 +17,7 @@
             </div>
           </div>
         </div>
+        <br>
         <div class="owl-carousel owl-theme" data-plugin-options="{'items': 4, 'margin': 20, 'loop': true}">
           <div class="portfolio-item" *ngFor="let predator of predators">
             <div style="text-align: right;">
@@ -25,7 +26,7 @@
                 <i class="fa fa-trash" style="text-align: center;margin-left:10px;"></i>
               </a>
             </div>
-            <a [routerLink]="['../../../animals/details', predator.id]" data-portfolio-on-modal>
+            <a href="/animals/details/{{predator.id}}" data-portfolio-on-modal>
               <span class="thumb-info thumb-info-lighten">
                 <span class="thumb-info-wrapper">
                   <img src="{{predator.image[0]}}" class="img-responsive" alt="">

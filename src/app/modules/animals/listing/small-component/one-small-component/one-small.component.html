@@ -8,7 +8,7 @@
       <i class="fa fa-trash" style="text-align: center; margin-left:10px;"></i>
     </a>
     </div>
-    <a [routerLink]="['../animals/details', animal.id]">
+    <a href="../animals/details/{{animal.id}}">
       <span class="thumb-info thumb-info-lighten">
         <span class="thumb-info-wrapper">
           <img [src]="animal.image[0]" class="img-responsive" alt="">

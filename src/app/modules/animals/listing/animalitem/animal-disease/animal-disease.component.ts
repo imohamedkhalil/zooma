@@ -13,6 +13,9 @@ export class AnimalDiseaseComponent implements OnInit {
   getDisease() {
     this.diseases = this.diseaseService.getDiseases();
   }
+  deleteDisease(id){
+    this.diseaseService.deleteDisease(id);
+  }
   ngOnInit() {
     this.getDisease();
   }

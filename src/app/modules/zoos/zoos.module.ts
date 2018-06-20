@@ -23,10 +23,8 @@ import { EditZooComponent } from './edit-zoo/edit-zoo.component';
     ZoofilterComponent,
     ZooCollectionComponent,
     ZoodetailsComponent,
-
     AddZooFormComponent,
     EditZooComponent
-
 ]
 })
 export class ZoosModule { }

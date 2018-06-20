@@ -8,14 +8,17 @@ import { AnimalService } from 'src/app/shared/services/animalservice/animal.serv
   styleUrls: ['./animal-predator.component.css']
 })
 export class AnimalPredatorComponent implements OnInit {
-  animals: IAnimal [];
-  getAnimal() {
-    this.animals = this.animalService.getAnimals();
+  predators: IAnimal [];
+  getPredators() {
+    this.predators = this.animalService.getPredators();
+  }
+  public deletePredator(id){
+    this.animalService.deletePredator(id); 
   }
   constructor(private animalService: AnimalService) { }
 
   ngOnInit() {
-    this.getAnimal();
+    this.getPredators();
 }
 
 }

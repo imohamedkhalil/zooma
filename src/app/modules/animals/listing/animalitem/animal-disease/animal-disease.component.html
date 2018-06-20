@@ -5,7 +5,7 @@
       <div class="col-md-12">
         <div class="row">
           <div class="col-md-8">
-            <h2>
+            <h2 class="fix-title">
               <strong>Diseases</strong>
             </h2>
           </div>
@@ -17,17 +17,18 @@
             </div>
           </div>
         </div>
+        <br>
         <div class="owl-carousel owl-theme" data-plugin-options="{'items': 4, 'margin': 20, 'loop': false}">
           <div class="portfolio-item"  *ngFor="let disease of diseases">
             <div class="product-label" style="text-align:right; margin-left:10px;">
-              <a href="#">
+              <!-- <a href="#">
                 <i class="fa fa-edit"></i>
-              </a>
-              <a href="#">
+              </a> -->
+              <a  (click)="deleteDisease(disease.id)">
                 <i class="fa fa-trash" style="margin-left:10px;"></i>
               </a>
             </div>
-            <a  [routerLink]="['../../../disease/details', disease.id]" data-portfolio-on-modal>
+            <a  href="/disease/details/{{disease.id}}" data-portfolio-on-modal>
               <span class="thumb-info thumb-info-lighten">
                 <span class="thumb-info-wrapper">
                     <i class="icon-featured fa fa-stethoscope"></i>

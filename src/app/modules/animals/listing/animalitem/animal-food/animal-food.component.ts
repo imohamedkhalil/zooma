@@ -13,6 +13,9 @@ export class AnimalFoodComponent implements OnInit {
   getFood(){
     this.foods=this.foodService.getfoods();
   }
+  deleteFood(id){
+    this.foodService.deleteFood(id);
+  }
   ngOnInit() {
     this.getFood();
   }

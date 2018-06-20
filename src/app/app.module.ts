@@ -7,9 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AgmCoreModule } from '@agm/core';
 
-
-
-
 import './modules/homepage/homepage.module.ts';
 
 import { MedicineListingComponent } from './modules/medicine/listing/medicine-listing.component';
@@ -85,6 +82,14 @@ import { DiseaseOneitemComponent } from 'src/app/modules/disease/disease-listing
 import { CarouselModule } from 'ngx-bootstrap';
 import { SliderOneitemComponent } from 'src/app/modules/animals/listing/animalitem/slider-oneitem/slider-oneitem.component';
 import { SigninComponent } from 'src/app/modules/signin/signin.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { AddNewsComponent } from 'src/app/modules/news/add-news/add-news.component';
+import { EditNewsComponent } from 'src/app/modules/news/edit-news/edit-news.component';
+import { NewsListingComponent } from './modules/news/news-listing/news-listing.component';
+import { OneItemNewsComponent } from 'src/app/modules/news/news-listing/one-item-news/one-item-news.component';
+import { ReadmoreNewsComponent } from 'src/app/modules/news/readmore-news/readmore-news.component';
+import { NewsServiceService } from 'src/app/shared/services/newsService/news-service.service';
+
 
 
 @NgModule({
@@ -139,9 +144,10 @@ import { SigninComponent } from 'src/app/modules/signin/signin.component';
     FoodlistingComponent,
     FooddetailsComponent,
     FilterComponent,
-    AddfoodComponent, 
+    AddfoodComponent,
     FoodeditComponent,
     SmallfoodComponent,
+    MapComponent,
     DiseaseListingComponent,
     DiseaseFilterComponent,
     DiseaseOneitemComponent,
@@ -150,7 +156,14 @@ import { SigninComponent } from 'src/app/modules/signin/signin.component';
     EditDiseaseComponent,
     MapComponent,
     SliderOneitemComponent,
-    SigninComponent
+    SigninComponent,
+    AddNewsComponent,
+    EditNewsComponent,
+    NewsListingComponent,
+    OneItemNewsComponent,
+    ReadmoreNewsComponent,
+    SliderOneitemComponent,
+    AboutUsComponent
 
   ],
   imports: [
@@ -160,14 +173,12 @@ import { SigninComponent } from 'src/app/modules/signin/signin.component';
     FormsModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
-     AgmCoreModule.forRoot({
+    AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBuDz7GbyoAEHd9Q3VgmSREX-J4Ian2NUw'
     }),
     RouterModule.forRoot([
       { path: 'medicine', component: MedicineListingComponent },
       { path: 'medicine/details/:id', component: MedicineDetailComponent },
-      // { path: 'medicine/edit/:id', component: EditMedicineComponent },
-      // { path: 'listing', component: ListingComponent },
       { path: 'animals', component: ListingComponent },
       { path: 'animals/details/:id', component: AnimalitemComponent },
       { path: 'add', component: AddAnimalComponent },
@@ -181,16 +192,23 @@ import { SigninComponent } from 'src/app/modules/signin/signin.component';
       { path:'food/details/:id', component: FooddetailsComponent },
       { path: 'disease', component: DiseaseListingComponent },
       { path: 'disease/details/:id', component: DiseaseDetailComponent },
-      { path:'', component: HomepageviewComponent },
+      { path: 'news', component: NewsListingComponent },
+      { path: 'Readmore/:id', component: ReadmoreNewsComponent },
+      { path: 'newsAdd', component: AddNewsComponent },
+      { path: 'oneItemNews', component: OneItemNewsComponent },
+      { path: 'newsEdit/:id', component: EditNewsComponent }
+      {path:'aboutus',component: AboutUsComponent},
+      { path:'', component: HomepageviewComponent }
     ])
   ],
-  
+
   providers: [
     AnimalService,
     ZooserviceService,
     MedicineService,
     ShowService,
-    FoodService
+    FoodService,
+    NewsServiceService
   ],
   bootstrap: [AppComponent]
 })

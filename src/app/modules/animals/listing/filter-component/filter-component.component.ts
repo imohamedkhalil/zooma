@@ -28,11 +28,11 @@ export class FilterComponentComponent implements OnInit {
       case 'bird':
         this.filter.emit('bird');
         break;
-      case 'Horses':
-        this.filter.emit('Horses');
+      case 'horse':
+        this.filter.emit('horse');
         break;
-        case 'Fishes':
-        this.filter.emit('Fishes');
+        case 'fish':
+        this.filter.emit('fish');
         break;
     }
   }

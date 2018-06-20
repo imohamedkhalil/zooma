@@ -15,3 +15,7 @@ height: 180px;
 .thumb-info-lighten{
     width: 99%;
 }
+.fix-title{
+    margin-top: 0px;
+    margin-bottom:0px;
+}

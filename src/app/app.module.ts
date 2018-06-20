@@ -196,7 +196,7 @@ import { NewsServiceService } from 'src/app/shared/services/newsService/news-ser
       { path: 'Readmore/:id', component: ReadmoreNewsComponent },
       { path: 'newsAdd', component: AddNewsComponent },
       { path: 'oneItemNews', component: OneItemNewsComponent },
-      { path: 'newsEdit/:id', component: EditNewsComponent }
+      { path: 'newsEdit/:id', component: EditNewsComponent },
       {path:'aboutus',component: AboutUsComponent},
       { path:'', component: HomepageviewComponent }
     ])
